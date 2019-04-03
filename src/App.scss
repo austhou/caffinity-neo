@@ -51,6 +51,14 @@ p {
     color: $color-blue;
 }
 
+.textReveal {
+    display: none;
+}
+
+.itemHolder:hover .textReveal {
+    display: block;
+}
+
 .darkIcon {
     color: $color-black;
 }

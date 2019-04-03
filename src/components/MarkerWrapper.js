@@ -36,7 +36,7 @@ class MarkerWrapper extends Component {
                     onClick={this.selectionProcess.bind(this)}
                     icon={{
                         path: iconData.pin.svg,
-                        fillColor: '#2CC761',
+                        fillColor: '#229EC5',
                         fillOpacity: 1,
                         strokeOpacity: 0,
                         anchor: { x: 15, y: 31 }
@@ -52,7 +52,7 @@ class MarkerWrapper extends Component {
                     onClick={this.selectionProcess.bind(this)}
                     icon={{
                         path: iconData.pin.svg,
-                        fillColor: '#252222',
+                        fillColor: '#02253E',
                         fillOpacity: 1,
                         strokeOpacity: 0,
                         anchor: { x: 15, y: 31 }

@@ -22,7 +22,7 @@ const MapComponent = withScriptjs(withGoogleMap((props) =>
                         "saturation": 36
                     },
                     {
-                        "color": "#333030"
+                        "color": "#303335"
                     },
                     {
                         "lightness": 40
@@ -58,7 +58,7 @@ const MapComponent = withScriptjs(withGoogleMap((props) =>
                 "elementType": "geometry.fill",
                 "stylers": [
                     {
-                        "color": "#fefafa"
+                        "color": "#fafefe"
                     },
                     {
                         "lightness": "20"
@@ -70,7 +70,7 @@ const MapComponent = withScriptjs(withGoogleMap((props) =>
                 "elementType": "geometry.stroke",
                 "stylers": [
                     {
-                        "color": "#fefafa"
+                        "color": "#fafefe"
                     },
                     {
                         "lightness": 17
@@ -85,7 +85,7 @@ const MapComponent = withScriptjs(withGoogleMap((props) =>
                 "elementType": "geometry",
                 "stylers": [
                     {
-                        "color": "#f5f1f1"
+                        "color": "#F3F5F7"
                     },
                     {
                         "lightness": "-4"
@@ -97,7 +97,7 @@ const MapComponent = withScriptjs(withGoogleMap((props) =>
                 "elementType": "geometry",
                 "stylers": [
                     {
-                        "color": "#f5f1f1"
+                        "color": "#F3F5F7"
                     },
                     {
                         "lightness": 21
@@ -109,7 +109,7 @@ const MapComponent = withScriptjs(withGoogleMap((props) =>
                 "elementType": "geometry",
                 "stylers": [
                     {
-                        "color": "#dedede"
+                        "color": "#dedfdf"
                     },
                     {
                         "lightness": 21
@@ -172,7 +172,7 @@ const MapComponent = withScriptjs(withGoogleMap((props) =>
                 "elementType": "geometry",
                 "stylers": [
                     {
-                        "color": "#f2f2f2"
+                        "color": "#f2f5f6"
                     },
                     {
                         "lightness": 19
@@ -184,7 +184,7 @@ const MapComponent = withScriptjs(withGoogleMap((props) =>
                 "elementType": "geometry",
                 "stylers": [
                     {
-                        "color": "#f8f4f4"
+                        "color": "#F3F5F7"
                     },
                     {
                         "lightness": "0"
@@ -199,7 +199,7 @@ const MapComponent = withScriptjs(withGoogleMap((props) =>
         <Marker
             icon={{
                 path: props.locationSvg,
-                fillColor: '#0d95d4',
+                fillColor: '#229EC5',
                 fillOpacity: 1,
                 strokeOpacity: 0,
                 anchor: { x: 15, y: 15 }

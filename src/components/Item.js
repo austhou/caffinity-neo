@@ -94,16 +94,26 @@ class List extends Component {
         return (
             <div className="itemHolder">
                 { this.props.cafe && 
-                    <div style={{display: 'flex', flexDirection: "row", position: 'absolute'}}>
+                    <div style={{display: 'flex', flexDirection: "row", position: 'absolute', alignItems: 'center'}}>
                         <p 
                             style={{width: 64, textAlign: 'right', marginRight: 32}} 
                             className="textLight"
                         >
                             {distance(this.props.cafe.lat, this.props.cafe.lng, this.props.location.lat, this.props.location.lng, "M") + " mi"}
                         </p>
-                        <p style={{width: 360, textAlign: 'left', marginRight: 8}} className="textName">
+                        <p style={{
+                            width: 360, 
+                            textAlign: 'left', 
+                            marginRight: 8, 
+                            display: 'flex', 
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            }} 
+                            className="textName"
+                        >
                             {this.props.cafe.name}
                             <span style={{marginLeft: 16}} className="textLight textSmall">{!this.state.openNow && 'CLOSED'}</span>
+                            <span style={{marginLeft: 0}} className="textLight textSmall textReveal">{this.state.openNow && 'OPEN'}</span>
                         </p>
                         {this.returnIcon('wifi','wifi')}
                         {this.returnIcon('outlets','plug')}

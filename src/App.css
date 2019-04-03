@@ -65,6 +65,14 @@ p {
   color: #229EC5;
 }
 
+.textReveal {
+  display: none;
+}
+
+.itemHolder:hover .textReveal {
+  display: block;
+}
+
 .darkIcon {
   color: #02253E;
 }
