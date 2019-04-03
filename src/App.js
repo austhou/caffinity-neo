@@ -40,11 +40,19 @@ class App extends Component {
                     <div style={{width: '50%'}}>
                         <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',width: '100%'}}>
                             <img src={banner} width="200" style={{marginBottom: 16}} />
-                            <div 
-                                className="itemButton"
-                                style={{marginRight: 8}}
-                            >
-                                SUBMIT CAFE
+                            <div style={{display: 'flex', flexDirection: 'row'}}>
+                                <div 
+                                    className="grayButton"
+                                    style={{marginRight: 8}}
+                                >
+                                    CHANGE LOCATION
+                                </div>
+                                <div 
+                                    className="itemButton"
+                                    style={{marginRight: 8}}
+                                >
+                                    SUBMIT CAFE
+                                </div>
                             </div>
                         </div>
                         
