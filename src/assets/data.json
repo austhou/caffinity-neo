@@ -1,0 +1,3107 @@
+{
+    "Cafe La Flore IRVING 1340 Irving St": {
+      "formatted_address": "1340 Irving St, San Francisco, CA 94122, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7639837,
+          "lng": -122.472449
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.76522972989272,
+            "lng": -122.4710924201073
+          },
+          "southwest": {
+            "lat": 37.76253007010727,
+            "lng": -122.4737920798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "6119670932acc5e06b829f2e0694aed9f91052f4",
+      "name": "Cafe La Flore Irving",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104315430881787977254/photos\">Pravin Prakash</a>"
+          ],
+          "photo_reference": "CmRaAAAAxw3PAWwtcFbFbzOJrw8VLnzaet2tNcsU_wpqE7siafdwTtkx6kKLQbRrD9qqLrJLrLhXxU-yZfFpZG-GjddyZl2kQSp7vS28ONRGgny0DWdm6AksznoAkjRMGMFvZ-qWEhBcN5wUncHXhxlYvVWa2ly6GhRU4qcfT2qPVxqDCnT0K8GxwRfvWg",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJ9VVDS2aHhYARD3YLGYKdH6E",
+      "plus_code": {
+        "compound_code": "QG7H+H2 Sunset District, San Francisco, CA, USA",
+        "global_code": "849VQG7H+H2"
+      },
+      "price_level": 1,
+      "rating": 4.6,
+      "reference": "ChIJ9VVDS2aHhYARD3YLGYKdH6E",
+      "types": [
+        "cafe",
+        "store",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 127
+    },
+    "Java Beach Café 1396 La Playa St": {
+      "formatted_address": "1396 La Playa St, San Francisco, CA 94122, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.760458,
+          "lng": -122.5089426
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.76180262989272,
+            "lng": -122.5077068201073
+          },
+          "southwest": {
+            "lat": 37.75910297010728,
+            "lng": -122.5104064798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "812cb9c4c9b8338f3e962b90876e2ae4ca98938d",
+      "name": "Java Beach Café",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102554247807397131953/photos\">Joseph Hardeman</a>"
+          ],
+          "photo_reference": "CmRaAAAAxBJ0-NHe1gm-VTHNXRx91V8Md-IvxWkPQFUYyGu92SOqo3CfTWo1suqMhR5QRNYoC-c_3gWB4oSrZeyC0qLUYqU35bMZURopEyYMP41PdX4pj_LUUgwGaSb0NflmSp8mEhBX1oG-mua6JQhaxGAZBJJfGhSt8L-hXw-8L6_f4vP0SxZ3ibMMaQ",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJgSqBnZaHhYARhZdyjXrqU-E",
+      "plus_code": {
+        "compound_code": "QF6R+5C Sunset District, San Francisco, CA, USA",
+        "global_code": "849VQF6R+5C"
+      },
+      "rating": 4.4,
+      "reference": "ChIJgSqBnZaHhYARhZdyjXrqU-E",
+      "types": [
+        "cafe",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 799
+    },
+    "Andytown Coffee Roasters 3655 Lawton St": {
+      "formatted_address": "3655 Lawton St, San Francisco, CA 94122, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7566719,
+          "lng": -122.5022955
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.75811282989272,
+            "lng": -122.5009515201073
+          },
+          "southwest": {
+            "lat": 37.75541317010727,
+            "lng": -122.5036511798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "d842d06e66907ac0e0ba0ed73c8f3404a1497d4c",
+      "name": "Andytown Coffee Roasters",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2633,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110659465775138078783/photos\">Patrick Chen</a>"
+          ],
+          "photo_reference": "CmRaAAAA3OasRyMe1MTthJP_-G5T_rMYmEiEwv6HCpb--bx6U1ceuhmyE7O58mCZR-nYPx7PrgHOopEXxiDHktnMjuX3XMRmR3UxpPzjfZ_S69-Lf-MrqvLgBopdBZeGa50goh8UEhAUhM9TKz8xNNPcdTbC_cjpGhRrO-w01DWD9nUKM9lttmDd8GXAmA",
+          "width": 2633
+        }
+      ],
+      "place_id": "ChIJee4DupqHhYARXadb2DlBtr8",
+      "plus_code": {
+        "compound_code": "QF4X+M3 Sunset District, San Francisco, CA, USA",
+        "global_code": "849VQF4X+M3"
+      },
+      "price_level": 1,
+      "rating": 4.7,
+      "reference": "ChIJee4DupqHhYARXadb2DlBtr8",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 596
+    },
+    "Verve Coffee Roasters 2101 Market St": {
+      "formatted_address": "2101 Market St, San Francisco, CA 94114, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7670785,
+          "lng": -122.4290805
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.76848722989273,
+            "lng": -122.4278011201073
+          },
+          "southwest": {
+            "lat": 37.76578757010729,
+            "lng": -122.4305007798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "04d035cb1d369f04e9f665e7fc592ef194520b50",
+      "name": "Verve Coffee Roasters",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1125,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100506683555304843329/photos\">A Google User</a>"
+          ],
+          "photo_reference": "CmRZAAAAQpXQ9MZ05YiWNeIpI9XftoPFYUfs4f4XfClxls3Dd7vQ4SYehVrB3COtukPadIOtump9cdxiSMbkKGwaQB6les1zU1SD-55dmfUXbIdk8tob0ZNCRc_MzvjbcqomQ5aLEhBJYqybI7jT7g30xvE1vk_RGhRw5aJWlFLTanwEJMrV8CJFVKvzBw",
+          "width": 2000
+        }
+      ],
+      "place_id": "ChIJUVdHex5-j4ARPEs27aq3-tg",
+      "plus_code": {
+        "compound_code": "QH8C+R9 Mission District, San Francisco, CA, USA",
+        "global_code": "849VQH8C+R9"
+      },
+      "price_level": 2,
+      "rating": 4.5,
+      "reference": "ChIJUVdHex5-j4ARPEs27aq3-tg",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 317
+    },
+    "Streamline Cafe 3560 Taraval": {
+      "formatted_address": "3560 Taraval, San Francisco, CA 94116, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7418964,
+          "lng": -122.5044713
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.74319727989273,
+            "lng": -122.5031180201073
+          },
+          "southwest": {
+            "lat": 37.74049762010728,
+            "lng": -122.5058176798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "b7387ce9ac7877b9d3a7f5681cab93ede3159a76",
+      "name": "Streamline Cafe",
+      "permanently_closed": true,
+      "photos": [
+        {
+          "height": 1019,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113925993082823889615/photos\">A Google User</a>"
+          ],
+          "photo_reference": "CmRaAAAAyToLGpjP4azc_Y0oeYIiquGcoQaWYS2iAXyhFAUOPpa1WEHM_xOOzDmhllqtks0BdUTpnDAX9erwlZBmxhVNwe7jYuxpgV60P-S4vpBrLbQC1VEuvttolS4yLCiWZFo1EhAP1ex-CJd8XD-YSN8xI3LKGhQfLwg90L5JYl8WIbg61oKLseYn-w",
+          "width": 1500
+        }
+      ],
+      "place_id": "ChIJxZifQ2N9j4ARdWdjFuxkO64",
+      "plus_code": {
+        "compound_code": "PFRW+Q6 Sunset District, San Francisco, CA, USA",
+        "global_code": "849VPFRW+Q6"
+      },
+      "price_level": 2,
+      "rating": 4.5,
+      "reference": "ChIJxZifQ2N9j4ARdWdjFuxkO64",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 89
+    },
+    "Mazarine Coffee 720 Market St": {
+      "formatted_address": "720 Market St, San Francisco, CA 94102, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7875604,
+          "lng": -122.4040535
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.78881597989272,
+            "lng": -122.4025829701073
+          },
+          "southwest": {
+            "lat": 37.78611632010728,
+            "lng": -122.4052826298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "16b85de79a1c33e5ef41981fa971f5cf4059f36d",
+      "name": "Mazarine Coffee",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2160,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113295381399161184944/photos\">Hyeji Chung</a>"
+          ],
+          "photo_reference": "CmRaAAAAIP6L_LYWMiTrzSTE83maMsovwP56ONF3GgsVYogzIvqLXxp29lJ8ZD8WxTK2II6XAsKoFLPIRZalwLflkM62MfmQ2Smr2wkqci-DcMF41JnvmQOvJefOMyZNN-krHaiMEhB7Gz9k9YYVPgggcC3KhVUfGhSp3Xbak-yf1lPgiMBF7Fn1zLd_-w",
+          "width": 2880
+        }
+      ],
+      "place_id": "ChIJAZVMZ4iAhYARzKgSF703Y2E",
+      "plus_code": {
+        "compound_code": "QHQW+29 Financial District, San Francisco, CA, USA",
+        "global_code": "849VQHQW+29"
+      },
+      "price_level": 2,
+      "rating": 4.5,
+      "reference": "ChIJAZVMZ4iAhYARzKgSF703Y2E",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 944
+    },
+    "The Social Study 1795 Geary Blvd": {
+      "formatted_address": "1795 Geary Blvd, San Francisco, CA 94115, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7841746,
+          "lng": -122.4325035
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.78557102989273,
+            "lng": -122.4311624701073
+          },
+          "southwest": {
+            "lat": 37.78287137010728,
+            "lng": -122.4338621298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+      "id": "1684ae4f1aafde49737339b6ec0412baaf809489",
+      "name": "The Social Study",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/116032065875809955791/photos\">Jean-Philippe Laverdure</a>"
+          ],
+          "photo_reference": "CmRaAAAAcLvqoBLI8SiASIRG4Q1ZvVdoyEW0Xyy56naVdZDchrNoE6Llo82ss9Eay2gdMpqOCtQ2qo_kxuVlD1PacaBljZIheX25bWrbTWCfLpnlCCzYEACEpRPADPYuAz8oWhHlEhCUC5nQzIVa91D8K4vV7kDSGhQm3gejCBpVU6xLBrNOCvo6FPwEXw",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJ76SKCLmAhYARe15t27RAbwY",
+      "plus_code": {
+        "compound_code": "QHM8+MX Western Addition, San Francisco, CA, USA",
+        "global_code": "849VQHM8+MX"
+      },
+      "price_level": 2,
+      "rating": 4.5,
+      "reference": "ChIJ76SKCLmAhYARe15t27RAbwY",
+      "types": [
+        "night_club",
+        "bar",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 323
+    },
+    "Flywheel Coffee Roasters 672 Stanyan St": {
+      "formatted_address": "672 Stanyan St, San Francisco, CA 94117, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7696659,
+          "lng": -122.4534796
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.77097542989272,
+            "lng": -122.4521223201073
+          },
+          "southwest": {
+            "lat": 37.76827577010728,
+            "lng": -122.4548219798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "ef09136a9cdbf905d19f13d4256a08c48cf4c741",
+      "name": "Flywheel Coffee Roasters",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3480,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108984905692249353444/photos\">Vinay Ram</a>"
+          ],
+          "photo_reference": "CmRaAAAABDKGTrtSbRSrNeuHtc75dPGm7ZSza-hN9W_BJSzHksnr6Xz3W9xRHIofoqPrdRMi9sw5phGA25J01cIXpWW6A1UtZmg_u6G8XiZmEYgnuAQL1Cpjk4w5jGtAy_nNjvZREhAYwbdCXM1P5XFYBjoG-UUoGhT8V5i_-xNye9i0pU0k5iV26j253w",
+          "width": 4640
+        }
+      ],
+      "place_id": "ChIJYYkIlFGHhYARN9qc7jwIQEs",
+      "plus_code": {
+        "compound_code": "QG9W+VJ Haight-Ashbury, San Francisco, CA, USA",
+        "global_code": "849VQG9W+VJ"
+      },
+      "price_level": 1,
+      "rating": 4.5,
+      "reference": "ChIJYYkIlFGHhYARN9qc7jwIQEs",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 461
+    },
+    "Stable Cafe 2128 Folsom St": {
+      "formatted_address": "2128 Folsom St, San Francisco, CA 94110, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7632354,
+          "lng": -122.4153407
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.76459147989272,
+            "lng": -122.4138864201073
+          },
+          "southwest": {
+            "lat": 37.76189182010727,
+            "lng": -122.4165860798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "4e8be962fb7e1e15bf4eb63de5d3bfa4b9364a2b",
+      "name": "Stable Cafe",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3002,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105981464064843083484/photos\">Moritz Habermann</a>"
+          ],
+          "photo_reference": "CmRaAAAABGyYHAIrkEHpwj5fgdIHTuScdJxhr9twcyOdiwDOEQnMFnx7O1jS2w-uBhYZZrKgwF1HHz8DcZ1Xa0KJrn18Mc0XPoG8sTQfr3ut76d0rnz3I6yY7hpXcK3z9lKtM9AfEhCLYdUi2mngUgKnQZxai3InGhQdB0-cCwh5jvGPyTazdSp8cbKa-A",
+          "width": 4002
+        }
+      ],
+      "place_id": "ChIJDS_j2Tp-j4ARx1SqQlnrP4U",
+      "plus_code": {
+        "compound_code": "QH7M+7V Mission District, San Francisco, CA, USA",
+        "global_code": "849VQH7M+7V"
+      },
+      "price_level": 2,
+      "rating": 4.6,
+      "reference": "ChIJDS_j2Tp-j4ARx1SqQlnrP4U",
+      "types": [
+        "cafe",
+        "meal_takeaway",
+        "store",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 468
+    },
+    "Four Barrel Coffee 375 Valencia St": {
+      "formatted_address": "375 Valencia St, San Francisco, CA 94103, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.767019,
+          "lng": -122.421961
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.76836422989273,
+            "lng": -122.4206873701073
+          },
+          "southwest": {
+            "lat": 37.76566457010728,
+            "lng": -122.4233870298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "e36ed3acbf815e3cc49501912b2c456edaaf8abc",
+      "name": "Four Barrel Coffee",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115456521926830097005/photos\">Jack Tsai</a>"
+          ],
+          "photo_reference": "CmRaAAAAskbBTGxhQPF6KLnBIKYw_mueCWyNXhl7k45hYLnArZPmDPozEIrM2P1Rf3hSkwLu_d2Exq65J16MohUZw74s_2RhAKxDkmutJuCtKEvjGRFKLyFqdK5u8Fy8v7GGZX9FEhCOpAbcVZxMGWMqG6k7KbAQGhTgceT6G_gVYsWOar_CXfK8Qj2oYA",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJ__abjyF-j4ARmyuzGS1yOdc",
+      "plus_code": {
+        "compound_code": "QH8H+R6 Mission District, San Francisco, CA, USA",
+        "global_code": "849VQH8H+R6"
+      },
+      "price_level": 2,
+      "rating": 4.5,
+      "reference": "ChIJ__abjyF-j4ARmyuzGS1yOdc",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 1702
+    },
+    "Blue Bottle Coffee 115 Sansome St": {
+      "formatted_address": "115 Sansome St, San Francisco, CA 94104, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7913064,
+          "lng": -122.4009679
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.79266662989273,
+            "lng": -122.3995403201073
+          },
+          "southwest": {
+            "lat": 37.78996697010728,
+            "lng": -122.4022399798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "36bb00a72fae3c4a9eef37091a4bc747018058ad",
+      "name": "Blue Bottle Coffee",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/117253046154837933990/photos\">Karthik Subramaniam</a>"
+          ],
+          "photo_reference": "CmRaAAAAn5Hl-N42rYrjvkWl-zeltEMxcySuXnCQbxAJYDmAwGNP1-AdmKZgOWqs5WbAqisusly6bgH7PXjxm1RBnChrApmNbJ2Q-NawD4m8xiMrX5WObrm9Qr4nZzlKS03NS0PXEhC3oyclfvyl4pHRcAg2SmQkGhRVBJxDL2ZmhKFMNEbiGk65P6bRYg",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJ3UFdD2KAhYARYOHf4j7DshM",
+      "plus_code": {
+        "compound_code": "QHRX+GJ Financial District, San Francisco, CA, USA",
+        "global_code": "849VQHRX+GJ"
+      },
+      "price_level": 2,
+      "rating": 4.5,
+      "reference": "ChIJ3UFdD2KAhYARYOHf4j7DshM",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 859
+    },
+    "Sightglass Coffee 301 Divisadero St": {
+      "formatted_address": "301 Divisadero St, San Francisco, CA 94117, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7723206,
+          "lng": -122.4375092
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.77368147989272,
+            "lng": -122.4360725701073
+          },
+          "southwest": {
+            "lat": 37.77098182010727,
+            "lng": -122.4387722298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "5e7695df440060e1500bdc48e6964f9ce3b0dd3d",
+      "name": "Sightglass Coffee",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103856939649039559037/photos\">Amirhossein Hajihosseini</a>"
+          ],
+          "photo_reference": "CmRaAAAAapcbkFZUTxaMyY2KEXvKln_57dbgJcZqBZK7l3RsbZNXCSjf1HV_j8NKXwMGLgq1RWeAyPamfbgaaHEUjbTjB0uXYMSZa2ruM_cjfwKt8t95ufes3KtRgwrbKCqYNhn5EhC0IjWybD3tkqzB4ree6Fc1GhTZ0oGkv9kh4jZ1cqQFDkcHNwR33w",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJ0ZnTPK-AhYARbVoaoZLrzv8",
+      "plus_code": {
+        "compound_code": "QHC6+WX Haight-Ashbury, San Francisco, CA, USA",
+        "global_code": "849VQHC6+WX"
+      },
+      "price_level": 2,
+      "rating": 4.4,
+      "reference": "ChIJ0ZnTPK-AhYARbVoaoZLrzv8",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 198
+    },
+    "Peet's Coffee 601 Van Ness Ave": {
+      "formatted_address": "601 Van Ness Ave, San Francisco, CA 94102, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.78174,
+          "lng": -122.42087
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.78310137989272,
+            "lng": -122.4194291701073
+          },
+          "southwest": {
+            "lat": 37.78040172010728,
+            "lng": -122.4221288298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "87e8a2fbadf7d39e7e622a2ebabe29270b779e15",
+      "name": "Peet's Coffee",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102177180826767391036/photos\">yuen zhang</a>"
+          ],
+          "photo_reference": "CmRaAAAALzf7EMeLmyJN2nwEJLywe_thzHwU36pwZiiL83Dv8_glmG0vtUb-lXtTdCGPmDtmGR6-Rfr9aeDkL8uIJvZtIxI35IZhPaacsn8Q1EWrjYazW1onZiwvMIaMQqt-tYF9EhC7llOOHYNJ3HELLTncpRq7GhSz7lbLfrnw_WR6u9dABW2soNQWFg",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJiZOlfZeAhYARrh5R3O9F0j4",
+      "plus_code": {
+        "compound_code": "QHJH+MM Western Addition, San Francisco, CA, USA",
+        "global_code": "849VQHJH+MM"
+      },
+      "price_level": 1,
+      "rating": 4.1,
+      "reference": "ChIJiZOlfZeAhYARrh5R3O9F0j4",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 216
+    },
+    "Réveille Coffee Co. 4076 18th St": {
+      "formatted_address": "4076 18th St, San Francisco, CA 94114, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7611009,
+          "lng": -122.4344262
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.76236627989272,
+            "lng": -122.4330673701073
+          },
+          "southwest": {
+            "lat": 37.75966662010728,
+            "lng": -122.4357670298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "564943bf03bf119b2c58a1a5a60876b5b767772b",
+      "name": "Réveille Coffee Co.",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/118010347509792120747/photos\">Sang Yoon</a>"
+          ],
+          "photo_reference": "CmRaAAAAjoz2C_AwHj0L4V_obLVZzBIbl3PT8BpGPRcCSviVYf3wz1WI4RWLeZfZv1axcI3KaCL8XaQOB0BgAh5-fYG6obc6fvSY41E4IdZR1nBuA4K3YkkC0c-PYPLq_YEJOkTDEhDmcs03OtQHMmMD79JAqMiKGhQCkDQxDczmNm2Gi6SsHtBNaKIcDQ",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJ6VMNOxt-j4ARQvNJc_JGJOw",
+      "plus_code": {
+        "compound_code": "QH68+C6 The Castro, San Francisco, CA, USA",
+        "global_code": "849VQH68+C6"
+      },
+      "price_level": 2,
+      "rating": 4.6,
+      "reference": "ChIJ6VMNOxt-j4ARQvNJc_JGJOw",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 302
+    },
+    "Caffe Roma Coffee Roasting Co. 885 Bryant St": {
+      "formatted_address": "885 Bryant St, San Francisco, CA 94103, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7744697,
+          "lng": -122.4041571
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.77589362989272,
+            "lng": -122.4029049701073
+          },
+          "southwest": {
+            "lat": 37.77319397010728,
+            "lng": -122.4056046298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "5d933ab2bef3cba76993cdb979b75441f2385d96",
+      "name": "Caffe Roma Coffee Roasting Co.",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 2160,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104302027458325660593/photos\">David Imel</a>"
+          ],
+          "photo_reference": "CmRaAAAAWXgNVHIj3saPzL40obIahCL7EtW2mFuTr7Vvxc7xsBS4ALMvnT7bxPOLX-KDmDUqMVCvNZKDLPmm90O-N1SE9cUPuLDZKSxnFIIihAD8-VESBVgtY9whMS1NPnvNMEDbEhCnbl1_TL5LqkLYetIZvN5DGhQaf-Go0E1W8g6A7BD1XwaL3XZD4w",
+          "width": 3840
+        }
+      ],
+      "place_id": "ChIJJz14VSp-j4ARbjv3dt0d_Dw",
+      "plus_code": {
+        "compound_code": "QHFW+Q8 SoMa, San Francisco, CA, USA",
+        "global_code": "849VQHFW+Q8"
+      },
+      "rating": 4.2,
+      "reference": "ChIJJz14VSp-j4ARbjv3dt0d_Dw",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 45
+    },
+    "Ashley's Cafe 4454 California St": {
+      "formatted_address": "4454 California St, San Francisco, CA 94118, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7850153,
+          "lng": -122.4655074
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.78630227989272,
+            "lng": -122.4641445701073
+          },
+          "southwest": {
+            "lat": 37.78360262010728,
+            "lng": -122.4668442298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "7cc6471e2eb5039e16571e63f65ad7c2e18a728b",
+      "name": "Ashley's Cafe",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/117706697175244478751/photos\">Aubrey Topkick</a>"
+          ],
+          "photo_reference": "CmRaAAAAupcpRTq3jPa6NY0ji_TPlXirsUearKNv0cTgn-NbcRwgWmjBjO0R8DtR6FqhYs1H3Xt8hAAIdDNM1hUyZmKQv69VDX0uJ9xxriEhWpLwFbbHgKiRjl6ZQTHrqAMlJ5GcEhCM4WKnOBMw7QGErsDRoHwoGhSSskiEWGGFCSZLIo7xov3IqDisdg",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJEedS6TyHhYARNS8APPzQUDY",
+      "plus_code": {
+        "compound_code": "QGPM+2Q Richmond District, San Francisco, CA, USA",
+        "global_code": "849VQGPM+2Q"
+      },
+      "price_level": 1,
+      "rating": 4.1,
+      "reference": "ChIJEedS6TyHhYARNS8APPzQUDY",
+      "types": [
+        "cafe",
+        "store",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 141
+    },
+    "Sextant Coffee Roasters 1415 Folsom St": {
+      "formatted_address": "1415 Folsom St, San Francisco, CA 94103, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7725052,
+          "lng": -122.4130081
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.77389717989272,
+            "lng": -122.4116096701073
+          },
+          "southwest": {
+            "lat": 37.77119752010728,
+            "lng": -122.4143093298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "ea86f748e256828b2c1ab8208e18b9471ef0f90f",
+      "name": "Sextant Coffee Roasters",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101609047959665616120/photos\">Joshua Zedalis</a>"
+          ],
+          "photo_reference": "CmRaAAAA9H4in_YHCVz63oKVefAAnSPsCaWfmBrfdA-FbwFrkbrvIkcaF1Df_61Hy22QpR_5ggdvfuualDrMpMjPI_YVvjQ3ZLILMokDWnXs6ZvihLS3oLlOGPk1k6yUwdf04U2UEhD9f8Lhu5r32-52wp_Cy1VNGhRnPm-pJkKUFF8C8cGQv8a-HRSbOA",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJg1s92Sd-j4ARTKJr-IhF_-Q",
+      "plus_code": {
+        "compound_code": "QHFP+2Q SoMa, San Francisco, CA, USA",
+        "global_code": "849VQHFP+2Q"
+      },
+      "price_level": 1,
+      "rating": 4.5,
+      "reference": "ChIJg1s92Sd-j4ARTKJr-IhF_-Q",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 289
+    },
+    "Wooden Cafe 862 Cole St": {
+      "formatted_address": "862 Cole St, San Francisco, CA 94117, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7659807,
+          "lng": -122.4497475
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.76731332989272,
+            "lng": -122.4485308201073
+          },
+          "southwest": {
+            "lat": 37.76461367010728,
+            "lng": -122.4512304798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "24a445424d80e7d974c9518746aba72c12ea17f1",
+      "name": "Wooden Coffeehouse",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104315430881787977254/photos\">Pravin Prakash</a>"
+          ],
+          "photo_reference": "CmRaAAAAmajdIyPQMCcsKMG3K6ZnhTE6DrCs4QZqZI84YMa9ixH3-s-2QME6qLe3fzoGUm7lvMbTcLyuSGg0DWGxQgvJpbGBgmtlbELaDEBoJUp5uW48dZqhvNc76bJ9hYWFVNlXEhCPSYW9Zbbx4ecTvGkVYSp-GhSX79-HpYuHFn4o7rv2Indis3kxiQ",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJXwohWVSHhYARVpS5xcRiVlw",
+      "plus_code": {
+        "compound_code": "QH82+94 Cole Valley, San Francisco, CA, USA",
+        "global_code": "849VQH82+94"
+      },
+      "rating": 4.6,
+      "reference": "ChIJXwohWVSHhYARVpS5xcRiVlw",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 63
+    },
+    "Gaslamp Cafe 1599 Howard St": {
+      "formatted_address": "1599 Howard St, San Francisco, CA 94103, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7717904,
+          "lng": -122.4166365
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.77318537989272,
+            "lng": -122.4153700201073
+          },
+          "southwest": {
+            "lat": 37.77048572010728,
+            "lng": -122.4180696798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "1e9051ded278932c26441ebc88f6f3ecb7be97f2",
+      "name": "Gaslamp Cafe",
+      "permanently_closed": true,
+      "photos": [
+        {
+          "height": 1152,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/116554775371278059214/photos\">Ken Odom</a>"
+          ],
+          "photo_reference": "CmRaAAAARQk4F1aYgap-jiiq7BdRobk_FTirY4o3HemT7iwOIVmURq7SxLC6tuiVDgsHuPHowpxRTdYPbxWV0EISRxR0_-t9h1RQaI1WLbW3nHKA2p5w6ds8tjwFsgmmhScikLKiEhD_4Fi_r0ae_1MPBmsTWqZ7GhRqUcbCqHJZtzdau341eTcBPEuRYg",
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJG4hpayd-j4ARVgt8lFCUmkM",
+      "plus_code": {
+        "compound_code": "QHCM+P8 SoMa, San Francisco, CA, USA",
+        "global_code": "849VQHCM+P8"
+      },
+      "rating": 4.2,
+      "reference": "ChIJG4hpayd-j4ARVgt8lFCUmkM",
+      "types": [
+        "cafe",
+        "bakery",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 126
+    },
+    "Borderlands Cafe 870 Valencia St": {
+      "formatted_address": "870 Valencia St, San Francisco, CA 94110, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7589628,
+          "lng": -122.4215326
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.76033077989271,
+            "lng": -122.4200880701072
+          },
+          "southwest": {
+            "lat": 37.75763112010727,
+            "lng": -122.4227877298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "6d38be28554e6a41014e03878d37fd711f0b5225",
+      "name": "Borderlands Cafe",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2592,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114033463017612485434/photos\">NYLY JOJO</a>"
+          ],
+          "photo_reference": "CmRaAAAAvIdgEZ_oidgvowaFDfGOkrOPJaGNvaNi1q_RrrMYPb7HLnkOAIt4n_Muf76HooZcYUOUQYYXChOJZ0pDEvo1A6uM7QwTUG55odASx5YbOl-TsZ-hY3f_wXhltApfsbQMEhAFWS7t0LCvGoxP64oQ0s2tGhSgYWvxnCr1s3V4L4cFv-ynQbtwtA",
+          "width": 3888
+        }
+      ],
+      "place_id": "ChIJyc2Ysj1-j4ARaTIkvP6mLMU",
+      "plus_code": {
+        "compound_code": "QH5H+H9 Mission District, San Francisco, CA, USA",
+        "global_code": "849VQH5H+H9"
+      },
+      "price_level": 1,
+      "rating": 4.4,
+      "reference": "ChIJyc2Ysj1-j4ARaTIkvP6mLMU",
+      "types": [
+        "cafe",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 167
+    },
+    "Another Cafe 1191 Pine St": {
+      "formatted_address": "1191 Pine St, San Francisco, CA 94109, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.79010359999999,
+          "lng": -122.4153985
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.79154367989273,
+            "lng": -122.4140676201073
+          },
+          "southwest": {
+            "lat": 37.78884402010728,
+            "lng": -122.4167672798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "2b6e0634bee59b2443f15d7ef05129f8b9748c37",
+      "name": "Another Cafe",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114832380918896847951/photos\">Deby Lepage</a>"
+          ],
+          "photo_reference": "CmRaAAAAysUmAZ5QALkhItnWMgugOpNqIvzHUuxfybiujJo6atg1BCFx5V-kwRaLyObyO_sViqXa1vLq5ZR3HN1R7tsHJ_-POvFI6p8GyWeiYkOFyBBzHu1Q08LMizloorz34igQEhBlGKQnzY-2RXv6tScy8XXQGhS9_4a-neM2wNjW0niApu1oYyie_g",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJJ-xR_pKAhYARNAvzaJs_lt0",
+      "plus_code": {
+        "compound_code": "QHRM+2R Nob Hill, San Francisco, CA, USA",
+        "global_code": "849VQHRM+2R"
+      },
+      "price_level": 1,
+      "rating": 4.3,
+      "reference": "ChIJJ-xR_pKAhYARNAvzaJs_lt0",
+      "types": [
+        "cafe",
+        "store",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 255
+    },
+    "Fueling Station Cafe 2436 Polk St": {
+      "formatted_address": "2436 Polk St, San Francisco, CA 94109, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.799352,
+          "lng": -122.422238
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.80068782989272,
+            "lng": -122.4210047201072
+          },
+          "southwest": {
+            "lat": 37.79798817010727,
+            "lng": -122.4237043798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "1554a1b90a078d4e48460160c4ef859af401b2a8",
+      "name": "Fueling Station Cafe",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107828665068533690895/photos\">Craig Hammell</a>"
+          ],
+          "photo_reference": "CmRaAAAAZ8iGk2c3lb7mjr73AW8tdpRE26mhjk8HQOE45_kRwhV2zsRlLfK72XuksgYD5Su8lV15FAPHdhSB2hdeFG3l4uirAXYRRg7tWT5uJxwS5_Q5SiMPGAMXD_1YVlVtFtfMEhAFtn5jOIUIboDetJYE-5RzGhQvltBeRfUq0fCPBiG1FomknfOkzA",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJi6iXceiAhYARL18mA3K20FE",
+      "plus_code": {
+        "compound_code": "QHXH+P4 Russian Hill, San Francisco, CA, USA",
+        "global_code": "849VQHXH+P4"
+      },
+      "price_level": 1,
+      "rating": 4.6,
+      "reference": "ChIJi6iXceiAhYARL18mA3K20FE",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 71
+    },
+    "Joy's Place 611 Post St": {
+      "formatted_address": "611 Post St, San Francisco, CA 94109, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7877411,
+          "lng": -122.4120067
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.78914752989272,
+            "lng": -122.4106675701073
+          },
+          "southwest": {
+            "lat": 37.78644787010727,
+            "lng": -122.4133672298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "6a6d8b640d5260886eac5ce1b3aa73b3b0d0bb1c",
+      "name": "Joy's Place",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109383364523945736298/photos\">Kathleen S</a>"
+          ],
+          "photo_reference": "CmRaAAAAcE42IZgNHh8rcrktojAVmgFi-oJ-MrWJAoDcySGa0zIZWoMwYQRLrJE4aR5C3pplS6KXPIpz8rTz0vwVQfziLxe6ZC_bVYFpbkpCRAU7i8qhHDtJX_0xzbQeG6xs74oGEhCXmsXgUfhr6Z5FZ2WNVPgiGhSnomZz21gVPjwV-DwUn70qvBqcuw",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJheCrEY6AhYARxCkT8_KjDWE",
+      "plus_code": {
+        "compound_code": "QHQQ+35 Lower Nob Hill, San Francisco, CA, USA",
+        "global_code": "849VQHQQ+35"
+      },
+      "price_level": 1,
+      "rating": 4.3,
+      "reference": "ChIJheCrEY6AhYARxCkT8_KjDWE",
+      "types": [
+        "cafe",
+        "store",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 243
+    },
+    "Cafe La Taza 470 Post St": {
+      "formatted_address": "470 Post St, San Francisco, CA 94102, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7882406,
+          "lng": -122.4095519
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.78955912989272,
+            "lng": -122.4081956201073
+          },
+          "southwest": {
+            "lat": 37.78685947010727,
+            "lng": -122.4108952798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "6b791ca63681cd8ea6dfdfc2b1920ab5240aa1ad",
+      "name": "Cafe La Taza",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104096781519454808462/photos\">Marc Becker</a>"
+          ],
+          "photo_reference": "CmRaAAAApciRN05qk0cgbUU12U_TYBHHASDQvvf89aUUKQuVvaJ-bvbha3sxp9wydGZNsxvfmEzmzb1WGUHuGp7RKD4jEy7Xg38GmtlYETroNftxYfUGvnH6DLgTZ0NmSxGfEUgeEhDjVNVVYKoJ9l3DJF0Bc3n3GhRDqhKFdGvEVhlf6EK52OTl1NyoAw",
+          "width": 6000
+        }
+      ],
+      "place_id": "ChIJWaNqi46AhYARnDgYNMMK0qA",
+      "plus_code": {
+        "compound_code": "QHQR+75 Lower Nob Hill, San Francisco, CA, USA",
+        "global_code": "849VQHQR+75"
+      },
+      "price_level": 1,
+      "rating": 4.3,
+      "reference": "ChIJWaNqi46AhYARnDgYNMMK0qA",
+      "types": [
+        "cafe",
+        "store",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 239
+    },
+    "Cafe Venue 67 5th St": {
+      "formatted_address": "67 5th St, San Francisco, CA 94103, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7832021,
+          "lng": -122.4068585
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.78450637989272,
+            "lng": -122.4055649201073
+          },
+          "southwest": {
+            "lat": 37.78180672010728,
+            "lng": -122.4082645798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "860b27d086b2465e44a4d7b12ed804842501b1f3",
+      "name": "Cafe Venue",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107448895369306891490/photos\">A Google User</a>"
+          ],
+          "photo_reference": "CmRaAAAAOZ0mQ9wifBLIJm0DWSaho1bkNNMxbPXNxouSyO1sRJk-_lNv6NFkbS5Dds2AumIelz6-zDPzl8AUruyFxCQnvMdZ_nD48TTCW33hefUAtYUORbUpSeXoPdrUmYhYwJZlEhC3om4TJwcWvHzaNYr-p3ehGhSXfWXPbpgdh7zwT5f-oQrYdNGBnA",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJn8BefoaAhYARG60zsVlCVRY",
+      "plus_code": {
+        "compound_code": "QHMV+77 SoMa, San Francisco, CA, USA",
+        "global_code": "849VQHMV+77"
+      },
+      "price_level": 1,
+      "rating": 4.3,
+      "reference": "ChIJn8BefoaAhYARG60zsVlCVRY",
+      "types": [
+        "cafe",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 160
+    },
+    "Sightglass Coffee 270 7th St": {
+      "formatted_address": "270 7th St, San Francisco, CA 94103, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7770356,
+          "lng": -122.4084543
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.77843522989272,
+            "lng": -122.4070426701072
+          },
+          "southwest": {
+            "lat": 37.77573557010728,
+            "lng": -122.4097423298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "2d0b4ef360b34aceb9ed2b3ae3651a58bde7bfbe",
+      "name": "Sightglass Coffee",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3036,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114488609812433341779/photos\">Girish Mahajan</a>"
+          ],
+          "photo_reference": "CmRaAAAApQJbIAGzmL_q-Knw7BTkPE9uu8W-AGUvDD27AKM7gTIEZsBsofZqrFQ2vIGYoNMSIU6gpVlPupGwlekLc2MKgQHKbCoegso-mrudy25Vn5YbJknNUBfC5pwiqnVsPzexEhD75JuAenaEk8giUaTddmJfGhR33Z2Z8Ut7iybMr2Ghvn8X-N2jXA",
+          "width": 4048
+        }
+      ],
+      "place_id": "ChIJf-V9OIKAhYARu8bBG2S6RME",
+      "plus_code": {
+        "compound_code": "QHGR+RJ SoMa, San Francisco, CA, USA",
+        "global_code": "849VQHGR+RJ"
+      },
+      "price_level": 2,
+      "rating": 4.5,
+      "reference": "ChIJf-V9OIKAhYARu8bBG2S6RME",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 1859
+    },
+    "Ritual Coffee Roasters 432b Octavia St": {
+      "formatted_address": "432b Octavia St, San Francisco, CA 94102, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7763909,
+          "lng": -122.4241939
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.77773302989272,
+            "lng": -122.4229092701073
+          },
+          "southwest": {
+            "lat": 37.77503337010728,
+            "lng": -122.4256089298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "c151a5fb3792cd8629776b5da00e900b28d13eda",
+      "name": "Ritual Coffee Roasters",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2530,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114370521086653947348/photos\">Austin Hyland</a>"
+          ],
+          "photo_reference": "CmRaAAAAB36Fwn9x39yT0BfwebMOOeKvL3jeSEP5CBnu-RTUCNdGCMytlqE1wzfLWz2y3ixeAXdy5uzp8P3xmKSmbGWXjMeVbRAziLQNAjGoVqP8cVkPGbJbuHKS1WRN5lIhZYJOEhCJn9xH00kUDS3d6yE7xkK9GhRjYlrmySkT1CE7br0a_z0Rx3R9Ig",
+          "width": 2530
+        }
+      ],
+      "place_id": "ChIJ70taCKKAhYARDqB5RsSPUJc",
+      "plus_code": {
+        "compound_code": "QHGG+H8 Western Addition, San Francisco, CA, USA",
+        "global_code": "849VQHGG+H8"
+      },
+      "price_level": 2,
+      "rating": 4.5,
+      "reference": "ChIJ70taCKKAhYARDqB5RsSPUJc",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 278
+    },
+    "Maxfield's House of Caffeine 398 Dolores St": {
+      "formatted_address": "398 Dolores St, San Francisco, CA 94110, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7631654,
+          "lng": -122.4265493
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.76452137989272,
+            "lng": -122.4250954701073
+          },
+          "southwest": {
+            "lat": 37.76182172010728,
+            "lng": -122.4277951298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "4ba8ab35a23ed21a1b8f7cc3b5730a0f53b7e3aa",
+      "name": "Maxfield's House of Caffeine",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102177180826767391036/photos\">yuen zhang</a>"
+          ],
+          "photo_reference": "CmRaAAAAULkmg8p_eAXwo_tackgtLG_9f5iOAryZDmXGn08chExqev-LNXjTMTT94VJisFQkzmlCitQMR1XB3GDCaSfQXVgqD4LvCe3T9jL8D19NZoA7p5Mb6bwVXCeT8qTG_52VEhBANpgGCGEcMrAt-Dm4k-CJGhSO8hCLePTVzUTMLGJbpjc242S-Bg",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJGX6--xh-j4ARUggmRyhlmmU",
+      "plus_code": {
+        "compound_code": "QH7F+79 Mission District, San Francisco, CA, USA",
+        "global_code": "849VQH7F+79"
+      },
+      "price_level": 1,
+      "rating": 4.1,
+      "reference": "ChIJGX6--xh-j4ARUggmRyhlmmU",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 174
+    },
+    "Church Street Cafe 260 Church St": {
+      "formatted_address": "2111 Church St NW, Albuquerque, NM 87104, USA",
+      "geometry": {
+        "location": {
+          "lat": 35.0972179,
+          "lng": -106.6698439
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 35.09851712989272,
+            "lng": -106.6684947201073
+          },
+          "southwest": {
+            "lat": 35.09581747010728,
+            "lng": -106.6711943798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "a5f6d7c25f9faf4eb18a5bdf12e08479ac4bbd9c",
+      "name": "Church Street Cafe",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2988,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114953191719587645949/photos\">Stephen Brewster</a>"
+          ],
+          "photo_reference": "CmRZAAAAk0LEOC5ZItDQ4LpUxx7FvL2CN9EFLGxM4GhingN7uzzMqrkdEVmlqT9ClBnuOkzXDiNLGgklzPgECEge5C9RwQB5XCzmxAS9rM05OIyeXIiSkSseLB6841HPoMe3Qy2EEhDMiJfvVzh1eRdiWKe_eWHzGhTWQ8y6fQghqWpAMO0FiKFrfHT-Qw",
+          "width": 5312
+        }
+      ],
+      "place_id": "ChIJL9rNU9MMIocROSMidbVyvO4",
+      "plus_code": {
+        "compound_code": "38WJ+V3 Albuquerque, New Mexico, USA",
+        "global_code": "857M38WJ+V3"
+      },
+      "price_level": 2,
+      "rating": 4.3,
+      "reference": "ChIJL9rNU9MMIocROSMidbVyvO4",
+      "types": [
+        "cafe",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 1145
+    },
+    "Stanza Coffee 3126 16th St": {
+      "formatted_address": "3126 16th St, San Francisco, CA 94103, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7649988,
+          "lng": -122.4226528
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.76628767989272,
+            "lng": -122.4212962701073
+          },
+          "southwest": {
+            "lat": 37.76358802010728,
+            "lng": -122.4239959298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "6b6ac292cd080685bac53785ed3625df2aec0144",
+      "name": "Stanza Coffee",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2448,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/115471921667195240491/photos\">Andrew Soliman</a>"
+          ],
+          "photo_reference": "CmRaAAAAXszFwyOQ0jwnggaLVbiBgyHWJPwrm7qPCsyw1QhbE6iz28ouU2hqOYcZ7aW2sP0MX7ZrfPd8wIFvcmRDcuvGq0Mi0TXHzA7r9nh45UEVguqnEu6h4_5exbftFMIIu93nEhAmx_0PfLHI8G0tFmBasoshGhSYkwrWtcndrFUpcWR5dc0t-f2YsA",
+          "width": 3264
+        }
+      ],
+      "place_id": "ChIJjX_6QSJ-j4ARUKV1G9o5QxM",
+      "plus_code": {
+        "compound_code": "QH7G+XW Mission District, San Francisco, CA, USA",
+        "global_code": "849VQH7G+XW"
+      },
+      "price_level": 1,
+      "rating": 4.3,
+      "reference": "ChIJjX_6QSJ-j4ARUKV1G9o5QxM",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 175
+    },
+    "Café La Bohème 3318 24th St": {
+      "formatted_address": "3318 24th St, San Francisco, CA 94110, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.75232829999999,
+          "lng": -122.418971
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.75362157989272,
+            "lng": -122.4176167201073
+          },
+          "southwest": {
+            "lat": 37.75092192010727,
+            "lng": -122.4203163798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+      "id": "97ef9a9f9713fee88f230b4c15263bc276dbaf8b",
+      "name": "Café La Bohème",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2988,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101706123762944190136/photos\">clara woodcock</a>"
+          ],
+          "photo_reference": "CmRZAAAA1wQTSlTsAdcRbUCxoBnE59IqO7LMte9FAzErRQRWUChLv9TsRy0yv37IOiFgYB8QVw1cUl2yW7IRxFJ1yfjqIavJOzQ3pP-z7zQWmCFB0iuPPTAZp7ut1oDkiBU6VigLEhCW2tX0ZXT61BcVhO4LwgWuGhRNGXdopnG5ZhS9aI_0eRz-kae9ig",
+          "width": 5312
+        }
+      ],
+      "place_id": "ChIJZ6fXsEB-j4ARgzVvdjgUcJQ",
+      "plus_code": {
+        "compound_code": "QH2J+WC Mission District, San Francisco, CA, USA",
+        "global_code": "849VQH2J+WC"
+      },
+      "price_level": 1,
+      "rating": 4.2,
+      "reference": "ChIJZ6fXsEB-j4ARgzVvdjgUcJQ",
+      "types": [
+        "cafe",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 197
+    },
+    "leCupboard Café 1298 Church St": {
+      "formatted_address": "1298 Church St, San Francisco, CA 94114, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7502093,
+          "lng": -122.4275421
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.75156577989272,
+            "lng": -122.4260803701073
+          },
+          "southwest": {
+            "lat": 37.74886612010728,
+            "lng": -122.4287800298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+      "id": "e39861060a702c8935632472f27547a79142753f",
+      "name": "leCupboard Café",
+      "permanently_closed": true,
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105514064902804213259/photos\">Peter Liddicoat</a>"
+          ],
+          "photo_reference": "CmRaAAAAX0k8Iof_LTDnhjUUBsIj-ZE4UYzyMcB9IRfYMLViA9LroRvVAJAAbu2OewFDK154ldDYenxKTAUUcTlZCBe0A9WKWRF9n4Pe8Wor9ezgJooVKZlPun2LV0QJfBYpTEyOEhDGgd1CiyqoJe8bKFPWKKFBGhRupOS0YmXcoPOJ4L4kpd5qNaepjA",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJ3VJvKxx-j4ARzIy9BBCNlds",
+      "plus_code": {
+        "compound_code": "QH2C+3X Noe Valley, San Francisco, CA, USA",
+        "global_code": "849VQH2C+3X"
+      },
+      "price_level": 1,
+      "rating": 4.6,
+      "reference": "ChIJ3VJvKxx-j4ARzIy9BBCNlds",
+      "types": [
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 43
+    },
+    "Robin's Café 3153 17th St": {
+      "formatted_address": "1332, 3153 17th St, San Francisco, CA 94110, United States",
+      "geometry": {
+        "location": {
+          "lat": 37.7634167,
+          "lng": -122.4164485
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.76487122989271,
+            "lng": -122.4151106701073
+          },
+          "southwest": {
+            "lat": 37.76217157010727,
+            "lng": -122.4178103298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "e46274a15260ca2fba73321dd79bd0d5a76021ea",
+      "name": "Robin's Café",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 720,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107878733545421119984/photos\">Robin&#39;s Cafe</a>"
+          ],
+          "photo_reference": "CmRaAAAAMc1J47_EK9CixKNdGHhD9Ru6xkjkrMruSJmBGlsuq77JU1caYF7IKraGlvzEsaeLr7hIAwDUMWvO16svZ3arRwMKKzd28GC6kXGp01VWNQYaict7HeNgB1KwSDez9QTTEhDkSZdvj-avMnSYejj-TmbkGhRFd_6KnTsmSPS87ba7FhhFlyXMdQ",
+          "width": 960
+        }
+      ],
+      "place_id": "ChIJX-7oMjt-j4ARu_dWWMKlHdA",
+      "plus_code": {
+        "compound_code": "QH7M+9C Mission District, San Francisco, CA, USA",
+        "global_code": "849VQH7M+9C"
+      },
+      "price_level": 1,
+      "rating": 4.5,
+      "reference": "ChIJX-7oMjt-j4ARu_dWWMKlHdA",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 68
+    },
+    "Haus Coffee 3086 24th St": {
+      "formatted_address": "3086 24th St, San Francisco, CA 94110, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.752635,
+          "lng": -122.4137286
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.75393277989272,
+            "lng": -122.4123736701073
+          },
+          "southwest": {
+            "lat": 37.75123312010727,
+            "lng": -122.4150733298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "6917a42a674d52ecd0add7874a3a62cfee8d0d2f",
+      "name": "Haus Coffee",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2988,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109327911466557151256/photos\">Jesse Simmons</a>"
+          ],
+          "photo_reference": "CmRaAAAAX1C2l4-DFWw6DsO66h0DwuqXVLjBV3O_gXjggqOi-RouS3By1L3rjRwBqss0qNHcs6YODv0smypp_q3oH_kvC3kvjv5xmiL0kFOKaC92MFA4UcSLFkf_6KLAG7i-aTxUEhDRoXR8GfmjFK9pdnnoexbEGhQ0s1PXoucfIhoYzfvKcogi-g8bdA",
+          "width": 5312
+        }
+      ],
+      "place_id": "ChIJJZKJzEd-j4ARnnFluLjIt0M",
+      "plus_code": {
+        "compound_code": "QH3P+3G Mission District, San Francisco, CA, USA",
+        "global_code": "849VQH3P+3G"
+      },
+      "price_level": 1,
+      "rating": 4.3,
+      "reference": "ChIJJZKJzEd-j4ARnnFluLjIt0M",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 297
+    },
+    "Pebbles Cafe 2852 Diamond St": {
+      "formatted_address": "2852 Diamond St, San Francisco, CA 94131, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7338568,
+          "lng": -122.4342151
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.73519692989273,
+            "lng": -122.4328050201073
+          },
+          "southwest": {
+            "lat": 37.73249727010728,
+            "lng": -122.4355046798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+      "id": "127a6b0ae0bf0d81aec72c00d5bca5866ff9d916",
+      "name": "Pebbles Cafe",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3120,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109899934597465148588/photos\">Dan Huang</a>"
+          ],
+          "photo_reference": "CmRaAAAAo5gnF2Z9LGvnO-idUmIraCkKXuLW_DJktBlnK8ai4-auSl8OkUIWiryaQKOsElArAFDts89OcKC46NRQbVilzXlt4SdAZD4nw8KAdbBdctVzThj8hjxgX5ByrJT5X0G_EhAZvpAO30nVM3QSCYfpb74hGhRAEE7eO7qUyoYedaRFPAp5ADSacg",
+          "width": 4160
+        }
+      ],
+      "place_id": "ChIJadslXGN-j4ARNpSz6dNlLjs",
+      "plus_code": {
+        "compound_code": "PHM8+G8 Glen Park, San Francisco, CA, USA",
+        "global_code": "849VPHM8+G8"
+      },
+      "price_level": 2,
+      "rating": 4.7,
+      "reference": "ChIJadslXGN-j4ARNpSz6dNlLjs",
+      "types": [
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 64
+    },
+    "Bean Bag Cafe 601 Divisadero St": {
+      "formatted_address": "601 Divisadero St, San Francisco, CA 94117, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.77507749999999,
+          "lng": -122.4380005
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.77643512989272,
+            "lng": -122.4365932201073
+          },
+          "southwest": {
+            "lat": 37.77373547010728,
+            "lng": -122.4392928798928
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "f14ef2a8d3c01c588e4efb261ae03859688f8f43",
+      "name": "Bean Bag Cafe",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3464,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100135706604490047536/photos\">anthony morreale</a>"
+          ],
+          "photo_reference": "CmRaAAAAT4UPfjVafq64p2njQHi56vnWM5xuaY3JxPql4WKXEL2Xs8LAe-2Ra4Kf7p51dTKaRgCW0Y_PoOnCdKVqj5sm7PyUyPesmqwzWllpg6GbyQNdq3cG2xV9aY2PYKZ88EczEhBo8ocUAKyEum9sq4EWudgjGhReZAZOQLlqf4CGT78QtuqB-K0vfQ",
+          "width": 4618
+        }
+      ],
+      "place_id": "ChIJe29bzK-AhYARBbTdJAwZD8Q",
+      "plus_code": {
+        "compound_code": "QHG6+2Q Western Addition, San Francisco, CA, USA",
+        "global_code": "849VQHG6+2Q"
+      },
+      "price_level": 1,
+      "rating": 4.4,
+      "reference": "ChIJe29bzK-AhYARBbTdJAwZD8Q",
+      "types": [
+        "cafe",
+        "store",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 459
+    },
+    "Saltroot Café 2960 Clement St": {
+      "formatted_address": "2960 Clement St, San Francisco, CA 94121, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7818872,
+          "lng": -122.4911466
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.78316457989272,
+            "lng": -122.4897919201073
+          },
+          "southwest": {
+            "lat": 37.78046492010728,
+            "lng": -122.4924915798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "58db40a0d01c362c4ccab95c07553e65d0350968",
+      "name": "Saltroot Café",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112759190884849042354/photos\">Ben Lobenstein</a>"
+          ],
+          "photo_reference": "CmRaAAAAnS95lqGFZWviXpKDzxa_4AS2qrIIGg8RZxSi23diAwZIkf9UvEpoz2rWTEQNzCTI06OGbzxToEBwTkbXY3-ZzaYzQJ7CmcfQkpjaxcS-UNtYCF3crNs0fD7DTDYBmTKKEhCUltepNieylQ-n7vIW-0sXGhTQ_cXm4bMNC_o_3fUqJ_Xg8btGag",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJAQDUaAeHhYARpTINVU6tjEY",
+      "plus_code": {
+        "compound_code": "QGJ5+QG Richmond District, San Francisco, CA, USA",
+        "global_code": "849VQGJ5+QG"
+      },
+      "price_level": 1,
+      "rating": 4.7,
+      "reference": "ChIJAQDUaAeHhYARpTINVU6tjEY",
+      "types": [
+        "cafe",
+        "bakery",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 51
+    },
+    "Progressive Grounds 400 Cortland Ave": {
+      "formatted_address": "400 Cortland Ave, San Francisco, CA 94110, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7390371,
+          "lng": -122.4176918
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.74045597989272,
+            "lng": -122.4163308201073
+          },
+          "southwest": {
+            "lat": 37.73775632010727,
+            "lng": -122.4190304798928
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "78371620fdb28bf29955f0b6e53b8315a85b0c7d",
+      "name": "Progressive Grounds",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 533,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113899656318165032573/photos\">A Google User</a>"
+          ],
+          "photo_reference": "CmRaAAAAV-6mQDY4Idkc7fpEPFdbr8m-s15p6LAXKlH9Wv8ASbzITrU9OT-hRUYdodAma9YqnMG2h6qjM5UrHFnHdpmE4PkF7KjW2WDjmmGIjYeucln8021QXaeLHW_ea-WMDngxEhBVi2EOBheW3-UnL3mCcyXBGhQzOGmTQVvvIk7H4b_M4CY8ujnyHA",
+          "width": 960
+        }
+      ],
+      "place_id": "ChIJq1nvWVl-j4ARdnQigXKI3I4",
+      "plus_code": {
+        "compound_code": "PHQJ+JW Bernal Heights, San Francisco, CA, USA",
+        "global_code": "849VPHQJ+JW"
+      },
+      "price_level": 1,
+      "rating": 4.4,
+      "reference": "ChIJq1nvWVl-j4ARdnQigXKI3I4",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 187
+    },
+    "The Mill 736 Divisadero St": {
+      "formatted_address": "736 Divisadero St, San Francisco, CA 94117, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.776466,
+          "lng": -122.4378324
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.77780102989272,
+            "lng": -122.4365962701072
+          },
+          "southwest": {
+            "lat": 37.77510137010728,
+            "lng": -122.4392959298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "7cfa71df40122b78052b3bc48accea1c0d63b3ac",
+      "name": "The Mill",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1366,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110708249785013099893/photos\">The Mill</a>"
+          ],
+          "photo_reference": "CmRaAAAAWiUdIbz2TfCW_6h_ADOiR_m33wgrZpzndcKTitE1N2TFHabddRa5QvgJGes5WxEK9mTEKvzM9YzxfqngaSp9_tOsnakduB7XKYTSlHZwnhzjW8So1Q2AjgDwqnyAMg_FEhCAulJ1jM67vZPtZCfhP8VHGhR-mn_82HZhQy0FxzHJANA8T4cyjQ",
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJVzS3LbCAhYAR6Dw2KqlhWhg",
+      "plus_code": {
+        "compound_code": "QHG6+HV Western Addition, San Francisco, CA, USA",
+        "global_code": "849VQHG6+HV"
+      },
+      "price_level": 2,
+      "rating": 4.4,
+      "reference": "ChIJVzS3LbCAhYAR6Dw2KqlhWhg",
+      "types": [
+        "cafe",
+        "bakery",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 1020
+    },
+    "Vinyl Coffee & Wine Bar 359 Divisadero St": {
+      "formatted_address": "359 Divisadero St, San Francisco, CA 94117, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7730052,
+          "lng": -122.4375768
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.77436142989272,
+            "lng": -122.4361739201073
+          },
+          "southwest": {
+            "lat": 37.77166177010728,
+            "lng": -122.4388735798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+      "id": "59505be2d0673e3a6310b1dd914e2c9f93bfd5b7",
+      "name": "Vinyl Coffee & Wine Bar",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3036,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\">Richard Navarro</a>"
+          ],
+          "photo_reference": "CmRaAAAA_JJzTI4aziJZsBFFtzSCEvN34tylKJtrJHfKxf3KYx17c7_qs40htDVx2gfcCPl6dr_21EmDYZm8FpP4kL3ZetpaA9BTMyFirMT8PNLdNbuIP-PaYqxjq9VSPVswgMI6EhCZVGIfiuVy483mQoSFjCBLGhQh6h_rY1TMXD2_QzkYVuLZSCO2eQ",
+          "width": 4048
+        }
+      ],
+      "place_id": "ChIJY9qmGq-AhYARrULv5cUR7kw",
+      "plus_code": {
+        "compound_code": "QHF6+6X Haight-Ashbury, San Francisco, CA, USA",
+        "global_code": "849VQHF6+6X"
+      },
+      "price_level": 2,
+      "rating": 4.3,
+      "reference": "ChIJY9qmGq-AhYARrULv5cUR7kw",
+      "types": [
+        "cafe",
+        "bar",
+        "store",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 232
+    },
+    "Cafe St Jorge 3438 Mission St": {
+      "formatted_address": "3438 Mission St, San Francisco, CA 94110, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.741689,
+          "lng": -122.4227246
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.74299167989272,
+            "lng": -122.4212591201073
+          },
+          "southwest": {
+            "lat": 37.74029202010727,
+            "lng": -122.4239587798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "315bd195dffffb97bc7339720e7fcfd7a5464239",
+      "name": "Cafe St Jorge",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 612,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/114042649902259452735/photos\">Marni Sweetland</a>"
+          ],
+          "photo_reference": "CmRZAAAAJf3aFLv7VzGxqM3yCMoEIEsmDnF7mlbd0JgB8iQ4b4xlBmvLVADZrapO2NjOEEd8tzEJj-r9pnalISEx4uvkEZqai_dQtWxsdU34T5tj6hyrC-uStvksuz25T_6YzfffEhDDEEJ4p2oeohFQ36n4qYVdGhSNql8UGUyyIycCLlJJGWBhSlQ10w",
+          "width": 816
+        }
+      ],
+      "place_id": "ChIJnzy2OF1-j4ARsMoR2MFChXk",
+      "plus_code": {
+        "compound_code": "PHRG+MW Bernal Heights, San Francisco, CA, USA",
+        "global_code": "849VPHRG+MW"
+      },
+      "price_level": 2,
+      "rating": 4.6,
+      "reference": "ChIJnzy2OF1-j4ARsMoR2MFChXk",
+      "types": [
+        "cafe",
+        "bakery",
+        "store",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 352
+    },
+    "Sightglass Coffee 3014 20th St": {
+      "formatted_address": "3014 20th St, San Francisco, CA 94110, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7592298,
+          "lng": -122.4113185
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.76052192989273,
+            "lng": -122.4099625201073
+          },
+          "southwest": {
+            "lat": 37.75782227010728,
+            "lng": -122.4126621798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "e6d4429cabf05e85480fc42c9fd20169077768f8",
+      "name": "Sightglass Coffee",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3036,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103704678007795356443/photos\">James Araujo</a>"
+          ],
+          "photo_reference": "CmRaAAAAm7ZNtX0sQRiqrnAj-q-9Me2JzcJS1IiJvrvNPHjUOlBV5mxjTtSuq5rENBskQVKhaB1QCRelgLYYkDtq2HyxLTwnxGhy5R0-VZKRQ2r1s6tNZql4JoDB_QWAZJ8Ge1_AEhBX_aF5yVVC7DL_KxDRamizGhS9wsrml_hIn4rjMacWpPn6UQThNQ",
+          "width": 4048
+        }
+      ],
+      "place_id": "ChIJH3-XPzd-j4ARxc5pUq9X8CU",
+      "plus_code": {
+        "compound_code": "QH5Q+MF Mission District, San Francisco, CA, USA",
+        "global_code": "849VQH5Q+MF"
+      },
+      "price_level": 2,
+      "rating": 4.6,
+      "reference": "ChIJH3-XPzd-j4ARxc5pUq9X8CU",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 364
+    },
+    "Oakside Cafe 1195 Oak St": {
+      "formatted_address": "1195 Oak St, San Francisco, CA 94117, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7728351,
+          "lng": -122.4389135
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.77424887989272,
+            "lng": -122.4375767701073
+          },
+          "southwest": {
+            "lat": 37.77154922010727,
+            "lng": -122.4402764298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "262c614b129118ca65e165e8aea86e5bfce1c3cb",
+      "name": "Oakside Cafe",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/106759678830990867266/photos\">林敬堯</a>"
+          ],
+          "photo_reference": "CmRaAAAAHr6spTUaL7dWWAdvHDYwKsLC6XqgVSGGmuGewI733om6QcCt0DxbgnLqzGBqFfyc6STYRsAnwkzq7Ulsb_IOgQE4t-6iY4SDfTgufFGAecg7pvj8UJmEjuUWQBeCSUw9EhCVV2cHYYxYVge5ArpCXogfGhTZdcHVj9RTmNXa56LzgYgmLhgBtw",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJ-ySZ8K6AhYAR9sWmiTRkxTo",
+      "plus_code": {
+        "compound_code": "QHF6+4C Haight-Ashbury, San Francisco, CA, USA",
+        "global_code": "849VQHF6+4C"
+      },
+      "price_level": 1,
+      "rating": 4.4,
+      "reference": "ChIJ-ySZ8K6AhYAR9sWmiTRkxTo",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 96
+    },
+    "de Young Café 50 Hagiwara Tea Garden Dr": {
+      "formatted_address": "50 Hagiwara Tea Garden Dr, San Francisco, CA 94118, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.770955,
+          "lng": -122.4688688
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.77216832989272,
+            "lng": -122.4674469701073
+          },
+          "southwest": {
+            "lat": 37.76946867010728,
+            "lng": -122.4701466298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "85b425f4a4d4567411a7232cbdbf1d40928381ec",
+      "name": "de Young Café",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3264,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101311671400237520236/photos\">Maria Ngo</a>"
+          ],
+          "photo_reference": "CmRaAAAA0g1NPxPak1OKE71SXId_xE_32zkSfRcbQ9F093EIHvwoYiWsOP2dd7iyuuCUCPWzG76kY8MuW6OUkibivRuyaGP8fPA8CREl_QGWzgCV2WkUUYMrcWVx5eDlVouvu35JEhC5i3kgNL63rPpcHLEzAbGYGhScsWjQXbkHRsL-SEZQyTWtpqnUZg",
+          "width": 1836
+        }
+      ],
+      "place_id": "ChIJI7NivpmAhYARYpThv2G8f9c",
+      "plus_code": {
+        "compound_code": "QGCJ+9F Golden Gate Park, San Francisco, CA, USA",
+        "global_code": "849VQGCJ+9F"
+      },
+      "rating": 3.8,
+      "reference": "ChIJI7NivpmAhYARYpThv2G8f9c",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 54
+    },
+    "Laundré 2401 Mission St": {
+      "formatted_address": "2401 Mission St, San Francisco, CA 94110, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7585313,
+          "lng": -122.4188224
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.75991662989272,
+            "lng": -122.4175209701072
+          },
+          "southwest": {
+            "lat": 37.75721697010728,
+            "lng": -122.4202206298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+      "id": "839bbd176aee01a86c6956e975d6096a287a5c90",
+      "name": "Laundré",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1706,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104279030846553274435/photos\">Laundré</a>"
+          ],
+          "photo_reference": "CmRaAAAAzetZHXX8ZLrbtvkg3L-U4RvQWIDF_6JnV9Bah5Wz4Na5tuRXzOz70LRVBQ0B9ziHwWi0Z3KKVVE1Z7erAsjHpZeGvau96-cmfly1guq7ocNv9r6yxVtapcM0Y7-YSX4MEhDkAARlOw4m8NQlYl6bFaywGhTxUY2B6kcCVlexOJS5VKDQ2ygfiw",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJ-eDsBTx-j4ARY0MKy74YO6M",
+      "plus_code": {
+        "compound_code": "QH5J+CF Mission District, San Francisco, CA, USA",
+        "global_code": "849VQH5J+CF"
+      },
+      "price_level": 1,
+      "rating": 4.5,
+      "reference": "ChIJ-eDsBTx-j4ARY0MKy74YO6M",
+      "types": [
+        "laundry",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 92
+    },
+    "Arlequin Cafe & Food To Go 384 Hayes St": {
+      "formatted_address": "384 Hayes St, San Francisco, CA 94102, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7771087,
+          "lng": -122.4226547
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.77836772989272,
+            "lng": -122.4212878701073
+          },
+          "southwest": {
+            "lat": 37.77566807010728,
+            "lng": -122.4239875298928
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "7b274041324bf42cc71aa3fec2002ed338dccd7e",
+      "name": "Arlequin Cafe & Food To Go",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 681,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107402671387740480485/photos\">Arlequin Cafe &amp; Food-To-Go</a>"
+          ],
+          "photo_reference": "CmRaAAAABqc5Q5Bxq7JvA2U1QQHA4k0c2_9-7qJxoIBVdJji4w7zBc7d76kQxGz1X_-s5CZOT5ytzLL2vYx-BQZbY35v7OXGbiShx2BBMdO4KH6esQmk4EkiCA1noc5Wdp6apggSEhChXv9KB6VcyPCfSo30fibHGhTxS_QyPEKJpUNqytoETSoJCW86Sw",
+          "width": 1024
+        }
+      ],
+      "place_id": "ChIJr7uwv5iAhYAR4OZfo28tCME",
+      "plus_code": {
+        "compound_code": "QHGG+RW Western Addition, San Francisco, CA, USA",
+        "global_code": "849VQHGG+RW"
+      },
+      "price_level": 2,
+      "rating": 4.4,
+      "reference": "ChIJr7uwv5iAhYAR4OZfo28tCME",
+      "types": [
+        "cafe",
+        "bar",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 435
+    },
+    "Beanstalk Cafe 4555 California St": {
+      "formatted_address": "4555 California St, San Francisco, CA 94118, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7844957,
+          "lng": -122.4665401
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.78596832989273,
+            "lng": -122.4652085201073
+          },
+          "southwest": {
+            "lat": 37.78326867010728,
+            "lng": -122.4679081798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "b2f0e21082d18dedbe5d5bca8dd202117aa717b8",
+      "name": "Beanstalk Cafe",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100187648268951523767/photos\">Aubrey T</a>"
+          ],
+          "photo_reference": "CmRaAAAARw3oRTmgKsssiC0ZopwwXf2ymaRxxenOIMGURsBycaIB3ia9PI__P7vx1L2LNtqQ20IfAzyBd9Ln3Eq9xA2zC38xZTZRu7k3Zly_LGAV_cP66erQRHEY1DQjbmN2gO-KEhD1IYFCSZznQgH7lRTokrfAGhTsdPW8ueGuyOGPOhfKW7CBBuTf-Q",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJXYdiHT2HhYARHK70h6vSQ7U",
+      "plus_code": {
+        "compound_code": "QGMM+Q9 Richmond District, San Francisco, CA, USA",
+        "global_code": "849VQGMM+Q9"
+      },
+      "rating": 4.5,
+      "reference": "ChIJXYdiHT2HhYARHK70h6vSQ7U",
+      "types": [
+        "cafe",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 43
+    },
+    "Matching Half Cafe 1799 McAllister St": {
+      "formatted_address": "1799 McAllister St, San Francisco, CA 94115, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7772762,
+          "lng": -122.4414404
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.77863312989272,
+            "lng": -122.4401992201072
+          },
+          "southwest": {
+            "lat": 37.77593347010728,
+            "lng": -122.4428988798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "f368dc027cd46372275cbd63dda680609c925f0c",
+      "name": "Matching Half",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105360278337596630880/photos\">Dr Nic Williams</a>"
+          ],
+          "photo_reference": "CmRaAAAAulvkdNdRUKBwrVwESprrqZ7muy9btYNduGpSoPtquICe0U_tc7xVJN7Ru7Ah7e6BLH6-awndIb0oVWORHqK3HWbpwLeLSCop0KToBAygiPnZnLGe6XevKuhRq9EJWmCtEhBgui0RoHwkxe8gn4ZlWLHiGhRioGYUsNoyt8doSNmHX-Up95KygQ",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJraGpLLKAhYARsWqJ-sBBQhM",
+      "plus_code": {
+        "compound_code": "QHG5+WC Western Addition, San Francisco, CA, USA",
+        "global_code": "849VQHG5+WC"
+      },
+      "price_level": 1,
+      "rating": 4.5,
+      "reference": "ChIJraGpLLKAhYARsWqJ-sBBQhM",
+      "types": [
+        "cafe",
+        "bar",
+        "store",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 211
+    },
+    "Mercury Cafe 201 Octavia St": {
+      "formatted_address": "201 Octavia St, San Francisco, CA 94102, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.773967,
+          "lng": -122.4242333
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.77532302989272,
+            "lng": -122.4228368701073
+          },
+          "southwest": {
+            "lat": 37.77262337010728,
+            "lng": -122.4255365298928
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "93cae3c7da37a26347facfe8ed815e41249ababa",
+      "name": "Mercury Cafe",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1204,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100107103622774618115/photos\">Paolo Sabatinelli</a>"
+          ],
+          "photo_reference": "CmRaAAAAeRBy1jsH9n53ppCZOjVcEsBNgOuz1fa_Pgo8NOThRgK05jvZi27a4lORNkTXMWhsn1inBNQCKUbLQsRA2ynw9YHa6G9Bu5S7zXQqzE5sY4rJ5Ya3udUPO6mWREDJFEEuEhCXzO980_bu3XPZ4YliJ7XBGhSskNYO4gZB_uhi2_jaKBd3CQBEuw",
+          "width": 2436
+        }
+      ],
+      "place_id": "ChIJZ_Ak36GAhYARaz2iDa2Cygs",
+      "plus_code": {
+        "compound_code": "QHFG+H8 Hayes Valley, San Francisco, CA, USA",
+        "global_code": "849VQHFG+H8"
+      },
+      "price_level": 2,
+      "rating": 4.4,
+      "reference": "ChIJZ_Ak36GAhYARaz2iDa2Cygs",
+      "types": [
+        "cafe",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 156
+    },
+    "Union Street Coffee Roastery 2191 Union St": {
+      "formatted_address": "2191 Union St, San Francisco, CA 94123, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7970042,
+          "lng": -122.4353226
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.79841062989271,
+            "lng": -122.4339840701073
+          },
+          "southwest": {
+            "lat": 37.79571097010727,
+            "lng": -122.4366837298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "132e771a709a60405d0965b5bfd544ab8073ff80",
+      "name": "Union Street Coffee Roastery",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1200,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/116233184418314935011/photos\">Chandana Hosamane</a>"
+          ],
+          "photo_reference": "CmRaAAAA7bjldalTmFMmu0NVO7wphyVVitzqGUztAgiri3_Fzs27AugdedjYK1JmuMnLcEm_IrUKKIFewfatrSgQy76oUCIt9cTOmFuDEKSskXfUgixu5rK21dxc8q-u7Hqv-kffEhCLBN5_frfPOFWF4yjbVZcrGhRkdUU2tvWTSadOg1Jj0RZxAqvH5A",
+          "width": 1600
+        }
+      ],
+      "place_id": "ChIJ_2mTn9qAhYAR6Upoqz_I5Q0",
+      "plus_code": {
+        "compound_code": "QHW7+RV Cow Hollow, San Francisco, CA, USA",
+        "global_code": "849VQHW7+RV"
+      },
+      "price_level": 2,
+      "rating": 4.1,
+      "reference": "ChIJ_2mTn9qAhYAR6Upoqz_I5Q0",
+      "types": [
+        "cafe",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 117
+    },
+    "The Grind 783 Haight St": {
+      "formatted_address": "783 Haight St, San Francisco, CA 94117, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7713109,
+          "lng": -122.4351783
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.77276077989272,
+            "lng": -122.4338482201073
+          },
+          "southwest": {
+            "lat": 37.77006112010728,
+            "lng": -122.4365478798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+      "id": "5d91d1a2b7753d13286df8523fa76c1a40691d12",
+      "name": "The Grind",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113194172467214453918/photos\">John Minervini</a>"
+          ],
+          "photo_reference": "CmRaAAAA1G9YhrjFLYOErE51RO2TdHYNjJA0K-mKRQKp_uiLX-Czq3AgGZCwkNSElUN8SR3VOBkm2iNCR9gefQeqyJfdp8HqY3hbQUsATh7viF_aAiBuXMG4x-EhDJ9Pg-48t5zzEhCP0KAflOHGvvLyx2jigfQGGhQvYsR1IWNuiIpqD4LeAw2fxNEKsQ",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJVZ6oHKaAhYAR7nvlwWEZajE",
+      "plus_code": {
+        "compound_code": "QHC7+GW Lower Haight, San Francisco, CA, USA",
+        "global_code": "849VQHC7+GW"
+      },
+      "price_level": 1,
+      "rating": 4.3,
+      "reference": "ChIJVZ6oHKaAhYAR7nvlwWEZajE",
+      "types": [
+        "cafe",
+        "meal_takeaway",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 316
+    },
+    "Royal Ground Coffee 2216 Polk St": {
+      "formatted_address": "2216 Polk St, San Francisco, CA 94109, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7971437,
+          "lng": -122.4218583
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.79848392989272,
+            "lng": -122.4205898201073
+          },
+          "southwest": {
+            "lat": 37.79578427010728,
+            "lng": -122.4232894798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "3a8d6fd32bbc3218cb811b5af167c74a5050a282",
+      "name": "Royal Ground Coffee",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2269,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109539258193900380228/photos\">A Google User</a>"
+          ],
+          "photo_reference": "CmRaAAAAtve7T-S8DlgHdMcNB9vxpZw4MwvWcmNP9RziQWtolw1q_kNl1CxHYi7v7mbf8Rp-2sOpGbmOHqPuXGyrwJ4lVVWKShPMwiZAKlzUS78JPpDx7KHV8b5vn3dBs1RbthyuEhAyW6Bgt7Aaa6G3xV69DDZhGhQjsEb6A6t20eNW2QC7jovuemUBsQ",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJDbUarumAhYAR9azGX34nQzc",
+      "plus_code": {
+        "compound_code": "QHWH+V7 Russian Hill, San Francisco, CA, USA",
+        "global_code": "849VQHWH+V7"
+      },
+      "price_level": 1,
+      "rating": 4.4,
+      "reference": "ChIJDbUarumAhYAR9azGX34nQzc",
+      "types": [
+        "cafe",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 89
+    },
+    "Hollow 1435 Irving St": {
+      "formatted_address": "1435 Irving St, San Francisco, CA 94122, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.76355119999999,
+          "lng": -122.4734028
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.76499482989272,
+            "lng": -122.4720584701072
+          },
+          "southwest": {
+            "lat": 37.76229517010727,
+            "lng": -122.4747581298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "1110375b5e95e90d6b73711d741cccc38663f03f",
+      "name": "Hollow",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3036,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100692639939672208996/photos\">Katie Rowland</a>"
+          ],
+          "photo_reference": "CmRaAAAABEdM2ccuris83J-8wPR0vQLOlJp_F9OKxA71pc61a_WLHdPxk2_prjwtXRkkPAdUFj2GmaIGFJncOEvWv_dOHDgm3ZSy924Nqp27fIscUiJ-EVihm-V_FgR8QgWMUCdPEhBzFVK8NQKmrq8U-ZFUVZjnGhQjydGvDkKrIJLa7rUgxQqgsSkJ8A",
+          "width": 4048
+        }
+      ],
+      "place_id": "ChIJ5dpeQGaHhYARvGu-dP6AxwM",
+      "plus_code": {
+        "compound_code": "QG7G+CJ Sunset District, San Francisco, CA, USA",
+        "global_code": "849VQG7G+CJ"
+      },
+      "price_level": 1,
+      "rating": 4.6,
+      "reference": "ChIJ5dpeQGaHhYARvGu-dP6AxwM",
+      "types": [
+        "cafe",
+        "bakery",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 168
+    },
+    "Snowbird Coffee 1352 9th Ave A": {
+      "formatted_address": "1352 9th Ave A, San Francisco, CA 94122, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7630714,
+          "lng": -122.4661192
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.76441772989272,
+            "lng": -122.4648394201073
+          },
+          "southwest": {
+            "lat": 37.76171807010728,
+            "lng": -122.4675390798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "5c17c12e48f5efbde4ced722eaaeafd82b689640",
+      "name": "Snowbird Coffee",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109161943830538807614/photos\">Mark Phagan</a>"
+          ],
+          "photo_reference": "CmRaAAAA6T3yE0LuvRFKM5G7pCB5AujlSd7b7w94VEBvqNAuIOUcMpSaXAZZR1xtiZIUuvHqWhaKN3EfjBMknPFIpYDIhc-94K6jNKlWPRw44KrVqtrJODPBXafJcmGTHnivU8PUEhDuNhoZnzbdF2sx7FG8KToLGhQYN954H-VIctBvZXVgmIfH4OmoKw",
+          "width": 1920
+        }
+      ],
+      "place_id": "ChIJIztOzV2HhYAR0wpB5VfTGb0",
+      "plus_code": {
+        "compound_code": "QG7M+6H Sunset District, San Francisco, CA, USA",
+        "global_code": "849VQG7M+6H"
+      },
+      "price_level": 1,
+      "rating": 4.4,
+      "reference": "ChIJIztOzV2HhYAR0wpB5VfTGb0",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 284
+    },
+    "Cup Cafe 6 Monterey Blvd": {
+      "formatted_address": "6 Monterey Blvd, San Francisco, CA 94131, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.732519,
+          "lng": -122.4347697
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.73382897989272,
+            "lng": -122.4333920701073
+          },
+          "southwest": {
+            "lat": 37.73112932010727,
+            "lng": -122.4360917298928
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "de7ee607c77f2a398c8adff92c773d10c1ec077a",
+      "name": "Cup Cafe",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 3456,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100392313867375585519/photos\">Eric Nguyen</a>"
+          ],
+          "photo_reference": "CmRaAAAA-rJuTj-mP8tZbXwSogQZo1dML9bZsoioSPksDTqg6Zxn-N0Rmfolt0sGL2ArTHbEqxMpp8pckUpHh01ZHzbsP9w8JDdAEQ1woVMLPulntuV4GFhuYblNTmmKzaMhbJW2EhAeXgm6tEmM_67wHdiN91OHGhQbyAzDZhqdWu9Iw1tG7ImkdCHGUg",
+          "width": 4608
+        }
+      ],
+      "place_id": "ChIJy5S4MGN-j4ARpJbMTWMAdis",
+      "plus_code": {
+        "compound_code": "PHM8+23 Outer Mission, San Francisco, CA, USA",
+        "global_code": "849VPHM8+23"
+      },
+      "price_level": 1,
+      "rating": 4.8,
+      "reference": "ChIJy5S4MGN-j4ARpJbMTWMAdis",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 105
+    },
+    "Garden House Cafe 3117 Clement St": {
+      "formatted_address": "3117 Clement St, San Francisco, CA 94121, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7814847,
+          "lng": -122.4927107
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.78292707989272,
+            "lng": -122.4913666201072
+          },
+          "southwest": {
+            "lat": 37.78022742010727,
+            "lng": -122.4940662798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "3670c02283a5d2150d1f5b9db23dc724dd6a3b9a",
+      "name": "Garden House Cafe",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/107138379601510409299/photos\">Mahlen Morris</a>"
+          ],
+          "photo_reference": "CmRaAAAARYjed1rAzGaLKlS4Zp9FRB02dWJ71CUFvIJ_D5i6sETbRfnZPNZgtZfnY1B-dW2ZJ_bERLMDZE0NGDPfAuwQLVJGssXCPEkBSlpqs_nM7Y-ntliUFM6h5QQ8OHRln8QSEhDnyXujDaCzA7V3pxyts93gGhTTULNZRhWK7f2fB4fJO52Q71waew",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJV_Av3amHhYAR7d5C1Qb_QPw",
+      "plus_code": {
+        "compound_code": "QGJ4+HW Richmond District, San Francisco, CA, USA",
+        "global_code": "849VQGJ4+HW"
+      },
+      "price_level": 1,
+      "rating": 4.4,
+      "reference": "ChIJV_Av3amHhYAR7d5C1Qb_QPw",
+      "types": [
+        "cafe",
+        "store",
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 176
+    },
+    "Red Door Coffee 111 Minna St": {
+      "formatted_address": "111 Minna St, San Francisco, CA 94105, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7874232,
+          "lng": -122.3992509
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.78881902989272,
+            "lng": -122.3979618701073
+          },
+          "southwest": {
+            "lat": 37.78611937010727,
+            "lng": -122.4006615298928
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "896a768ad6a2180a201930442b732f87b594761e",
+      "name": "Red Door Coffee",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100392313867375585519/photos\">Eric Nguyen</a>"
+          ],
+          "photo_reference": "CmRaAAAAtMymlWQSPXkJy8XHMQu8CfplgfuoE7kc3T607OFyFgk_Bry4htqxhofLwson5FETg-b2VurfHI5y9YSfKWdvaXWGq_yEn99hXUXp2k_aW8wewrMDfY-Sqbo7HuAWX4NWEhD2Ghn39Up-CdRqoWRsUmk5GhSTXuTtM0kMGdqOqw9gxqOnhCd98g",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJo4KWMX2AhYARWaFbtenR8Hk",
+      "plus_code": {
+        "compound_code": "QJP2+X7 SoMa, San Francisco, CA, USA",
+        "global_code": "849VQJP2+X7"
+      },
+      "price_level": 2,
+      "rating": 4.3,
+      "reference": "ChIJo4KWMX2AhYARWaFbtenR8Hk",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 159
+    },
+    "Cafe International 508 Haight St": {
+      "formatted_address": "508 Haight St, San Francisco, CA 94117, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.772197,
+          "lng": -122.430674
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.77349967989272,
+            "lng": -122.4293156701073
+          },
+          "southwest": {
+            "lat": 37.77080002010727,
+            "lng": -122.4320153298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "79c8e79740f19e07c2d751a89548a28723cd210d",
+      "name": "Cafe International",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1536,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101934208280104768301/photos\">A Google User</a>"
+          ],
+          "photo_reference": "CmRaAAAAyQAqTEhWt8NOnh2dXZf55zWDAEf4mtTqsm7i69JuSDXm4-jj9Vfootw_fjMTDrFRu_7mRJSY5XiwS3cxWKCS-51_gcMu-rlNDI_KCMjPmLto6LM0DTPrG6yaivpL7pJEEhAk52YRnXU9NO0S8mXKOtaWGhQho8FcgQiR4_RV7wQfHg9lc7kaJg",
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJ-T9Zx6aAhYAR5HAILvUzsaA",
+      "plus_code": {
+        "compound_code": "QHC9+VP Lower Haight, San Francisco, CA, USA",
+        "global_code": "849VQHC9+VP"
+      },
+      "price_level": 1,
+      "rating": 4.5,
+      "reference": "ChIJ-T9Zx6aAhYAR5HAILvUzsaA",
+      "types": [
+        "cafe",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 236
+    },
+    "Contraband Coffee Bar 260 5th St": {
+      "formatted_address": "260 5th St, San Francisco, CA 94103, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7806685,
+          "lng": -122.4041914
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.78207632989272,
+            "lng": -122.4027685701073
+          },
+          "southwest": {
+            "lat": 37.77937667010728,
+            "lng": -122.4054682298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "569091789784001673cd98915470b9834fb41708",
+      "name": "Contraband Coffee Bar",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3036,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110217198489759189358/photos\">Michael Pak</a>"
+          ],
+          "photo_reference": "CmRaAAAAxURdfTHuu5dBp3w3P8Q-Z16R05Y6ZHJ1lInyP0P-xFI6ShXWL7SKOPsEP-ODp3Op-kasTMf7yPmYF2vtiKjhOlSWu0oKQM4l19PhcmAzsJW6mJW3qER5d8vFRFQr8OyAEhDKUXhw_RNnG-atdTIj6ZWfGhQD-dVoGpL9soqlNBVSS2LokNHg2A",
+          "width": 4048
+        }
+      ],
+      "place_id": "ChIJ2aur2ICAhYAR2UKNl6ZcgsQ",
+      "plus_code": {
+        "compound_code": "QHJW+78 SoMa, San Francisco, CA, USA",
+        "global_code": "849VQHJW+78"
+      },
+      "price_level": 2,
+      "rating": 4.5,
+      "reference": "ChIJ2aur2ICAhYAR2UKNl6ZcgsQ",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 202
+    },
+    "Coffee Bar 1890 Bryant St": {
+      "formatted_address": "1890 Bryant St, San Francisco, CA 94110, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7631121,
+          "lng": -122.4108723
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.76440217989272,
+            "lng": -122.4096095201073
+          },
+          "southwest": {
+            "lat": 37.76170252010728,
+            "lng": -122.4123091798927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "58b5e3b90ba23b870426c07d2148b91566b2df60",
+      "name": "Coffee Bar",
+      "photos": [
+        {
+          "height": 1433,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113882590828361693152/photos\">Coffee Bar</a>"
+          ],
+          "photo_reference": "CmRaAAAA6CIiUVG1ZSmmPrj7KjvgVME0j-o0LwZJp9oOs7nFiBqvDIpmQ0UcDa-nlBeV8KT3-E3xXltbqeFD8sLkvuNzNy82wIYFcOnhDMhndgu3dvFu6jq3rNYwY_rrAGH0qvoVEhAQ0g6kQMG20nrIXGYxi2bJGhRObcHHXnt3LsHAdU-DP1uMze7EDQ",
+          "width": 2150
+        }
+      ],
+      "place_id": "ChIJL3J_VjB-j4ARsQnC8nlwwCk",
+      "plus_code": {
+        "compound_code": "QH7Q+6M Mission District, San Francisco, CA, USA",
+        "global_code": "849VQH7Q+6M"
+      },
+      "price_level": 2,
+      "rating": 4.3,
+      "reference": "ChIJL3J_VjB-j4ARsQnC8nlwwCk",
+      "types": [
+        "cafe",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 496
+    },
+    "Saint Frank Coffee 2340 Polk St": {
+      "formatted_address": "2340 Polk St, San Francisco, CA 94109, USA",
+      "geometry": {
+        "location": {
+          "lat": 37.7984753,
+          "lng": -122.4221879
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.79981847989273,
+            "lng": -122.4208903701073
+          },
+          "southwest": {
+            "lat": 37.79711882010729,
+            "lng": -122.4235900298927
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+      "id": "806b84e7d7da627fd4264477831066b6da53dead",
+      "name": "Saint Frank Coffee",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112443164726669474746/photos\">이긍정</a>"
+          ],
+          "photo_reference": "CmRZAAAAM7zVesMH_ToIpXwItnDX51xVQ3qNvc8aGBb1ydaMMqK7laWdj-Xj7SXzq_uZinpk6YuVn4UmA1dN5-Wg6Dts0ersDgHLjPGhc9twfgxngHXiZ1QxadDuF8K5xUUejoo3EhCunJbeFTl3cLVQViPHWaHuGhRvCeK9bXUTdnTJN7IkorUjMDRC1A",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJmfgIQ-iAhYARq5osc-JybBo",
+      "plus_code": {
+        "compound_code": "QHXH+94 Russian Hill, San Francisco, CA, USA",
+        "global_code": "849VQHXH+94"
+      },
+      "price_level": 2,
+      "rating": 4.5,
+      "reference": "ChIJmfgIQ-iAhYARq5osc-JybBo",
+      "types": [
+        "cafe",
+        "store",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 544
+    }
+  }

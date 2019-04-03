@@ -1,0 +1,131 @@
+{
+    "name": "coffeelist_sf",
+    "cafes": [
+        {
+            "name": "Sightglass Coffee",
+            "address": {
+                "street": "270 7th St",
+                "street2": "",
+                "citystate": "San Francisco, CA",
+                "zip": "94121"
+            },
+            "neighborhood": "SOMA",
+            "attributes": {
+                "outlets": 0,
+                "wifi": 0,
+                "coffee": 1,
+                "food": 0
+            },
+            "lat": 37.776869,
+            "lng": -122.40863209999998
+        },
+        {
+            "name": "Garden House Cafe",
+            "address": {
+                "street": "3117 Clement St",
+                "street2": "",
+                "citystate": "San Francisco, CA",
+                "zip": "94121"
+            },
+            "neighborhood": "Inner Richmond",
+            "attributes": {
+                "outlets": 2,
+                "wifi": 1,
+                "coffee": 0,
+                "food": 1
+            },
+            "lat": 37.7814847,
+            "lng": -122.49271069999998
+        },
+        {
+            "name": "Oakside Cafe",
+            "address": {
+                "street": "1195 Oak St",
+                "street2": "",
+                "citystate": "San Francisco, CA",
+                "zip": "94117"
+            },
+            "neighborhood": "NOPA",
+            "attributes": {
+                "outlets": 1,
+                "wifi": 1,
+                "coffee": 0,
+                "food": 1
+            },
+            "lat": 37.77283509999999,
+            "lng": -122.43891350000001
+        },
+        {
+            "name": "Vinyl Coffee & Wine Bar",
+            "address": {
+                "street": "359 Divisadero St",
+                "street2": "",
+                "citystate": "San Francisco, CA",
+                "zip": "94117"
+            },
+            "neighborhood": "NOPA",
+            "attributes": {
+                "outlets": 1,
+                "wifi": 1,
+                "coffee": 1,
+                "food": 1
+            },
+            "lat": 37.7730052,
+            "lng": -122.43757679999999
+        },
+        {
+            "name": "The Mill",
+            "address": {
+                "street": "736 Divisadero St",
+                "street2": "",
+                "citystate": "San Francisco, CA",
+                "zip": "94117"
+            },
+            "neighborhood": "NOPA",
+            "attributes": {
+                "outlets": 0,
+                "wifi": 0,
+                "coffee": 1,
+                "food": 0
+            },
+            "lat": 37.776466,
+            "lng": -122.43783239999999
+        },
+        {
+            "name": "Haus Coffee",
+            "address": {
+                "street": "3086 24th St",
+                "street2": "",
+                "citystate": "San Francisco, CA",
+                "zip": "94110"
+            },
+            "neighborhood": "NOPA",
+            "attributes": {
+                "outlets": 2,
+                "wifi": 2,
+                "coffee": 1,
+                "food": 0
+            },
+            "lat": 37.752635,
+            "lng": -122.41372860000001
+        },
+        {
+            "name": "Haus Coffee",
+            "address": {
+                "street": "3086 24th St",
+                "street2": "",
+                "citystate": "San Francisco, CA",
+                "zip": "94110"
+            },
+            "neighborhood": "NOPA",
+            "attributes": {
+                "outlets": 2,
+                "wifi": 2,
+                "coffee": 1,
+                "food": 0
+            },
+            "lat": 37.752635,
+            "lng": -122.41372860000001
+        }
+    ]
+}

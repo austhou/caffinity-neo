@@ -1,0 +1,105 @@
+@import './styles/variables';
+@import './styles/text';
+@import '//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css';
+
+body, html {
+    background-color: $color-white;
+    color: $color-black;
+    font-family: 'Inter';
+    font-weight: 500;
+}
+
+body {
+    max-height: calc(100vh - 32px);
+    
+    margin-top: 32px;
+}
+
+p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.App {
+    width: calc(100% - 64px);
+    height: calc(100% - 64px);
+    margin: 32px;
+    display: flex;
+    flex-direction: row;
+    background-color: $color-white;
+}
+
+.itemHolder {
+    //width: calc(100% - 32px);
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    //justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+}
+
+.itemHolder:hover {
+    background-color: $color-hover;
+}
+
+.itemHolder:hover .textName {
+    color: $color-blue;
+}
+
+.darkIcon {
+    color: $color-black;
+}
+
+.lightIcon {
+    color: $color-lighter;
+}
+
+.itemMenu {
+    width: calc(100% - 32px);
+    display: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+}
+
+.itemHolder:hover .itemMenu {
+    display: flex;
+    z-index: 2;
+}
+
+.itemButton {
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 18px;
+    background-color: $color-white;
+    color: $color-blue;
+    border: 2px solid $color-blue;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    max-height: 36px;
+    transition: 0.2s all;
+}
+
+.itemButton:hover {
+    box-shadow: 0px 4px 8px 0px $color-bluelight;
+    cursor: pointer;
+}
+
+.redButton {
+    border: 2px solid $color-red;
+    color: $color-red;
+    
+}
+
+.listContainer::-webkit-scrollbar { 
+    display: none;  // Safari and Chrome
+}

@@ -1,33 +1,120 @@
+@import url("https://rsms.me/inter/inter.css");
+@import '//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css';
+.textLight {
+  font-family: "Inter";
+  font-weight: 300;
+  color: rgba(2, 37, 62, 0.33);
+}
+
+.textName {
+  font-family: "Inter";
+  font-weight: 500;
+  color: #02253E;
+}
+
+.textSmall {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+body, html {
+  background-color: #F3F5F7;
+  color: #02253E;
+  font-family: "Inter";
+  font-weight: 500;
+}
+
+body {
+  max-height: calc(100vh - 32px);
+  margin-top: 32px;
+}
+
+p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: calc(100% - 64px);
+  height: calc(100% - 64px);
+  margin: 32px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  background-color: #F3F5F7;
+}
+
+.itemHolder {
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.itemHolder:hover {
+  background-color: rgba(2, 37, 62, 0.03);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.itemHolder:hover .textName {
+  color: #229EC5;
 }
+
+.darkIcon {
+  color: #02253E;
+}
+
+.lightIcon {
+  color: rgba(2, 37, 62, 0.1);
+}
+
+.itemMenu {
+  width: calc(100% - 32px);
+  display: none;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+}
+
+.itemHolder:hover .itemMenu {
+  display: flex;
+  z-index: 2;
+}
+
+.itemButton {
+  padding: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 18px;
+  background-color: #F3F5F7;
+  color: #229EC5;
+  border: 2px solid #229EC5;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  max-height: 36px;
+  transition: 0.2s all;
+}
+
+.itemButton:hover {
+  box-shadow: 0px 4px 8px 0px rgba(22, 158, 197, 0.33);
+  cursor: pointer;
+}
+
+.redButton {
+  border: 2px solid #D92752;
+  color: #D92752;
+}
+
+.listContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/*# sourceMappingURL=App.css.map */
