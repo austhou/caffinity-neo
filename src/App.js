@@ -32,7 +32,8 @@ class App extends Component {
     document.title = 'caffinity - your cafe grind resource'
     
 
-}
+    }
+
     render() {
         return (
             <Provider store={createStore(reducers, {}, applyMiddleware(ReduxThunk))}>
