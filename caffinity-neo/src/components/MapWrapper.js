@@ -1,7 +1,6 @@
-import _ from 'lodash';
 import React, { Component } from 'react';
 import '../App.css';
-import { withScriptjs, withGoogleMap, GoogleMap, Marker, SearchBox } from "react-google-maps";
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 import { connect } from 'react-redux';
 import * as actions from '../redux/actions';
 import MarkerWrapper from './MarkerWrapper';
@@ -194,7 +193,7 @@ const MapComponent = withScriptjs(withGoogleMap((props) =>
         ]}}
     >
 
-        {props.cafes.map(item => <MarkerWrapper cafe={item} key={item.name+" "+item.address.street}/>)}
+        {props.cafes.map(item => <MarkerWrapper cafe={item} key={item.placesData.name+" "+item.placesData.formatted_address}/>)}
 
         <Marker
             icon={{
@@ -212,9 +211,6 @@ const MapComponent = withScriptjs(withGoogleMap((props) =>
 ))
 
 class MapWrapper extends Component {
-    constructor () {
-        super()
-    }
 
     componentWillMount() {
     }
@@ -239,8 +235,8 @@ class MapWrapper extends Component {
 
 const mapStateToProps = state => {
     const cafes = state.cafe && Object.keys(state.cafe).map(key => state.cafe[key]);
-    const location = state.location;
-    console.log(cafes)
+    const location = state.location.current;
+    //console.log(cafes)
     return { cafes, lat: location.lat, lng: location.lng };
 };
 

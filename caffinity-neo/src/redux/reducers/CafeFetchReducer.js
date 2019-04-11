@@ -22,7 +22,7 @@ export default (state = null, action) => {
     //console.log(action);
     switch (action.type) {
         case 'get_cafe_data':
-            return action.payload.cafes;
+            return action.payload;
         case 'cafe_sort':
             const stateArr = _.map(state, (val, uid) => {
                 return { ...val };

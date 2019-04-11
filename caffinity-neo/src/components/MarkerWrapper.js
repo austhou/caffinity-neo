@@ -24,7 +24,7 @@ class MarkerWrapper extends Component {
             this.props.clearCafe();
         }
         else {
-            this.props.selectCafe(this.state.cafe.name+" "+this.state.cafe.address.street);
+            this.props.selectCafe(this.state.cafe.placesData.name+" "+this.state.cafe.placesData.formatted_address);
             this.props.setCenter(this.state.cafe.lat, this.state.cafe.lng);
         }
     }
@@ -41,7 +41,7 @@ class MarkerWrapper extends Component {
                         strokeOpacity: 0,
                         anchor: { x: 15, y: 31 }
                     }}
-                    position={{ lat: this.state.cafe.lat, lng: this.state.cafe.lng }}
+                    position={{ lat: this.state.cafe.placesData.geometry.location.lat, lng: this.state.cafe.placesData.geometry.location.lng }}
                     zIndex={1000}
                 />
             )
@@ -57,7 +57,7 @@ class MarkerWrapper extends Component {
                         strokeOpacity: 0,
                         anchor: { x: 15, y: 31 }
                     }}
-                    position={{ lat: this.state.cafe.lat, lng: this.state.cafe.lng }}
+                    position={{ lat: this.state.cafe.placesData.geometry.location.lat, lng: this.state.cafe.placesData.geometry.location.lng }}
                 />
             )
         }
@@ -65,7 +65,7 @@ class MarkerWrapper extends Component {
 
     render() {
         return (
-            <div class='mapMarker'>
+            <div className='mapMarker'>
                 {this.displayMarker()}
             </div>
         )
@@ -73,7 +73,7 @@ class MarkerWrapper extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    const selectIdentifier = ownProps.cafe.name + " " + ownProps.cafe.address.street;
+    const selectIdentifier = ownProps.cafe.placesData.name + " " + ownProps.cafe.placesData.formatted_address;
     const selected = selectIdentifier === state.selectedName;
     return { selected };
 };

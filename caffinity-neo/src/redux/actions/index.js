@@ -38,6 +38,17 @@ export const cafeFetch = (city) => {
     };
 };
 
+export const cafeFetchMongo = () => {
+    return (dispatch) => {
+        fetch("http://localhost:3001/api/getData")
+        .then(data => data.json())
+        .then(res => {
+            console.log(res.data)
+            dispatch({ type: 'get_cafe_data', payload: res.data })
+        })
+    };
+}
+
 export const getLocation = (loc) => {
     //console.log("get")
     return {
@@ -49,6 +60,13 @@ export const getLocation = (loc) => {
 export const setLocation = (lat, lng) => {
     return {
         type: 'set_location',
+        payload: { lat, lng }
+    }
+}
+
+export const setGeoLocation = (lat, lng) => {
+    return {
+        type: 'set_geo_location',
         payload: { lat, lng }
     }
 }
