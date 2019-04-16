@@ -6,7 +6,8 @@ const INITIAL_STATE = {
     geo: {
         lat: 37.7749,
         lng: -122.4194
-    }
+    },
+    range: 1.2
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -20,6 +21,8 @@ export default (state = INITIAL_STATE, action) => {
         case 'set_geo_location':
             //set user's geolocation
             return { ...state, geo: { lat: action.payload.lat, lng: action.payload.lng } };
+        case 'set_range':
+            return { ...state, range: action.payload };
         default:
             return state;
     }

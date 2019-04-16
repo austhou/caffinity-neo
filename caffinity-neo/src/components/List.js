@@ -15,12 +15,13 @@ class List extends Component {
             filterWifi: false,
             filterPower: false,
             filterFood: false,
-            filterDistance: 30,
+            filterDistance: 1,
         }
     }
     componentWillMount() {
         navigator.geolocation.getCurrentPosition(this.storeLocation, null, { timeout: 30000 });
-        this.props.cafeFetchMongo();
+        //this.props.cafeFetchMongo();
+        //this.props.cafeFetchSelectionMongo(this.props.location.lat, this.props.location.lng, this.props.range);
     }
 
     componentDidMount() {
@@ -29,9 +30,9 @@ class List extends Component {
 
     storeLocation = (loc) => {
         console.log('The location in lat lon format is: [', loc.coords.latitude, ',', loc.coords.longitude, ']');
-        this.props.setLocation(loc.coords.latitude, loc.coords.longitude);
+        this.props.setLocation(loc.coords.latitude, loc.coords.longitude, this.props.range);
         this.props.setGeoLocation(loc.coords.latitude, loc.coords.longitude);
-        
+        //this.props.cafeFetchSelectionMongo(this.props.location.lat, this.props.location.lng, this.props.range);
     }
 
     sortCafes (cafes, location) {
@@ -72,7 +73,7 @@ class List extends Component {
             filterCafes = filterCafes.filter((cafe) => { return cafe.ratingFood>0 })
         }
         filterCafes = filterCafes.filter((cafe) => { 
-            return distance(cafe.placesData.geometry.location.lat, cafe.placesData.geometry.location.lng, this.props.location.lat, this.props.location.lng, "M") < this.state.filterDistance;
+            return distance(cafe.placesData.geometry.location.lat, cafe.placesData.geometry.location.lng, this.props.location.lat, this.props.location.lng, "M") < this.props.range;
         })
         return filterCafes;
     }
@@ -120,7 +121,8 @@ class List extends Component {
 const mapStateToProps = state => {
     const cafes = state.cafe;
     const location = state.location.current;
-    return { cafes, location };
+    const range = state.location.range;
+    return { cafes, location, range };
 }
 
 export default connect(mapStateToProps, actions)(List);

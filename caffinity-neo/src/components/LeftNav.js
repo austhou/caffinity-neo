@@ -10,13 +10,14 @@ class LeftNav extends Component {
     constructor() {
         super();
         this.state = {
-            customLoc: false
+            customLoc: false,
+            editRange: false,
         }
     }
     toggleCustomLocation() {
         if (this.state.customLoc) {
             this.setState({ customLoc: false });
-            this.props.setLocation(this.props.geoLocation.lat, this.props.geoLocation.lng);
+            this.props.setLocation(this.props.geoLocation.lat, this.props.geoLocation.lng, this.props.range);
         }
         else {
             this.setState({ customLoc: true });
@@ -32,7 +33,7 @@ class LeftNav extends Component {
                     let placeData = original[0]
                     let latitude = placeData.geometry.location.lat()
                     let longitude = placeData.geometry.location.lng()
-                    this.props.setLocation(latitude, longitude);
+                    this.props.setLocation(latitude, longitude, this.props.range);
                     // original is an array of Google Maps PlaceResult Object
                     // parsed is an array of parsed address components
                 }}
@@ -44,13 +45,31 @@ class LeftNav extends Component {
             return (
                 <div style={{display: 'flex', flexDirection: 'row'}}>
                     <p className='textName'>{Math.round(this.props.location.lat*100)/100 + ", " + Math.round(this.props.location.lng*100)/100}</p>
-                    <div 
-                        className="itemButton smallButton"
-                        style={{width: 'fit-content', display: 'flex', flexDirection: 'row', padding: 4, paddingBottom: 6, marginLeft: 8, marginTop: -4}}
-                        onClick={this.toggleCustomLocation.bind(this)}
-                    >
-                        <Icon className='blueIcon' name='pencil' style={{margin: 0}}/>
-                    </div>
+                    {this.returnEditButton(this.toggleCustomLocation)}
+                </div>
+            )
+        }
+    }
+    returnEditButton(someFunc, param=null) {
+        if (param) {
+            return (
+                <div 
+                    className="itemButton smallButton"
+                    style={{width: 'fit-content', display: 'flex', flexDirection: 'row', padding: 2, paddingBottom: 6, marginLeft: 8, marginTop: -3, marginBottom: 0}}
+                    onClick={someFunc.bind(this, param)}
+                >
+                    <Icon className='blueIcon' name='pencil' style={{margin: 0}}/>
+                </div>
+            )
+        }
+        else {
+            return (
+                <div 
+                    className="itemButton smallButton"
+                    style={{width: 'fit-content', display: 'flex', flexDirection: 'row', padding: 2, paddingBottom: 6, marginLeft: 8, marginTop: -3, marginBottom: -2}}
+                    onClick={someFunc.bind(this)}
+                >
+                    <Icon className='blueIcon' name='pencil' style={{margin: 0}}/>
                 </div>
             )
         }
@@ -70,6 +89,27 @@ class LeftNav extends Component {
             return null
         }
     }
+    returnRange() {
+        if (this.state.editRange) {
+            return (
+                <input />
+            )
+        }
+        else {
+            return (
+                <div style={{display: 'flex', flexDirection: 'row'}}>
+                    <p className='textName'>{this.props.range}</p>
+                    <div 
+                        className="itemButton smallButton"
+                        style={{width: 'fit-content', display: 'flex', flexDirection: 'row', padding: 2, paddingBottom: 6, marginLeft: 8, marginTop: -3, marginBottom: 0}}
+                        onClick={this.props.setRange.bind(this, this.props.location.lat, this.props.location.lng, 6)}
+                    >
+                        <Icon className='blueIcon' name='pencil' style={{margin: 0}}/>
+                    </div>
+                </div>
+            )
+        }
+    }
     render() {
         return (
             <div style={{width: '15%'}}>
@@ -80,7 +120,7 @@ class LeftNav extends Component {
                 {this.returnLocationButton()}
                 <div style={{height: 32}} />
                 <p className='textSmall lightColor'>DISTANCE (mi)</p>
-                <p className='textName'>30</p>
+                {this.returnRange()}
                 <div style={{height: 32}} />
                 <div 
                     className="itemButton"
@@ -97,8 +137,9 @@ const mapStateToProps = state => {
     const cafes = state.cafe;
     const location = state.location.current;
     const geoLocation = state.location.geo;
+    const range = state.location.range;
     
-    return { cafes, location, geoLocation };
+    return { cafes, location, geoLocation, range };
 }
 
 export default connect(mapStateToProps, actions)(LeftNav);

@@ -42,6 +42,39 @@ router.get("/getData", (req, res) => {
     });
 });
 
+router.get("/getRange/:minLat/:maxLat/:minLng/:maxLng", (req, res) => {
+  var minLat = parseFloat(req.params.minLat);
+  var maxLat = parseFloat(req.params.maxLat);
+  var minLng = parseFloat(req.params.minLng);
+  var maxLng = parseFloat(req.params.maxLng);
+
+  console.log("#"+minLat+'-'+maxLat+'-'+minLng+'-'+maxLng)
+  
+  Data.find({
+
+    //"placesData.geometry.location.lat" : { $gte: parseFloat(minLat) }
+    $and: [
+      {
+        "placesData.geometry.location.lat": {
+          $gte: minLat,
+          $lt: maxLat
+        }
+      },
+      {
+        "placesData.geometry.location.lng": {
+          $gte: minLng,
+          $lt: maxLng
+        }
+      }
+    ]
+  }, (err, data) => {
+    console.log(data)
+    if (err) return res.json({ success: false, error: err });
+    return res.json({ success: true, data: data });
+  });
+});
+
+
 // this is our update method
 // this method overwrites existing data in our database
 router.post("/updateData", (req, res) => {

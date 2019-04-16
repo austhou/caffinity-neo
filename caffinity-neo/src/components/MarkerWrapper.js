@@ -20,6 +20,7 @@ class MarkerWrapper extends Component {
     }
 
     selectionProcess() {
+        console.log(this.state.cafe)
         if (this.props.selected) {
             this.props.clearCafe();
         }
