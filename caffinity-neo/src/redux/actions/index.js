@@ -40,7 +40,7 @@ export const cafeFetch = (city) => {
 
 export const cafeFetchMongo = () => {
     return (dispatch) => {
-        fetch("http://localhost:3001/api/getData")
+        fetch("https://caffinity.co/backend/api/getData")
         .then(data => data.json())
         .then(res => {
             console.log(res.data)
@@ -54,13 +54,13 @@ export const cafeFetchMongo = () => {
 export const cafeFetchSelectionMongo = (lat, lng, rad) => {
     var minLat = lat - 0.0166666*rad;
     var maxLat = lat + 0.0166666*rad;
-    var minLng = lng - Math.cos(lat*Math.PI/180)*rad;
-    var maxLng = lng + Math.cos(lat*Math.PI/180)*rad;
+    var minLng = lng - 0.0166666*Math.cos(lat*Math.PI/180)*rad;
+    var maxLng = lng + 0.0166666*Math.cos(lat*Math.PI/180)*rad;
 
     console.log(lat+'+'+lng+'+'+rad);
     console.log(minLat+'-'+maxLat+'-'+minLng+'-'+maxLng)
     return (dispatch) => {
-        fetch(`http://localhost:3001/api/getRange/${minLat}/${maxLat}/${minLng}/${maxLng}`)
+        fetch(`https://caffinity.co/backend/api/getRange/${minLat}/${maxLat}/${minLng}/${maxLng}`)
         .then(data => data.json())
         .then(res => {
             console.log(res.data)
@@ -93,7 +93,7 @@ export const setLocation = (lat, lng, rad) => {
                 payload: { lat, lng }
             }
         )
-        fetch(`http://localhost:3001/api/getRange/${minLat}/${maxLat}/${minLng}/${maxLng}`)
+        fetch(`https://caffinity.co/backend/api/getRange/${minLat}/${maxLat}/${minLng}/${maxLng}`)
         .then(data => data.json())
         .then(res => {
             //console.log(res.data)
@@ -117,8 +117,8 @@ export const setGeoLocation = (lat, lng) => {
 export const setRange = (lat, lng, rad) => {
     var minLat = lat - 0.0166666*rad;
     var maxLat = lat + 0.0166666*rad;
-    var minLng = lng - Math.cos(lat*Math.PI/180)*rad;
-    var maxLng = lng + Math.cos(lat*Math.PI/180)*rad;
+    var minLng = lng - 0.0166666*Math.cos(lat*Math.PI/180)*rad;
+    var maxLng = lng + 0.0166666*Math.cos(lat*Math.PI/180)*rad;
 
     console.log(lat+'+'+lng+'+'+rad);
     console.log(minLat+'-'+maxLat+'-'+minLng+'-'+maxLng)
@@ -130,7 +130,7 @@ export const setRange = (lat, lng, rad) => {
                 payload: rad
             }
         )
-        fetch(`http://localhost:3001/api/getRange/${minLat}/${maxLat}/${minLng}/${maxLng}`)
+        fetch(`https://caffinity.co/backend/api/getRange/${minLat}/${maxLat}/${minLng}/${maxLng}`)
         .then(data => data.json())
         .then(res => {
             dispatch({ type: 'get_cafe_data', payload: res.data })

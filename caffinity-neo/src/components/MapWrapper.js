@@ -5,12 +5,13 @@ import { connect } from 'react-redux';
 import * as actions from '../redux/actions';
 import MarkerWrapper from './MarkerWrapper';
 import iconData from '../data/generalIcons.json';
+import { distance } from '../util';
 
 const MAPAPIKEY = "AIzaSyBABXrbgUP5XYi-sGHvJ_R9KuLlugctX8s";
 
 const MapComponent = withScriptjs(withGoogleMap((props) =>
     <GoogleMap
-        defaultZoom={12}
+        defaultZoom={14}
         center={{ lat: props.lat, lng: props.lng }}
         options={{ styles: [
             {
@@ -215,6 +216,23 @@ class MapWrapper extends Component {
     componentWillMount() {
     }
 
+    returnFilteredCafes() {
+        var filterCafes = [...this.props.cafes]
+        if (this.state.filterWifi) {
+            filterCafes = filterCafes.filter((cafe) => { return cafe.ratingWifi>0 })
+        }
+        if (this.state.filterPower) {
+            filterCafes = filterCafes.filter((cafe) => { return cafe.ratingPower>0 })
+        }
+        if (this.state.filterFood) {
+            filterCafes = filterCafes.filter((cafe) => { return cafe.ratingFood>0 })
+        }
+        filterCafes = filterCafes.filter((cafe) => { 
+            return distance(cafe.placesData.geometry.location.lat, cafe.placesData.geometry.location.lng, this.props.location.lat, this.props.location.lng, "M") < this.props.range;
+        })
+        return filterCafes;
+    }
+
     render () {
         return (
             <MapComponent
@@ -233,11 +251,21 @@ class MapWrapper extends Component {
     }
 }
 
+//filter cafes for markers in here
 const mapStateToProps = state => {
-    const cafes = state.cafe && Object.keys(state.cafe).map(key => state.cafe[key]);
+    const cafes = state.cafe;  // && Object.keys(state.cafe).map(key => state.cafe[key]);
     const location = state.location.current;
-    //console.log(cafes)
-    return { cafes, lat: location.lat, lng: location.lng };
+    const range = state.location.range;
+
+    var filterCafes = []
+
+    if (cafes) {
+        filterCafes = [...cafes]
+        filterCafes = filterCafes.filter((cafe) => { 
+            return distance(cafe.placesData.geometry.location.lat, cafe.placesData.geometry.location.lng, location.lat, location.lng, "M") < range;
+        })
+    }
+    return { cafes: filterCafes, lat: location.lat, lng: location.lng };
 };
 
 export default connect(mapStateToProps, actions)(MapWrapper);

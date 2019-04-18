@@ -19,7 +19,7 @@ class List extends Component {
         }
     }
     componentWillMount() {
-        navigator.geolocation.getCurrentPosition(this.storeLocation, null, { timeout: 30000 });
+        navigator.geolocation.getCurrentPosition(this.storeLocation, this.errorHandler, { timeout: 20000, maximumAge:Infinity, enableHighAccuracy: false });
         //this.props.cafeFetchMongo();
         //this.props.cafeFetchSelectionMongo(this.props.location.lat, this.props.location.lng, this.props.range);
     }
@@ -27,7 +27,9 @@ class List extends Component {
     componentDidMount() {
         this.props.distsort(this.props.location.lat, this.props.location.lng);  
     }
-
+    errorHandler = (error) => {
+        console.log(error)
+    }
     storeLocation = (loc) => {
         console.log('The location in lat lon format is: [', loc.coords.latitude, ',', loc.coords.longitude, ']');
         this.props.setLocation(loc.coords.latitude, loc.coords.longitude, this.props.range);

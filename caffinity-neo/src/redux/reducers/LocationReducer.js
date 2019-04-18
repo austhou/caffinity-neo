@@ -7,7 +7,7 @@ const INITIAL_STATE = {
         lat: 37.7749,
         lng: -122.4194
     },
-    range: 1.2
+    range: 3
 };
 
 export default (state = INITIAL_STATE, action) => {

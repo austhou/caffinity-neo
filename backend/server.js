@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const logger = require("morgan");
 const Data = require("./data");
 
-const API_PORT = 3001;
+const API_PORT = 8081;
 const app = express();
 app.use(cors());
 
@@ -68,7 +68,7 @@ router.get("/getRange/:minLat/:maxLat/:minLng/:maxLng", (req, res) => {
       }
     ]
   }, (err, data) => {
-    console.log(data)
+    //console.log(data)
     if (err) return res.json({ success: false, error: err });
     return res.json({ success: true, data: data });
   });

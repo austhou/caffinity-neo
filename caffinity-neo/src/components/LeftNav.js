@@ -12,7 +12,17 @@ class LeftNav extends Component {
         this.state = {
             customLoc: false,
             editRange: false,
+            rangebox: '',
         }
+    }
+    componentDidMount() {
+        document.getElementById('rangeInput').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter' || event.keyCode === 13) {
+                console.log("adsf")
+                this.toggleRange();
+            }
+        });
+        this.setState({ rangebox: this.props.range });
     }
     toggleCustomLocation() {
         if (this.state.customLoc) {
@@ -22,6 +32,18 @@ class LeftNav extends Component {
         else {
             this.setState({ customLoc: true });
         }
+    }
+    toggleRange() {
+        if (this.state.editRange) {
+            this.setState({ editRange: false });
+            this.props.setRange(this.props.location.lat, this.props.location.lng, parseFloat(this.state.rangebox));
+        }
+        else {
+            this.setState({ editRange: true });
+        }
+    }
+    submitRange() {
+        this.props.setRange(this.props.location.lat, this.props.location.lng, parseFloat(this.state.rangebox));
     }
     //return either a searchbox or text of the user's current location
     returnLocation() {
@@ -55,10 +77,10 @@ class LeftNav extends Component {
             return (
                 <div 
                     className="itemButton smallButton"
-                    style={{width: 'fit-content', display: 'flex', flexDirection: 'row', padding: 2, paddingBottom: 6, marginLeft: 8, marginTop: -3, marginBottom: 0}}
+                    style={{width: 'fit-content', display: 'flex', flexDirection: 'row', width: 24,height:24, justifyContent: 'center', alignItems: 'center', paddingTop: -4, marginLeft: 8}}
                     onClick={someFunc.bind(this, param)}
                 >
-                    <Icon className='blueIcon' name='pencil' style={{margin: 0}}/>
+                    <Icon className='blueIcon' name='pencil' style={{margin: 0, marginBottom: 2}}/>
                 </div>
             )
         }
@@ -66,13 +88,16 @@ class LeftNav extends Component {
             return (
                 <div 
                     className="itemButton smallButton"
-                    style={{width: 'fit-content', display: 'flex', flexDirection: 'row', padding: 2, paddingBottom: 6, marginLeft: 8, marginTop: -3, marginBottom: -2}}
+                    style={{width: 'fit-content', display: 'flex', width: 24,height:24, justifyContent: 'center', alignItems: 'center', paddingTop: -4, marginLeft: 8}}
                     onClick={someFunc.bind(this)}
                 >
-                    <Icon className='blueIcon' name='pencil' style={{margin: 0}}/>
+                    <Icon className='blueIcon' name='pencil' style={{margin: 0, marginBottom: 2}}/>
                 </div>
             )
         }
+    }
+    handleRangeChange(event) {
+        this.setState({rangebox: event.target.value});
     }
     returnLocationButton() {
         if (this.state.customLoc) {
@@ -90,25 +115,18 @@ class LeftNav extends Component {
         }
     }
     returnRange() {
-        if (this.state.editRange) {
-            return (
-                <input />
-            )
-        }
-        else {
-            return (
-                <div style={{display: 'flex', flexDirection: 'row'}}>
-                    <p className='textName'>{this.props.range}</p>
-                    <div 
-                        className="itemButton smallButton"
-                        style={{width: 'fit-content', display: 'flex', flexDirection: 'row', padding: 2, paddingBottom: 6, marginLeft: 8, marginTop: -3, marginBottom: 0}}
-                        onClick={this.props.setRange.bind(this, this.props.location.lat, this.props.location.lng, 6)}
-                    >
-                        <Icon className='blueIcon' name='pencil' style={{margin: 0}}/>
-                    </div>
+        return (
+            <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                <input id="rangeInput" value={this.state.rangebox} onChange={this.handleRangeChange.bind(this)} style={{width: 80, display: 'block'}} className='searchBox' />
+                <div 
+                    className="itemButton smallButton"
+                    style={{width: 'fit-content', display: 'flex', flexDirection: 'row', width: 24,height:24, justifyContent: 'center', alignItems: 'center', paddingTop: -4, marginLeft: 8}}
+                    onClick={this.submitRange.bind(this)}
+                >
+                    <Icon className='blueIcon' name='check' style={{margin: 0, marginBottom: 2}}/>
                 </div>
-            )
-        }
+            </div>
+        )
     }
     render() {
         return (

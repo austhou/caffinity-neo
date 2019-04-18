@@ -47,7 +47,7 @@ class List extends Component {
     }
     //get place details from google map with placeId (ref). [DEPRECATED]
     getPlaceDetails(ref,callback){
-        var config = {   
+        /* var config = {   
             uri:'https://maps.googleapis.com/maps/api/place/details/json',
             qs: {
                 key: "SOME-VALID-GOOGLEPLACES-API-KEY",
@@ -56,7 +56,7 @@ class List extends Component {
                 reference:ref,
                 sensor:'false',
             }
-        };
+        };*/
         const url = `https://maps.googleapis.com/maps/api/place/details/json?placeid=${ref}&key=${"AIzaSyABWS8s0OfEihnSO4l-g4pJc6eF9VFFFE8"}&fields=opening_hours`;
         const proxyurl = "https://cors-anywhere.herokuapp.com/";
         fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
