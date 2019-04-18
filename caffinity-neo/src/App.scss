@@ -170,3 +170,13 @@ p {
 .searchBox:focus {
     outline: none;
 }
+
+.checkBox {
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    border: 2px solid $color-blue;
+}
+.checkBox:hover {
+    background-color: $color-light;
+}

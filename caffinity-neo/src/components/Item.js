@@ -110,7 +110,7 @@ class List extends Component {
                                 //size={24}
                                 edit={false}
                                 color2={'rgba(2, 37, 62, .33)'} 
-                                size={'16px'}
+                                size={16}
                             />
                         </div>
                     </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { SearchBox } from '@loadup/react-google-places-autocomplete';
 import { Icon } from 'semantic-ui-react';
@@ -13,35 +14,39 @@ class LeftNav extends Component {
             customLoc: false,
             editRange: false,
             rangebox: '',
+            locationbox: 'Your Location',
         }
     }
     componentDidMount() {
-        document.getElementById('rangeInput').addEventListener('keydown', function(event) {
+        document.getElementById('rangeInput').addEventListener('keydown', (event) => {
             if (event.key === 'Enter' || event.keyCode === 13) {
                 console.log("adsf")
-                this.toggleRange();
+                this.props.setRange(this.props.location.lat, this.props.location.lng, parseFloat(this.state.rangebox));
             }
         });
         this.setState({ rangebox: this.props.range });
+
+        if (ReactDOM.findDOMNode(this.refs.searchBox)) {
+            ReactDOM.findDOMNode(this.refs.searchBox).focus()
+        }
     }
+    componentDidUpdate() {
+        if (ReactDOM.findDOMNode(this.refs.searchBox)) {
+            ReactDOM.findDOMNode(this.refs.searchBox).focus()
+        }
+    }
+    //toggle function between current and custom location
     toggleCustomLocation() {
         if (this.state.customLoc) {
             this.setState({ customLoc: false });
             this.props.setLocation(this.props.geoLocation.lat, this.props.geoLocation.lng, this.props.range);
+            
         }
         else {
             this.setState({ customLoc: true });
         }
     }
-    toggleRange() {
-        if (this.state.editRange) {
-            this.setState({ editRange: false });
-            this.props.setRange(this.props.location.lat, this.props.location.lng, parseFloat(this.state.rangebox));
-        }
-        else {
-            this.setState({ editRange: true });
-        }
-    }
+    //submits range change to redux (and then requeries mongo). called when range updates. 
     submitRange() {
         this.props.setRange(this.props.location.lat, this.props.location.lng, parseFloat(this.state.rangebox));
     }
@@ -50,6 +55,7 @@ class LeftNav extends Component {
         if (this.state.customLoc) {
             return <SearchBox
                 id="example-searchbox-id"
+                ref='searchBox'
                 onPlaceChanged={({ original, parsed }) => {
                     console.log(original)
                     let placeData = original[0]
@@ -65,40 +71,13 @@ class LeftNav extends Component {
         }
         else {
             return (
-                <div style={{display: 'flex', flexDirection: 'row'}}>
-                    <p className='textName'>{Math.round(this.props.location.lat*100)/100 + ", " + Math.round(this.props.location.lng*100)/100}</p>
-                    {this.returnEditButton(this.toggleCustomLocation)}
+                <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                    <input readOnly className='searchBox blueIcon' value={this.state.locationbox} onFocus={this.toggleCustomLocation.bind(this)} />
                 </div>
             )
         }
     }
-    returnEditButton(someFunc, param=null) {
-        if (param) {
-            return (
-                <div 
-                    className="itemButton smallButton"
-                    style={{width: 'fit-content', display: 'flex', flexDirection: 'row', width: 24,height:24, justifyContent: 'center', alignItems: 'center', paddingTop: -4, marginLeft: 8}}
-                    onClick={someFunc.bind(this, param)}
-                >
-                    <Icon className='blueIcon' name='pencil' style={{margin: 0, marginBottom: 2}}/>
-                </div>
-            )
-        }
-        else {
-            return (
-                <div 
-                    className="itemButton smallButton"
-                    style={{width: 'fit-content', display: 'flex', width: 24,height:24, justifyContent: 'center', alignItems: 'center', paddingTop: -4, marginLeft: 8}}
-                    onClick={someFunc.bind(this)}
-                >
-                    <Icon className='blueIcon' name='pencil' style={{margin: 0, marginBottom: 2}}/>
-                </div>
-            )
-        }
-    }
-    handleRangeChange(event) {
-        this.setState({rangebox: event.target.value});
-    }
+    //returns 'use my location' button when custom location is active
     returnLocationButton() {
         if (this.state.customLoc) {
             return <div 
@@ -114,19 +93,36 @@ class LeftNav extends Component {
             return null
         }
     }
+    //return range input form
     returnRange() {
         return (
             <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
                 <input id="rangeInput" value={this.state.rangebox} onChange={this.handleRangeChange.bind(this)} style={{width: 80, display: 'block'}} className='searchBox' />
+                {this.returnRangeButton()}
+                
+            </div>
+        )
+    }
+    //return range update button if range changes. called by returnRange()
+    returnRangeButton() {
+        if (parseFloat(this.state.rangebox) !== this.props.range) {
+            return (
                 <div 
                     className="itemButton smallButton"
-                    style={{width: 'fit-content', display: 'flex', flexDirection: 'row', width: 24,height:24, justifyContent: 'center', alignItems: 'center', paddingTop: -4, marginLeft: 8}}
+                    style={{display: 'flex', flexDirection: 'row', width: 24,height:24, justifyContent: 'center', alignItems: 'center', paddingTop: -4, marginLeft: 8}}
                     onClick={this.submitRange.bind(this)}
                 >
                     <Icon className='blueIcon' name='check' style={{margin: 0, marginBottom: 2}}/>
                 </div>
-            </div>
-        )
+            )
+        }
+        else {
+            return <div />
+        }
+    }
+    //sets state when range changes
+    handleRangeChange(event) {
+        this.setState({rangebox: event.target.value});
     }
     render() {
         return (

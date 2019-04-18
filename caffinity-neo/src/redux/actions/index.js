@@ -1,13 +1,10 @@
 import firebase from 'firebase';
 
+//deprecated
 export const cityCheck = (city) => {
     return (dispatch) => {
         firebase.database().ref(`/${city}/`)
             .on('value', snapshot => {
-
-                const cityObj = {
-                    "name": "Los Angeles"
-                };
 
                 if (snapshot.val() == null) {
                     firebase.database().ref('/').child(city).update({
@@ -24,6 +21,7 @@ export const cityCheck = (city) => {
     }
 }
 
+//deprecated
 export const cafeFetch = (city) => {
     //console.log("fetch start");
     return (dispatch) => {
@@ -38,6 +36,7 @@ export const cafeFetch = (city) => {
     };
 };
 
+//fetch all cafes from mongo
 export const cafeFetchMongo = () => {
     return (dispatch) => {
         fetch("https://caffinity.co/backend/api/getData")
@@ -49,9 +48,10 @@ export const cafeFetchMongo = () => {
     };
 }
 
-//1d lat = 70mi -> 1mi = 1/60 deg
-//longitude: = cos(lat deg) * miles
+//fetch cafes within a square of size rad around lat, lng
 export const cafeFetchSelectionMongo = (lat, lng, rad) => {
+    //1d lat = 70mi -> 1mi = 1/60 deg
+    //longitude: = cos(lat deg) * miles
     var minLat = lat - 0.0166666*rad;
     var maxLat = lat + 0.0166666*rad;
     var minLng = lng - 0.0166666*Math.cos(lat*Math.PI/180)*rad;
@@ -83,8 +83,8 @@ export const setLocation = (lat, lng, rad) => {
     var minLng = lng - 0.0166666*Math.cos(lat*Math.PI/180)*rad;
     var maxLng = lng + 0.0166666*Math.cos(lat*Math.PI/180)*rad;
 
-    console.log(lat+'+'+lng+'+'+rad);
-    console.log(minLat+'-'+maxLat+'-'+minLng+'-'+maxLng)
+    //console.log(lat+'+'+lng+'+'+rad);
+    //console.log(minLat+'-'+maxLat+'-'+minLng+'-'+maxLng)
 
     return (dispatch) => {
         dispatch(
@@ -120,8 +120,8 @@ export const setRange = (lat, lng, rad) => {
     var minLng = lng - 0.0166666*Math.cos(lat*Math.PI/180)*rad;
     var maxLng = lng + 0.0166666*Math.cos(lat*Math.PI/180)*rad;
 
-    console.log(lat+'+'+lng+'+'+rad);
-    console.log(minLat+'-'+maxLat+'-'+minLng+'-'+maxLng)
+    //console.log(lat+'+'+lng+'+'+rad);
+    //console.log(minLat+'-'+maxLat+'-'+minLng+'-'+maxLng)
 
     return (dispatch) => {
         dispatch(

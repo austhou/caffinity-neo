@@ -57,7 +57,7 @@ class List extends Component {
 
                 return ((x < y) ? -1 : ((x > y) ? 1 : 0));
             }), true);
-            console.log(sortedL)
+            //console.log(sortedL)
             return sortedL;
             
         }
