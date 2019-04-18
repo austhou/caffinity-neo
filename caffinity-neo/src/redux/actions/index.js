@@ -145,3 +145,24 @@ export const distsort = (lat, lng) => {
         payload: { lat, lng }
     }
 }
+
+export const toggleFilterWifi = () => {
+    return {
+        type: 'toggle_wifi',
+        payload: null
+    }
+}
+
+export const toggleFilterPower = () => {
+    return {
+        type: 'toggle_power',
+        payload: null
+    }
+}
+
+export const toggleFilterFood = () => {
+    return {
+        type: 'toggle_food',
+        payload: null
+    }
+}

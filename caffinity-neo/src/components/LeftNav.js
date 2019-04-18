@@ -13,8 +13,9 @@ class LeftNav extends Component {
         this.state = {
             customLoc: false,
             editRange: false,
+            focusLocation: false,
             rangebox: '',
-            locationbox: 'Your Location',
+            locationbox: 'Your Location', //does not change.
         }
     }
     componentDidMount() {
@@ -31,8 +32,9 @@ class LeftNav extends Component {
         }
     }
     componentDidUpdate() {
-        if (ReactDOM.findDOMNode(this.refs.searchBox)) {
+        if (ReactDOM.findDOMNode(this.refs.searchBox) && this.state.focusLocation) {
             ReactDOM.findDOMNode(this.refs.searchBox).focus()
+            this.setState({ focusLocation: false });
         }
     }
     //toggle function between current and custom location
@@ -40,10 +42,9 @@ class LeftNav extends Component {
         if (this.state.customLoc) {
             this.setState({ customLoc: false });
             this.props.setLocation(this.props.geoLocation.lat, this.props.geoLocation.lng, this.props.range);
-            
         }
         else {
-            this.setState({ customLoc: true });
+            this.setState({ customLoc: true, focusLocation: true });
         }
     }
     //submits range change to redux (and then requeries mongo). called when range updates. 

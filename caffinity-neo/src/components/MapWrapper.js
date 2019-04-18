@@ -256,11 +256,22 @@ const mapStateToProps = state => {
     const cafes = state.cafe;  // && Object.keys(state.cafe).map(key => state.cafe[key]);
     const location = state.location.current;
     const range = state.location.range;
+    const filters = state.filters;
 
     var filterCafes = []
 
+
     if (cafes) {
         filterCafes = [...cafes]
+        if (filters.filterWifi) {
+            filterCafes = filterCafes.filter((cafe) => { return cafe.ratingWifi>0 })
+        }
+        if (filters.filterPower) {
+            filterCafes = filterCafes.filter((cafe) => { return cafe.ratingPower>0 })
+        }
+        if (filters.filterFood) {
+            filterCafes = filterCafes.filter((cafe) => { return cafe.ratingFood>0 })
+        }
         filterCafes = filterCafes.filter((cafe) => { 
             return distance(cafe.placesData.geometry.location.lat, cafe.placesData.geometry.location.lng, location.lat, location.lng, "M") < range;
         })

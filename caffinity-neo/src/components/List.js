@@ -23,9 +23,8 @@ class List extends Component {
         //this.props.cafeFetchMongo();
         //this.props.cafeFetchSelectionMongo(this.props.location.lat, this.props.location.lng, this.props.range);
     }
-
     componentDidMount() {
-        this.props.distsort(this.props.location.lat, this.props.location.lng);  
+        //this.props.distsort(this.props.location.lat, this.props.location.lng);  
     }
     errorHandler = (error) => {
         console.log(error)
@@ -36,7 +35,6 @@ class List extends Component {
         this.props.setGeoLocation(loc.coords.latitude, loc.coords.longitude);
         //this.props.cafeFetchSelectionMongo(this.props.location.lat, this.props.location.lng, this.props.range);
     }
-
     sortCafes (cafes, location) {
         if( location ) {
             const stateArrL = _.map(cafes, (val, uid) => {
@@ -65,13 +63,13 @@ class List extends Component {
     }
     returnFilteredCafes() {
         var filterCafes = [...this.props.cafes]
-        if (this.state.filterWifi) {
+        if (this.props.filters.filterWifi) {
             filterCafes = filterCafes.filter((cafe) => { return cafe.ratingWifi>0 })
         }
-        if (this.state.filterPower) {
+        if (this.props.filters.filterPower) {
             filterCafes = filterCafes.filter((cafe) => { return cafe.ratingPower>0 })
         }
-        if (this.state.filterFood) {
+        if (this.props.filters.filterFood) {
             filterCafes = filterCafes.filter((cafe) => { return cafe.ratingFood>0 })
         }
         filterCafes = filterCafes.filter((cafe) => { 
@@ -90,20 +88,14 @@ class List extends Component {
             return <div />
         }
     }
-    toggleWifi() {
-        this.setState({ filterWifi: !this.state.filterWifi });
-    }
-    toggle(attr) {
-        this.setState({ [attr]: !this.state[attr] });
-    }
     //return filter checkboxes
     returnChecks() {
         return(
             <div style={{display: 'flex', flexDirection: "row", position: 'relative', alignItems: 'center', paddingBottom: 8, paddingLeft: 16}}>
                 <p style={{width: 64, textAlign: 'right', marginRight: 24}}></p>
-                <div onClick={this.toggle.bind(this, 'filterWifi')}><Check checked={this.state.filterWifi} /></div>
-                <div onClick={this.toggle.bind(this, 'filterPower')}><Check checked={this.state.filterPower} /></div>
-                <div onClick={this.toggle.bind(this, 'filterFood')}><Check checked={this.state.filterFood} /></div>
+                <div onClick={this.props.toggleFilterWifi.bind(this)}><Check checked={this.props.filters.filterWifi} /></div>
+                <div onClick={this.props.toggleFilterPower.bind(this)}><Check checked={this.props.filters.filterPower} /></div>
+                <div onClick={this.props.toggleFilterFood.bind(this)}><Check checked={this.props.filters.filterFood} /></div>
                 <p className='textSmall lightColor'>NAME</p>
             </div>
         )
@@ -124,7 +116,8 @@ const mapStateToProps = state => {
     const cafes = state.cafe;
     const location = state.location.current;
     const range = state.location.range;
-    return { cafes, location, range };
+    const filters = state.filters;
+    return { cafes, location, range, filters };
 }
 
 export default connect(mapStateToProps, actions)(List);
