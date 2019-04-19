@@ -5,10 +5,63 @@ var cors = require('cors');
 const bodyParser = require("body-parser");
 const logger = require("morgan");
 const Data = require("./data");
+const Users = require("./users");
+
+//------------------
+var passport = require('passport');
+var Strategy = require('passport-local').Strategy;
+passport.use(new Strategy(
+  function(username, password, cb) {
+    Users.findByUsername(username, function(err, user) {
+      if (err) { return cb(err); }
+      if (!user) { return cb(null, false); }
+      if (user.password != password) { return cb(null, false); }
+      return cb(null, user);
+  });
+}));
+
+// Configure Passport authenticated session persistence.
+//
+// In order to restore authentication state across HTTP requests, Passport needs
+// to serialize users into and deserialize users out of the session.  The
+// typical implementation of this is as simple as supplying the user ID when
+// serializing, and querying the user record by ID from the database when
+// deserializing.
+passport.serializeUser(function(user, cb) {
+  cb(null, user.id);
+});
+
+passport.deserializeUser(function(id, cb) {
+  Users.findById(id, function (err, user) {
+    if (err) { return cb(err); }
+    cb(null, user);
+  });
+});
+//------------------
+
+
 
 const API_PORT = 8081;
 const app = express();
-app.use(cors());
+
+var whitelist = ['http://localhost:3001', 'https://caffinity.co/beta/index.html']
+var corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  },
+  credentials: true
+}
+
+/*const corsOptions = {
+  origin: 'https://localhost:3001',
+  credentials: true,
+}*/
+app.use(cors(corsOptions));
+//app.use(cors());
 
 const router = express.Router();
 
@@ -32,6 +85,30 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(logger("dev"));
 
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+router.post(
+  '/login', 
+  passport.authenticate('local',{}),
+  function (req, res, next) {
+      res.send(req.user)
+});
+
+router.get('/logout', function (req, res) {
+  // destroy the user's session to log them out
+  // will be re-created next request
+  if (!req.session) {
+      res.send('ok')
+      return
+  }
+  req.session.destroy(function () {
+      res.send('ok');
+  });
+});
+
+//----
 
 // this is our get method
 // this method fetches all available data in our database
@@ -123,6 +200,29 @@ router.post("/putData", (req, res) => {
 // append /api for our http requests
 app.use("/api", router);
 
+
+// catch 404 and forward to error handler
+app.use(function (req, res, next) {
+  next(createError(404));
+});
+
+// error handler
+app.use(function (err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  console.error(err)
+  // render the error page
+  res.status(err.status || 500);
+  res.json({
+    message: err.message,
+    status: err.status,
+    stack: err.stack
+  });
+});
+
+
 // launch our backend into a port
 app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
+
 

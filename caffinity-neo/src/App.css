@@ -182,6 +182,7 @@ p {
 
 .searchBox:focus {
   outline: none;
+  border: 1px solid #229EC5;
 }
 
 .checkBox {
@@ -193,6 +194,21 @@ p {
 
 .checkBox:hover {
   background-color: rgba(2, 37, 62, 0.33);
+}
+
+.submitModal {
+  width: 25%;
+  height: auto;
+  background-color: #F3F5F7;
+  border: 1px solid rgba(2, 37, 62, 0.33);
+  border-radius: 16px;
+  padding: 32px;
+  margin-left: 37.5vw;
+  margin-top: 30vh;
+}
+
+.submitModal:focus {
+  outline: none;
 }
 
 /*# sourceMappingURL=App.css.map */

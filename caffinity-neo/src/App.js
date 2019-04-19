@@ -37,7 +37,7 @@ class App extends Component {
             <Provider store={createStore(reducers, {}, applyMiddleware(ReduxThunk))}>
                 <div className="App">
                     <LeftNav />
-                    <div style={{width: 'calc(45% - 32px)'}}>
+                    <div style={{width: 'calc(45% - 32px)', marginLeft: 32}}>
                         <List />
                     </div>
                     <div style={{width: 'calc(40% - 32px', marginLeft: 32}} >

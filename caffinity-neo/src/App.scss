@@ -169,6 +169,7 @@ p {
 
 .searchBox:focus {
     outline: none;
+    border: 1px solid $color-blue;
 }
 
 .checkBox {
@@ -179,4 +180,19 @@ p {
 }
 .checkBox:hover {
     background-color: $color-light;
+}
+
+.submitModal {
+    width: 25%;
+    height: auto;
+    background-color: $color-white;
+    border: 1px solid $color-light;
+    border-radius: 16px;
+    padding: 32px;
+    margin-left: 37.5vw;
+    margin-top: 30vh;
+}
+
+.submitModal:focus {
+    outline: none;
 }

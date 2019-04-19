@@ -61,6 +61,7 @@ class List extends Component {
         }
         return null;
     }
+    //applies filters to cafes
     returnFilteredCafes() {
         var filterCafes = [...this.props.cafes]
         if (this.props.filters.filterWifi) {

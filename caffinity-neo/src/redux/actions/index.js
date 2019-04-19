@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+const BACKEND_URL = 'https://caffinity.co/backend/api'
 
 //deprecated
 export const cityCheck = (city) => {
@@ -39,7 +40,7 @@ export const cafeFetch = (city) => {
 //fetch all cafes from mongo
 export const cafeFetchMongo = () => {
     return (dispatch) => {
-        fetch("https://caffinity.co/backend/api/getData")
+        fetch(`${BACKEND_URL}/getData`)
         .then(data => data.json())
         .then(res => {
             console.log(res.data)
@@ -60,7 +61,7 @@ export const cafeFetchSelectionMongo = (lat, lng, rad) => {
     console.log(lat+'+'+lng+'+'+rad);
     console.log(minLat+'-'+maxLat+'-'+minLng+'-'+maxLng)
     return (dispatch) => {
-        fetch(`https://caffinity.co/backend/api/getRange/${minLat}/${maxLat}/${minLng}/${maxLng}`)
+        fetch(`${BACKEND_URL}/getRange/${minLat}/${maxLat}/${minLng}/${maxLng}`)
         .then(data => data.json())
         .then(res => {
             console.log(res.data)
@@ -93,7 +94,7 @@ export const setLocation = (lat, lng, rad) => {
                 payload: { lat, lng }
             }
         )
-        fetch(`https://caffinity.co/backend/api/getRange/${minLat}/${maxLat}/${minLng}/${maxLng}`)
+        fetch(`${BACKEND_URL}/getRange/${minLat}/${maxLat}/${minLng}/${maxLng}`)
         .then(data => data.json())
         .then(res => {
             //console.log(res.data)
@@ -130,7 +131,7 @@ export const setRange = (lat, lng, rad) => {
                 payload: rad
             }
         )
-        fetch(`https://caffinity.co/backend/api/getRange/${minLat}/${maxLat}/${minLng}/${maxLng}`)
+        fetch(`${BACKEND_URL}/getRange/${minLat}/${maxLat}/${minLng}/${maxLng}`)
         .then(data => data.json())
         .then(res => {
             dispatch({ type: 'get_cafe_data', payload: res.data })
@@ -164,5 +165,32 @@ export const toggleFilterFood = () => {
     return {
         type: 'toggle_food',
         payload: null
+    }
+}
+
+/** Safely parse json or reject. */
+function jsonParser(response) {
+    if (!response.ok) {
+        return Promise.reject(response)
+    }
+    return response.json()
+}
+//login a user
+export const login = (username, password) => {
+    return dispatch => {
+        let body = new URLSearchParams();
+        body.append('username', username);
+        body.append('password', password);
+        return fetch(`${BACKEND_URL}/login`, {
+            credentials: 'include',
+            method: 'POST',
+            body,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        }).then(jsonParser).then(response => {
+            return dispatch({
+                type: 'login',
+                payload: response.username,
+            })
+        })
     }
 }

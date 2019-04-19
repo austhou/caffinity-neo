@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
+import Modal from 'react-modal';
 import { SearchBox } from '@loadup/react-google-places-autocomplete';
 import { Icon } from 'semantic-ui-react';
+import axios from 'axios';
 
 import * as actions from '../redux/actions';
 import banner from '../assets/banner.svg';
+
+import Check from './Check';
 
 class LeftNav extends Component {
     constructor() {
@@ -16,7 +20,19 @@ class LeftNav extends Component {
             focusLocation: false,
             rangebox: '',
             locationbox: 'Your Location', //does not change.
+            submitModalOpen: false,
+            formPlace: null,
+            newWifi: false,
+            newPower: false,
+            newFood: false,
+            newId: '',
+            loginFormStatus: false,
+            loginUser: '',
+            loginPassword: '',
         }
+        this.openModal = this.openModal.bind(this);
+        //this.afterOpenModal = this.afterOpenModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
     }
     componentDidMount() {
         document.getElementById('rangeInput').addEventListener('keydown', (event) => {
@@ -36,6 +52,12 @@ class LeftNav extends Component {
             ReactDOM.findDOMNode(this.refs.searchBox).focus()
             this.setState({ focusLocation: false });
         }
+    }
+    openModal() {
+        this.setState({submitModalOpen: true});
+    }
+    closeModal() {
+        this.setState({submitModalOpen: false, formPlace: null});
     }
     //toggle function between current and custom location
     toggleCustomLocation() {
@@ -125,9 +147,152 @@ class LeftNav extends Component {
     handleRangeChange(event) {
         this.setState({rangebox: event.target.value});
     }
+    returnIcon(name, iconName) {
+        if (this.props.cafe[name] >= 1) {
+            return <div style={{marginRight: 16}}><Icon className='darkIcon' name={iconName} /></div>
+        }
+        else {
+            return <div style={{marginRight: 16}}><Icon className="lightIcon" name={iconName} /></div>
+        }
+    }
+    toggleNewWifi() {
+        this.setState({ newWifi: !this.state.newWifi });
+    }
+    toggleNewPower() {
+        this.setState({ newPower: !this.state.newPower });
+    }
+    toggleNewFood() {
+        this.setState({ newFood: !this.state.newFood });
+    }
+    returnSubmitButton() {
+        return (<div 
+            className="itemButton"
+            style={{width: 'fit-content'}}
+            onClick={this.openModal}
+        >
+            + SUBMIT CAFE
+        </div>)
+    }
+    returnLoginForm() {
+        if (this.state.loginFormStatus) {
+            return (
+                <div>
+                    <input className='searchBox' value={this.state.loginUser} onChange={(event) => { this.setState({loginUser: event.target.value }) }} />
+                    <input type='password' className='searchBox' value={this.state.loginPassword} onChange={(event) => { this.setState({loginPassword: event.target.value }) }} />
+                    <div 
+                        className="itemButton"
+                        style={{width: 'fit-content'}}
+                        onClick={(event) => { 
+                            this.handleLoginSubmit(event)
+                            //this.setState({ loginFormStatus: false })
+                        }}
+                    >
+                        LOGIN
+                    </div>
+                </div>
+            )
+        }
+        else {
+            return (<div 
+                className="itemButton"
+                style={{width: 'fit-content'}}
+                onClick={() => { this.setState({ loginFormStatus: true })}}
+            >
+                LOGIN
+            </div>)
+        }
+    }
+    //send API login call
+    handleLoginSubmit(event) {
+        this.props.login(this.state.loginUser, this.state.loginPassword)
+            .catch(err => {
+                console.error(err)
+                this.setState({error: 'Failed to log in. Check email/password.'})
+            })
+        event.preventDefault();
+    }
+    putDataToDB = (placesObject, ratingWifi, ratingPower, ratingFood) => {
+        if (this.state.formPlace) {
+            let idToBeAdded = this.state.newId;
+
+            axios.post("https://caffinity.co/backend/api/putData", {
+            id: idToBeAdded,
+            ratingWifi: ratingWifi,
+            ratingPower: ratingPower,
+            ratingFood: ratingFood,
+            placesData: placesObject
+            }).then(() => {
+                    this.setState({newFood: false, newPower: false, newWifi: false, newId: null})
+                    ReactDOM.findDOMNode(this.refs.searchBox).value = "";
+                }
+            )
+        }
+    }
     render() {
         return (
             <div style={{width: '15%'}}>
+                    <Modal
+                    isOpen={this.state.submitModalOpen}
+                    //onAfterOpen={this.afterOpenModal}
+                    onRequestClose={this.closeModal}
+                    className="submitModal"
+                    contentLabel="Example Modal"
+                    verticallyCenter
+                    >
+                        <SearchBox
+                            id="add-searchbox-id"
+                            ref='searchBox'
+                            onPlaceChanged={({ original, parsed }) => {
+                                console.log(original)
+                                //let placeData = original[0]
+                                //let latitude = placeData.geometry.location.lat()
+                                //let longitude = placeData.geometry.location.lng()
+                                //this.props.setLocation(latitude, longitude, this.props.range);
+                                // original is an array of Google Maps PlaceResult Object
+                                // parsed is an array of parsed address components
+                                this.setState({ formPlace: {...original[0]}, newId: original[0].place_id });
+                                console.log(original[0])
+                            }}
+                            className="searchBox"
+                            placeholder="Enter a Cafe Name"
+                            style={{width: '100%'}}
+                        />
+                        <div style={{height: 32}} />
+                        <p className="textSmall lightColor" style={{marginBottom: 16}}>Select Properties</p>
+                        <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }}>
+                            <div onClick={this.toggleNewWifi.bind(this)}><Check checked={this.state.newWifi} /></div>
+                            <Icon className={(this.state.newWifi ? 'darkIcon' : 'lightIcon')} name="wifi" />
+                            <p style={{marginLeft: 16}}>{(this.state.newWifi ? 'Has Wifi' : "No Wifi")}</p>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }}>
+                            <div onClick={this.toggleNewPower.bind(this)}><Check checked={this.state.newPower} /></div>
+                            <Icon className={(this.state.newPower ? 'darkIcon' : 'lightIcon')} name="plug" />
+                            <p style={{marginLeft: 16}}>{(this.state.newPower ? 'Has Outlets' : "No Outlets")}</p>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }}>
+                            <div onClick={this.toggleNewFood.bind(this)}><Check checked={this.state.newFood} /></div>
+                            <Icon className={(this.state.newFood ? 'darkIcon' : 'lightIcon')} name="food" />
+                            <p style={{marginLeft: 16}}>{(this.state.newFood ? 'Has Food' : "No Food")}</p>
+                        </div>
+                        <div style={{height: 32}} />
+                        <div style={{marginLeft: 'auto', marginRight: 0, display: 'flex', flexDirection: 'row', width: 'fit-content'}}>
+                            <div 
+                                className="itemButton"
+                                style={{width: 'fit-content', marginRight: 16}}
+                                onClick={this.closeModal}
+                            >
+                                CLOSE
+                            </div>
+                            <div 
+                                className="itemButton"
+                                style={{width: 'fit-content'}}
+                                onClick={() => this.putDataToDB(this.state.formPlace, this.state.newWifi, this.state.newPower, this.state.newFood)}
+                            >
+                                SUBMIT
+                            </div>
+                        </div>
+                        
+                    </Modal>
                 <img src={banner} alt="banner" width="128" style={{marginBottom: 16}} />
                 <p className='textSmall lightColor'>LOCATION</p>
                 {this.returnLocation()}
@@ -137,12 +302,10 @@ class LeftNav extends Component {
                 <p className='textSmall lightColor'>DISTANCE (mi)</p>
                 {this.returnRange()}
                 <div style={{height: 32}} />
-                <div 
-                    className="itemButton"
-                    style={{width: 'fit-content'}}
-                >
-                    + SUBMIT CAFE
-                </div>
+
+
+                {this.props.user ? this.returnSubmitButton() : this.returnLoginForm()}
+                <p>{this.props.user}</p>
             </div>
         )
     }
@@ -153,8 +316,9 @@ const mapStateToProps = state => {
     const location = state.location.current;
     const geoLocation = state.location.geo;
     const range = state.location.range;
+    const user = state.user;
     
-    return { cafes, location, geoLocation, range };
+    return { cafes, location, geoLocation, range, user };
 }
 
 export default connect(mapStateToProps, actions)(LeftNav);
