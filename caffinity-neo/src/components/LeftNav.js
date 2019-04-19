@@ -169,53 +169,26 @@ class LeftNav extends Component {
         <div>
             <div 
                 className="itemButton"
-                style={{width: 'fit-content'}}
+                style={{width: 'fit-content', marginBottom: 32}}
                 onClick={this.openModal}
             >
                 + SUBMIT CAFE
             </div>
-            <div 
+        </div>
+        )
+    }
+    returnLoginLogoutButtons() {
+        if (this.props.user) {
+            return(<div 
                 className="grayButton"
-                style={{width: 'fit-content', marginRight: 16, marginTop: 16}}
+                style={{width: 'fit-content'}}
                 onClick={() => {
                     this.props.logout()
                     this.setState({ loginFormStatus: false })
                 }}
             >
                 LOGOUT
-            </div>
-        </div>
-        )
-    }
-    returnLoginForm() {
-        if (this.state.loginFormStatus) {
-            return (
-                <div>
-                    <p className='textSmall lightColor'>USERNAME</p>
-                    <input className='searchBox' value={this.state.loginUser} onChange={(event) => { this.setState({loginUser: event.target.value }) }} />
-                    <div style={{height: 8}} />
-                    <p className='textSmall lightColor'>PASSWORD</p>
-                    <input type='password' className='searchBox' value={this.state.loginPassword} onChange={(event) => { this.setState({loginPassword: event.target.value }) }} />
-                    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: 16}}>
-                        <div 
-                            className="grayButton"
-                            style={{width: 'fit-content', marginRight: 16}}
-                            onClick={() => { this.setState({ loginFormStatus: false })}}
-                        >
-                            CANCEL
-                        </div>
-                        <div 
-                            className="itemButton"
-                            style={{width: 'fit-content'}}
-                            onClick={(event) => { 
-                                this.handleLoginSubmit(event)
-                            }}
-                        >
-                            SUBMIT
-                        </div>
-                    </div>
-                </div>
-            )
+            </div>)
         }
         else {
             return (<div 
@@ -227,9 +200,39 @@ class LeftNav extends Component {
             </div>)
         }
     }
+    returnLoginForm() {
+        return (
+            <div>
+                <p className='textSmall lightColor'>USERNAME</p>
+                <input className='searchBox' value={this.state.loginUser} onChange={(event) => { this.setState({loginUser: event.target.value }) }} />
+                <div style={{height: 8}} />
+                <p className='textSmall lightColor'>PASSWORD</p>
+                <input type='password' className='searchBox' value={this.state.loginPassword} onChange={(event) => { this.setState({loginPassword: event.target.value }) }} />
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', marginTop: 16}}>
+                    <div 
+                        className="grayButton"
+                        style={{width: 'fit-content', marginRight: 16}}
+                        onClick={() => { this.setState({ loginFormStatus: false })}}
+                    >
+                        CANCEL
+                    </div>
+                    <div 
+                        className="itemButton"
+                        style={{width: 'fit-content'}}
+                        onClick={(event) => { 
+                            this.handleLoginSubmit(event)
+                        }}
+                    >
+                        SUBMIT
+                    </div>
+                </div>
+            </div>
+        )
+    }
     //send API login call
     handleLoginSubmit(event) {
         this.props.login(this.state.loginUser, this.state.loginPassword)
+            .then(this.setState({ loginFormStatus: false}))
             .catch(err => {
                 console.error(err)
                 this.setState({error: 'Failed to log in. Check email/password.'})
@@ -256,69 +259,108 @@ class LeftNav extends Component {
     render() {
         return (
             <div style={{width: '15%'}}>
-                    <Modal
-                    isOpen={this.state.submitModalOpen}
-                    //onAfterOpen={this.afterOpenModal}
-                    onRequestClose={this.closeModal}
+                <Modal 
+                    isOpen={this.state.loginFormStatus}
+                    onRequestClose={() => {this.setState({ loginFormStatus: false})}}
                     className="submitModal"
-                    contentLabel="Example Modal"
+                    contentLabel="login modal"
                     verticallyCenter
-                    >
-                        <SearchBox
-                            id="add-searchbox-id"
-                            ref='searchBox'
-                            onPlaceChanged={({ original, parsed }) => {
-                                console.log(original)
-                                //let placeData = original[0]
-                                //let latitude = placeData.geometry.location.lat()
-                                //let longitude = placeData.geometry.location.lng()
-                                //this.props.setLocation(latitude, longitude, this.props.range);
-                                // original is an array of Google Maps PlaceResult Object
-                                // parsed is an array of parsed address components
-                                this.setState({ formPlace: {...original[0]}, newId: original[0].place_id });
-                                console.log(original[0])
-                            }}
-                            className="searchBox"
-                            placeholder="Enter a Cafe Name"
-                            style={{width: '100%'}}
-                        />
-                        <div style={{height: 32}} />
-                        <p className="textSmall lightColor" style={{marginBottom: 16}}>Select Properties</p>
-                        <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }}>
-                            <div onClick={this.toggleNewWifi.bind(this)}><Check checked={this.state.newWifi} /></div>
-                            <Icon className={(this.state.newWifi ? 'darkIcon' : 'lightIcon')} name="wifi" />
-                            <p style={{marginLeft: 16}}>{(this.state.newWifi ? 'Has Wifi' : "No Wifi")}</p>
-                        </div>
-                        <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }}>
-                            <div onClick={this.toggleNewPower.bind(this)}><Check checked={this.state.newPower} /></div>
-                            <Icon className={(this.state.newPower ? 'darkIcon' : 'lightIcon')} name="plug" />
-                            <p style={{marginLeft: 16}}>{(this.state.newPower ? 'Has Outlets' : "No Outlets")}</p>
-                        </div>
-                        <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }}>
-                            <div onClick={this.toggleNewFood.bind(this)}><Check checked={this.state.newFood} /></div>
-                            <Icon className={(this.state.newFood ? 'darkIcon' : 'lightIcon')} name="food" />
-                            <p style={{marginLeft: 16}}>{(this.state.newFood ? 'Has Food' : "No Food")}</p>
-                        </div>
-                        <div style={{height: 32}} />
-                        <div style={{marginLeft: 'auto', marginRight: 0, display: 'flex', flexDirection: 'row', width: 'fit-content'}}>
+                >
+                    <div>
+                        <p className='textSmall lightColor'>USERNAME</p>
+                        <input className='searchBox' value={this.state.loginUser} onChange={(event) => { this.setState({loginUser: event.target.value }) }} />
+                        <div style={{height: 8}} />
+                        <p className='textSmall lightColor'>PASSWORD</p>
+                        <input type='password' className='searchBox' value={this.state.loginPassword} onChange={(event) => { this.setState({loginPassword: event.target.value }) }} />
+                        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', marginTop: 16}}>
                             <div 
                                 className="grayButton"
                                 style={{width: 'fit-content', marginRight: 16}}
-                                onClick={this.closeModal}
+                                onClick={() => { this.setState({ loginFormStatus: false })}}
                             >
-                                CLOSE
+                                CANCEL
                             </div>
                             <div 
                                 className="itemButton"
                                 style={{width: 'fit-content'}}
-                                onClick={() => this.putDataToDB(this.state.formPlace, this.state.newWifi, this.state.newPower, this.state.newFood)}
+                                onClick={(event) => { 
+                                    this.handleLoginSubmit(event)
+                                }}
                             >
                                 SUBMIT
                             </div>
                         </div>
-                        
-                    </Modal>
-                <img src={banner} alt="banner" width="128" style={{marginBottom: 16}} />
+                    </div>
+                </Modal>
+                <Modal
+                isOpen={this.state.submitModalOpen}
+                //onAfterOpen={this.afterOpenModal}
+                onRequestClose={this.closeModal}
+                className="submitModal"
+                contentLabel="Example Modal"
+                verticallyCenter
+                >
+                    <SearchBox
+                        id="add-searchbox-id"
+                        ref='searchBox'
+                        onPlaceChanged={({ original, parsed }) => {
+                            console.log(original)
+                            //let placeData = original[0]
+                            //let latitude = placeData.geometry.location.lat()
+                            //let longitude = placeData.geometry.location.lng()
+                            //this.props.setLocation(latitude, longitude, this.props.range);
+                            // original is an array of Google Maps PlaceResult Object
+                            // parsed is an array of parsed address components
+                            this.setState({ formPlace: {...original[0]}, newId: original[0].place_id });
+                            console.log(original[0])
+                        }}
+                        className="searchBox"
+                        placeholder="Enter a Cafe Name"
+                        style={{width: '100%'}}
+                    />
+                    <div style={{height: 32}} />
+                    <p className="textSmall lightColor" style={{marginBottom: 16}}>Select Properties</p>
+                    <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }}>
+                        <div onClick={this.toggleNewWifi.bind(this)}><Check checked={this.state.newWifi} /></div>
+                        <Icon className={(this.state.newWifi ? 'darkIcon' : 'lightIcon')} name="wifi" />
+                        <p style={{marginLeft: 16}}>{(this.state.newWifi ? 'Has Wifi' : "No Wifi")}</p>
+                    </div>
+                    <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }}>
+                        <div onClick={this.toggleNewPower.bind(this)}><Check checked={this.state.newPower} /></div>
+                        <Icon className={(this.state.newPower ? 'darkIcon' : 'lightIcon')} name="plug" />
+                        <p style={{marginLeft: 16}}>{(this.state.newPower ? 'Has Outlets' : "No Outlets")}</p>
+                    </div>
+                    <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }}>
+                        <div onClick={this.toggleNewFood.bind(this)}><Check checked={this.state.newFood} /></div>
+                        <Icon className={(this.state.newFood ? 'darkIcon' : 'lightIcon')} name="food" />
+                        <p style={{marginLeft: 16}}>{(this.state.newFood ? 'Has Food' : "No Food")}</p>
+                    </div>
+                    <div style={{height: 32}} />
+                    <div style={{marginLeft: 'auto', marginRight: 0, display: 'flex', flexDirection: 'row', width: 'fit-content'}}>
+                        <div 
+                            className="grayButton"
+                            style={{width: 'fit-content', marginRight: 16}}
+                            onClick={this.closeModal}
+                        >
+                            CLOSE
+                        </div>
+                        <div 
+                            className="itemButton"
+                            style={{width: 'fit-content'}}
+                            onClick={() => this.putDataToDB(this.state.formPlace, this.state.newWifi, this.state.newPower, this.state.newFood)}
+                        >
+                            SUBMIT
+                        </div>
+                    </div>
+                    
+                </Modal>
+                <div style={{marginBottom: 32, position: 'relative'}}>
+                    <img src={banner} alt="banner" width="128" style={{position: 'absolute', marginTop: 4}} />
+                    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-end'}}>
+                        {this.returnLoginLogoutButtons()}
+                    </div>
+                </div>
+                {this.props.user ? this.returnSubmitButton() : null}
                 <p className='textSmall lightColor'>LOCATION</p>
                 {this.returnLocation()}
                 <div style={{height: 4}} />
@@ -327,9 +369,6 @@ class LeftNav extends Component {
                 <p className='textSmall lightColor'>DISTANCE (mi)</p>
                 {this.returnRange()}
                 <div style={{height: 32}} />
-
-                {this.props.user ? this.returnSubmitButton() : this.returnLoginForm()}
-                
             </div>
         )
     }
