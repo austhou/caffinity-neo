@@ -194,3 +194,15 @@ export const login = (username, password) => {
         })
     }
 }
+//logout
+export const logout = () => {
+    return dispatch => {
+        return fetch(`${BACKEND_URL}/logout`, {
+            credentials: 'include',
+        }).then(response => {
+            return dispatch({
+                type: 'logout'
+            })
+        })
+    }
+}

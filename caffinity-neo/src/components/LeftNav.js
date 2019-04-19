@@ -165,29 +165,54 @@ class LeftNav extends Component {
         this.setState({ newFood: !this.state.newFood });
     }
     returnSubmitButton() {
-        return (<div 
-            className="itemButton"
-            style={{width: 'fit-content'}}
-            onClick={this.openModal}
-        >
-            + SUBMIT CAFE
-        </div>)
+        return (
+        <div>
+            <div 
+                className="itemButton"
+                style={{width: 'fit-content'}}
+                onClick={this.openModal}
+            >
+                + SUBMIT CAFE
+            </div>
+            <div 
+                className="grayButton"
+                style={{width: 'fit-content', marginRight: 16, marginTop: 16}}
+                onClick={() => {
+                    this.props.logout.bind(this)
+                    this.setState({ loginFormStatus: false })
+                }}
+            >
+                LOGOUT
+            </div>
+        </div>
+        )
     }
     returnLoginForm() {
         if (this.state.loginFormStatus) {
             return (
                 <div>
+                    <p className='textSmall lightColor'>USERNAME</p>
                     <input className='searchBox' value={this.state.loginUser} onChange={(event) => { this.setState({loginUser: event.target.value }) }} />
+                    <div style={{height: 8}} />
+                    <p className='textSmall lightColor'>PASSWORD</p>
                     <input type='password' className='searchBox' value={this.state.loginPassword} onChange={(event) => { this.setState({loginPassword: event.target.value }) }} />
-                    <div 
-                        className="itemButton"
-                        style={{width: 'fit-content'}}
-                        onClick={(event) => { 
-                            this.handleLoginSubmit(event)
-                            //this.setState({ loginFormStatus: false })
-                        }}
-                    >
-                        LOGIN
+                    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: 16}}>
+                        <div 
+                            className="grayButton"
+                            style={{width: 'fit-content', marginRight: 16}}
+                            onClick={() => { this.setState({ loginFormStatus: false })}}
+                        >
+                            CANCEL
+                        </div>
+                        <div 
+                            className="itemButton"
+                            style={{width: 'fit-content'}}
+                            onClick={(event) => { 
+                                this.handleLoginSubmit(event)
+                            }}
+                        >
+                            SUBMIT
+                        </div>
                     </div>
                 </div>
             )
@@ -277,7 +302,7 @@ class LeftNav extends Component {
                         <div style={{height: 32}} />
                         <div style={{marginLeft: 'auto', marginRight: 0, display: 'flex', flexDirection: 'row', width: 'fit-content'}}>
                             <div 
-                                className="itemButton"
+                                className="grayButton"
                                 style={{width: 'fit-content', marginRight: 16}}
                                 onClick={this.closeModal}
                             >
@@ -303,9 +328,8 @@ class LeftNav extends Component {
                 {this.returnRange()}
                 <div style={{height: 32}} />
 
-
                 {this.props.user ? this.returnSubmitButton() : this.returnLoginForm()}
-                <p>{this.props.user}</p>
+                
             </div>
         )
     }
