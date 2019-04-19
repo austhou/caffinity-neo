@@ -13,6 +13,7 @@ var Strategy = require('passport-local').Strategy;
 passport.use(new Strategy(
   function(username, password, cb) {
     Users.findByUsername(username, function(err, user) {
+      console.log(user)
       if (err) { return cb(err); }
       if (!user) { return cb(null, false); }
       if (user.password != password) { return cb(null, false); }
@@ -44,9 +45,11 @@ passport.deserializeUser(function(id, cb) {
 const API_PORT = 8081;
 const app = express();
 
-var whitelist = ['http://localhost:3001', 'https://caffinity.co/beta/index.html']
+var whitelist = ['http://localhost:3001', undefined, 'https://caffinity.co']
 var corsOptions = {
   origin: function (origin, callback) {
+    console.log(origin)
+    //is same origin then origin is null
     if (whitelist.indexOf(origin) !== -1) {
       callback(null, true)
     } else {
@@ -56,16 +59,9 @@ var corsOptions = {
   credentials: true
 }
 
-/*const corsOptions = {
-  origin: 'https://localhost:3001',
-  credentials: true,
-}*/
 app.use(cors(corsOptions));
-//app.use(cors());
 
 const router = express.Router();
-
-
 const dbRoute = "mongodb://cafeadmin:cafeadmin1@ds163255.mlab.com:63255/caffinity";
 
 mongoose.connect(
@@ -76,9 +72,7 @@ mongoose.connect(
 let db = mongoose.connection;
 
 db.once("open", () => console.log("connected to db"));
-
 db.on("error", console.error.bind(console, "MOngoDB error"));
-
 // (optional) only made for logging and
 // bodyParser, parses the request body to be a readable json format
 app.use(bodyParser.urlencoded({ extended: false }));

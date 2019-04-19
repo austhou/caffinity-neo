@@ -178,7 +178,7 @@ class LeftNav extends Component {
                 className="grayButton"
                 style={{width: 'fit-content', marginRight: 16, marginTop: 16}}
                 onClick={() => {
-                    this.props.logout.bind(this)
+                    this.props.logout()
                     this.setState({ loginFormStatus: false })
                 }}
             >
