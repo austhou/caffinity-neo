@@ -1,0 +1,94 @@
+
+.distanceCol {
+    width: 64px;
+    text-align: right;
+    margin-right: 24px;
+}
+
+.listHeader {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    padding-bottom: 8px;
+    padding-left: 16px;
+}
+
+.itemHolder {
+    //width: calc(100% - 32px);
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    //justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+}
+
+.itemHolder:hover {
+    background-color: $color-hover;
+}
+
+.itemHolder:hover .textName {
+    color: $color-blue;
+}
+
+.iconHolder {
+    margin-right: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.itemMenu {
+    width: calc(100% - 32px);
+    display: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+}
+
+.itemHolder:hover .itemMenu {
+    display: flex;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 480px) { 
+    .distanceCol {
+        width: 36px;
+        margin-right: 8px;
+    }
+
+    .listHeader {
+        padding-left: 0;
+    }
+
+    .itemHolder {
+        padding-left: 0;
+        padding-right: 0;
+        height: 48px;
+    }
+
+    .iconHolder {
+        margin-right: 8px;
+    }
+
+    .itemMenu {
+        width: 100%;
+    }
+
+    i.icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    i.icon::before {
+        width: 16px;
+        height: 16px;
+    }
+}

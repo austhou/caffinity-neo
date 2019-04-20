@@ -1,0 +1,42 @@
+.leftNavPane {
+    width: 15%;
+}
+
+.listPane {
+    width: calc(45% - 32px);
+    margin-left: 32px;
+}
+
+.mapPane {
+    width: calc(40% - 32px);
+    margin-left: 32px;
+}
+
+.showMobile {
+    display: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .leftNavPane {
+        width: 100%;
+    }
+    .listPane {
+        width: 100%;
+        margin: 0;
+        height: calc(100% - 64px);
+    }
+    .mapPane {
+        width: 100%;
+        margin: 0;
+        flex: 1;
+        height: calc(100% - 64px);
+    }
+
+    .hideMobile {
+        display: none;
+    }
+
+    .showMobile {
+        display: block;
+    }
+}

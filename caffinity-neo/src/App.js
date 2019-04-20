@@ -11,6 +11,7 @@ import './App.css';
 import List from './components/List';
 import MapWrapper from './components/MapWrapper';
 import LeftNav from './components/LeftNav';
+import MainFrame from './components/MainFrame';
 
 class App extends Component {
 
@@ -35,15 +36,7 @@ class App extends Component {
     render() {
         return (
             <Provider store={createStore(reducers, {}, applyMiddleware(ReduxThunk))}>
-                <div className="App">
-                    <LeftNav />
-                    <div style={{width: 'calc(45% - 32px)', marginLeft: 32}}>
-                        <List />
-                    </div>
-                    <div style={{width: 'calc(40% - 32px', marginLeft: 32}} >
-                        <MapWrapper />
-                    </div>
-                </div>
+                <MainFrame />
             </Provider>
         );
     }

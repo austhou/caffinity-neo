@@ -1,28 +1,5 @@
 @import url("https://rsms.me/inter/inter.css");
 @import '//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css';
-.textLight {
-  font-family: "Inter";
-  font-weight: 300;
-  color: rgba(2, 37, 62, 0.33);
-}
-
-.textName {
-  font-family: "Inter";
-  font-weight: 500;
-  color: #02253E;
-}
-
-.textSmall {
-  text-transform: uppercase;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 500;
-}
-
-.lightColor {
-  color: rgba(2, 37, 62, 0.33);
-}
-
 body, html {
   background-color: #F3F5F7;
   color: #02253E;
@@ -50,6 +27,106 @@ p {
   background-color: #F3F5F7;
 }
 
+@media only screen and (max-width: 480px) {
+  .App {
+    flex-direction: column;
+    width: calc(100% - 32px);
+    height: calc(100% - 32px);
+    max-height: calc(100vh - 32px);
+    margin: 16px;
+  }
+
+  body {
+    margin-top: 16px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+.textLight {
+  font-family: "Inter";
+  font-weight: 300;
+  color: rgba(2, 37, 62, 0.33);
+}
+
+.textName {
+  font-family: "Inter";
+  font-weight: 500;
+  color: #02253E;
+}
+
+.textSmall {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.lightColor {
+  color: rgba(2, 37, 62, 0.33);
+}
+
+.leftNavPane {
+  width: 15%;
+}
+
+.listPane {
+  width: calc(45% - 32px);
+  margin-left: 32px;
+}
+
+.mapPane {
+  width: calc(40% - 32px);
+  margin-left: 32px;
+}
+
+.showMobile {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .leftNavPane {
+    width: 100%;
+  }
+
+  .listPane {
+    width: 100%;
+    margin: 0;
+    height: calc(100% - 64px);
+  }
+
+  .mapPane {
+    width: 100%;
+    margin: 0;
+    flex: 1;
+    height: calc(100% - 64px);
+  }
+
+  .hideMobile {
+    display: none;
+  }
+
+  .showMobile {
+    display: block;
+  }
+}
+.distanceCol {
+  width: 64px;
+  text-align: right;
+  margin-right: 24px;
+}
+
+.listHeader {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  padding-bottom: 8px;
+  padding-left: 16px;
+}
+
 .itemHolder {
   height: 64px;
   border-radius: 16px;
@@ -69,6 +146,62 @@ p {
   color: #229EC5;
 }
 
+.iconHolder {
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemMenu {
+  width: calc(100% - 32px);
+  display: none;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+}
+
+.itemHolder:hover .itemMenu {
+  display: flex;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 480px) {
+  .distanceCol {
+    width: 36px;
+    margin-right: 8px;
+  }
+
+  .listHeader {
+    padding-left: 0;
+  }
+
+  .itemHolder {
+    padding-left: 0;
+    padding-right: 0;
+    height: 48px;
+  }
+
+  .iconHolder {
+    margin-right: 8px;
+  }
+
+  .itemMenu {
+    width: 100%;
+  }
+
+  i.icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  i.icon::before {
+    width: 16px;
+    height: 16px;
+  }
+}
 .textReveal {
   display: none;
 }
@@ -87,20 +220,6 @@ p {
 
 .lightIcon {
   color: rgba(2, 37, 62, 0.1);
-}
-
-.itemMenu {
-  width: calc(100% - 32px);
-  display: none;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  position: absolute;
-}
-
-.itemHolder:hover .itemMenu {
-  display: flex;
-  z-index: 2;
 }
 
 .itemButton {
@@ -122,6 +241,8 @@ p {
 .itemButton:hover {
   box-shadow: 0px 4px 8px 0px rgba(22, 158, 197, 0.33);
   cursor: pointer;
+  background-color: #229EC5;
+  color: #F3F5F7;
 }
 
 .smallButton {
@@ -155,7 +276,7 @@ p {
 }
 
 .grayButton:hover {
-  box-shadow: 0px 4px 8px 0px rgba(2, 37, 62, 0.33);
+  box-shadow: 0px 4px 8px 0px rgba(2, 37, 62, 0.1);
   cursor: pointer;
 }
 
@@ -175,7 +296,7 @@ p {
   font-size: 16px;
   line-height: 20px;
   padding: 8px;
-  width: 200px;
+  width: 180px;
   margin-top: 4px;
   margin-bottom: 4px;
 }
@@ -209,6 +330,20 @@ p {
 
 .submitModal:focus {
   outline: none;
+}
+
+.smallButton svg path {
+  fill: #229EC5;
+}
+
+.smallButton:hover svg path {
+  fill: #F3F5F7;
+}
+
+@media only screen and (max-width: 480px) {
+  .showMobile:hover .blueIcon {
+    color: #F3F5F7;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

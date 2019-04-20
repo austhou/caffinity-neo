@@ -1,0 +1,45 @@
+body, html {
+    background-color: $color-white;
+    color: $color-black;
+    font-family: 'Inter';
+    font-weight: 500;
+}
+
+body {
+    max-height: calc(100vh - 32px);
+    margin-top: 32px;
+}
+
+p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.App {
+    width: calc(100% - 64px);
+    height: calc(100% - 64px);
+    margin: 32px;
+    display: flex;
+    flex-direction: row;
+    background-color: $color-white;
+}
+
+@media only screen and (max-width: 480px) {
+    .App {
+        flex-direction: column;
+        width: calc(100% - 32px);
+        height: calc(100% - 32px);
+        max-height: calc(100vh - 32px);
+        margin: 16px;
+    }
+
+    body {
+        margin-top: 16px;
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}

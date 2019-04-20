@@ -5,11 +5,13 @@ import Modal from 'react-modal';
 import { SearchBox } from '@loadup/react-google-places-autocomplete';
 import { Icon } from 'semantic-ui-react';
 import axios from 'axios';
+import iconData from '../data/generalIcons.json';
 
 import * as actions from '../redux/actions';
 import banner from '../assets/banner.svg';
 
 import Check from './Check';
+import MobileTogglePaneButton from './MobileTogglePaneButton.js';
 
 class LeftNav extends Component {
     constructor() {
@@ -29,6 +31,7 @@ class LeftNav extends Component {
             loginFormStatus: false,
             loginUser: '',
             loginPassword: '',
+            showNavMobile: false,
         }
         this.openModal = this.openModal.bind(this);
         //this.afterOpenModal = this.afterOpenModal.bind(this);
@@ -37,7 +40,7 @@ class LeftNav extends Component {
     componentDidMount() {
         document.getElementById('rangeInput').addEventListener('keydown', (event) => {
             if (event.key === 'Enter' || event.keyCode === 13) {
-                console.log("adsf")
+                //console.log("adsf")
                 this.props.setRange(this.props.location.lat, this.props.location.lng, parseFloat(this.state.rangebox));
             }
         });
@@ -90,6 +93,7 @@ class LeftNav extends Component {
                 }}
                 className="searchBox"
                 placeholder="Enter a Location"
+                style={{marginRight: 8}}
             />
         }
         else {
@@ -102,14 +106,14 @@ class LeftNav extends Component {
     }
     //returns 'use my location' button when custom location is active
     returnLocationButton() {
+        //console.log(iconData)
         if (this.state.customLoc) {
             return <div 
                 className="itemButton smallButton"
-                style={{width: 'fit-content', display: 'flex', flexDirection: 'row'}}
+                style={{width: 'fit-content', display: 'flex', flexDirection: 'row', width: 32, height: 32, justifyContent: 'center', alignItems: 'center'}}
                 onClick={this.toggleCustomLocation.bind(this)}
             >
-                <Icon className='blueIcon' name='point' />
-                USE MY LOCATION
+                <svg width='16' height='16' viewBox='0 0 24 24' ><path d={iconData.yourlocation.svg}></path></svg>
             </div>
         }
         else {
@@ -258,7 +262,7 @@ class LeftNav extends Component {
     }
     render() {
         return (
-            <div style={{width: '15%'}}>
+            <div className="leftNavPane">
                 <Modal 
                     isOpen={this.state.loginFormStatus}
                     onRequestClose={() => {this.setState({ loginFormStatus: false})}}
@@ -355,20 +359,26 @@ class LeftNav extends Component {
                     
                 </Modal>
                 <div style={{marginBottom: 32, position: 'relative'}}>
-                    <img src={banner} alt="banner" width="128" style={{position: 'absolute', marginTop: 4}} />
+                    <img src={banner} alt="banner" width="128" style={{position: 'absolute', marginTop: 4}} onClick={() => {
+                        this.setState({ showNavMobile: !this.state.showNavMobile })
+                    }} />
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-end'}}>
                         {this.returnLoginLogoutButtons()}
+                        <MobileTogglePaneButton />
                     </div>
                 </div>
                 {this.props.user ? this.returnSubmitButton() : null}
-                <p className='textSmall lightColor'>LOCATION</p>
-                {this.returnLocation()}
-                <div style={{height: 4}} />
-                {this.returnLocationButton()}
-                <div style={{height: 32}} />
-                <p className='textSmall lightColor'>DISTANCE (mi)</p>
-                {this.returnRange()}
-                <div style={{height: 32}} />
+                <div className="hideMobile" style={this.state.showNavMobile ? {display: 'block'} : {}}>
+                    <p className='textSmall lightColor'>LOCATION</p>
+                    <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                        {this.returnLocation()}
+                        {this.returnLocationButton()}
+                    </div>
+                    <div style={{height: 32}} />
+                    <p className='textSmall lightColor'>DISTANCE (mi)</p>
+                    {this.returnRange()}
+                    <div style={{height: 32}} />
+                </div>
             </div>
         )
     }

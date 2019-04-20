@@ -206,3 +206,24 @@ export const logout = () => {
         })
     }
 }
+
+export const setMap = () => {
+    return {
+        type: 'set_map',
+        payload: null
+    }
+}
+
+export const setList = () => {
+    return {
+        type: 'set_list',
+        payload: null
+    }
+}
+
+export const togglePane = () => {
+    return {
+        type: 'toggle_pane',
+        payload: null
+    }
+}

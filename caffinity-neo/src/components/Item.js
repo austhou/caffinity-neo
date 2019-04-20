@@ -39,10 +39,10 @@ class List extends Component {
     //return semantic UI icon. takes the property name (to decide icon color) and the icon name (to select correct icon)
     returnIcon(name, iconName) {
         if (this.props.cafe[name] >= 1) {
-            return <div style={{marginRight: 16}}><Icon className='darkIcon' name={iconName} /></div>
+            return <div className="iconHolder"><Icon className='darkIcon listIcon' name={iconName} /></div>
         }
         else {
-            return <div style={{marginRight: 16}}><Icon className="lightIcon" name={iconName} /></div>
+            return <div className="iconHolder"><Icon className="lightIcon listIcon" name={iconName} /></div>
         }
     }
     //get place details from google map with placeId (ref). [DEPRECATED]
@@ -80,8 +80,7 @@ class List extends Component {
                 { this.props.cafe && 
                     <div style={{display: 'flex', flexDirection: "row", position: 'absolute', alignItems: 'center'}}>
                         <p 
-                            style={{width: 64, textAlign: 'right', marginRight: 24}} 
-                            className="textLight"
+                            className="distanceCol textLight"
                         >
                             {distance(this.props.cafe.placesData.geometry.location.lat, this.props.cafe.placesData.geometry.location.lng, this.props.location.lat, this.props.location.lng, "M") + " mi"}
                         </p>

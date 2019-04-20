@@ -92,8 +92,8 @@ class List extends Component {
     //return filter checkboxes
     returnChecks() {
         return(
-            <div style={{display: 'flex', flexDirection: "row", position: 'relative', alignItems: 'center', paddingBottom: 8, paddingLeft: 16}}>
-                <p style={{width: 64, textAlign: 'right', marginRight: 24}}></p>
+            <div className="listHeader">
+                <p className="distanceCol"></p>
                 <div onClick={this.props.toggleFilterWifi.bind(this)}><Check checked={this.props.filters.filterWifi} /></div>
                 <div onClick={this.props.toggleFilterPower.bind(this)}><Check checked={this.props.filters.filterPower} /></div>
                 <div onClick={this.props.toggleFilterFood.bind(this)}><Check checked={this.props.filters.filterFood} /></div>
