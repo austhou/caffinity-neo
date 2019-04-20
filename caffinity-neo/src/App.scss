@@ -92,9 +92,6 @@
     
 }
 
-.listContainer::-webkit-scrollbar { 
-    display: none;  // Safari and Chrome
-}
 
 .searchBox {
     background-color: transparent;
@@ -142,6 +139,13 @@
     outline: none;
 }
 
+.submitModalButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 16px;
+}
+
 .smallButton svg path {
     fill: $color-blue;
 }
@@ -153,5 +157,20 @@
 @media only screen and (max-width: 480px) { 
     .showMobile:hover .blueIcon {
         color: $color-white;
+    }
+
+    .submitModal {
+        width: calc(100% - 64px);
+        height: auto;
+        margin-left: 32px;
+        margin-top: 30vh;
+    }
+
+    .submitModal .searchBox {
+        width: 100%;
+    }
+
+    .submitModalButtons {
+        justify-content: space-between;
     }
 }

@@ -78,7 +78,7 @@ class List extends Component {
         return (
             <div className="itemHolder">
                 { this.props.cafe && 
-                    <div style={{display: 'flex', flexDirection: "row", position: 'absolute', alignItems: 'center'}}>
+                    <div style={{display: 'flex', flexDirection: "row", position: 'absolute', alignItems: 'center', maxWidth: '100%'}}>
                         <p 
                             className="distanceCol textLight"
                         >
@@ -87,19 +87,10 @@ class List extends Component {
                         {this.returnIcon('ratingWifi','wifi')}
                         {this.returnIcon('ratingPower','plug')}
                         {this.returnIcon('ratingFood','food')}
-                        <p style={{
-                            width: 360, 
-                            textAlign: 'left', 
-                            marginRight: 8, 
-                            display: 'flex', 
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                            }} 
-                            className="textName"
-                        >
+                        <p className="textName itemName">
                             {this.props.cafe.placesData.name}
                             <span style={{marginLeft: 16}} className="textLight textSmall">{!this.state.openNow && 'CLOSED'}</span>
-                            <span style={{marginLeft: 0}} className="textLight textSmall textReveal">{this.state.openNow && 'OPEN'}</span>
+                            <span style={{marginLeft: 0, display: 'none'}} className="textLight textSmall textReveal">{this.state.openNow && 'OPEN'}</span>
                         </p>
                         <div style={{display: 'none', marginLeft: 32}}>
                             <ReactStars

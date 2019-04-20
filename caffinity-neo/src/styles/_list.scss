@@ -58,9 +58,30 @@
     z-index: 2;
 }
 
+
+.listContainer::-webkit-scrollbar { 
+    display: none;  // Safari and Chrome
+}
+
+.itemName {
+    width: 360px;
+    text-align: left;
+    margin-right: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 @media only screen and (max-width: 480px) { 
+
+    .listContainer {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+
     .distanceCol {
-        width: 36px;
+        width: 42px;
+        min-width: 42px;
         margin-right: 8px;
     }
 
@@ -74,12 +95,24 @@
         height: 48px;
     }
 
+    .itemHolder:hover {
+        border-radius: 8px;
+    }
+
     .iconHolder {
         margin-right: 8px;
     }
 
     .itemMenu {
         width: 100%;
+    }
+
+    .itemName {
+        width: auto;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-right: 0;
     }
 
     i.icon {

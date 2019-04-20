@@ -1,1 +1,1 @@
-scp -r /Users/absentious/Documents/workspace/reactworkspace/prod/caffinity-neo/caffinity-neo/build/* root@138.68.15.101:/var/www/caffinity.co/beta
+scp -r /Users/absentious/Documents/workspace/reactworkspace/prod/caffinity-neo/caffinity-neo/build/* root@138.68.15.101:/var/www/caffinity.co/v2

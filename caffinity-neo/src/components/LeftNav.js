@@ -276,7 +276,7 @@ class LeftNav extends Component {
                         <div style={{height: 8}} />
                         <p className='textSmall lightColor'>PASSWORD</p>
                         <input type='password' className='searchBox' value={this.state.loginPassword} onChange={(event) => { this.setState({loginPassword: event.target.value }) }} />
-                        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', marginTop: 16}}>
+                        <div className="submitModalButtons">
                             <div 
                                 className="grayButton"
                                 style={{width: 'fit-content', marginRight: 16}}
@@ -358,7 +358,7 @@ class LeftNav extends Component {
                     </div>
                     
                 </Modal>
-                <div style={{marginBottom: 32, position: 'relative'}}>
+                <div style={{marginBottom: 16, position: 'relative'}}>
                     <img src={banner} alt="banner" width="128" style={{position: 'absolute', marginTop: 4}} onClick={() => {
                         this.setState({ showNavMobile: !this.state.showNavMobile })
                     }} />
@@ -367,6 +367,7 @@ class LeftNav extends Component {
                         <MobileTogglePaneButton />
                     </div>
                 </div>
+                <div className="hideMobile" style={{height: 16}} />
                 {this.props.user ? this.returnSubmitButton() : null}
                 <div className="hideMobile" style={this.state.showNavMobile ? {display: 'block'} : {}}>
                     <p className='textSmall lightColor'>LOCATION</p>
