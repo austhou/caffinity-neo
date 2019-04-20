@@ -7,7 +7,6 @@ import '../App.css';
 import List from './List';
 import MapWrapper from './MapWrapper';
 import LeftNav from './LeftNav';
-import MobileTogglePaneButton from './MobileTogglePaneButton';
 
 class MainFrame extends Component {
 

@@ -21,12 +21,12 @@ class MarkerWrapper extends Component {
 
     selectionProcess() {
         console.log(this.state.cafe)
-        if (this.props.selected) {
-            this.props.clearCafe();
+        if (this.props.selection) {
+            this.props.clearSelection();
         }
         else {
-            this.props.selectCafe(this.state.cafe.placesData.name+" "+this.state.cafe.placesData.formatted_address);
-            this.props.setCenter(this.state.cafe.lat, this.state.cafe.lng);
+            this.props.setSelection(this.state.cafe);
+            //this.props.setCenter(this.state.cafe.lat, this.state.cafe.lng);
         }
     }
 

@@ -4,9 +4,6 @@ import { Icon } from 'semantic-ui-react';
 import * as actions from '../redux/actions';
 
 import '../App.css';
-import List from './List';
-import MapWrapper from './MapWrapper';
-import LeftNav from './LeftNav';
 
 class MobileTogglePaneButton extends Component {
 

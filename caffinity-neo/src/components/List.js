@@ -1,6 +1,7 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import _ from 'lodash';
+import MediaQuery from 'react-responsive';
 import { distance } from '../util';
 
 import * as actions from '../redux/actions';
@@ -92,13 +93,15 @@ class List extends Component {
     //return filter checkboxes
     returnChecks() {
         return(
-            <div className="listHeader">
-                <p className="distanceCol"></p>
-                <div onClick={this.props.toggleFilterWifi.bind(this)}><Check checked={this.props.filters.filterWifi} /></div>
-                <div onClick={this.props.toggleFilterPower.bind(this)}><Check checked={this.props.filters.filterPower} /></div>
-                <div onClick={this.props.toggleFilterFood.bind(this)}><Check checked={this.props.filters.filterFood} /></div>
-                <p className='textSmall lightColor'>NAME</p>
-            </div>
+            <MediaQuery query="(min-device-width: 600px)">
+                <div className="listHeader">
+                    <p className="distanceCol"></p>
+                    <div onClick={this.props.toggleFilterWifi.bind(this)}><Check checked={this.props.filters.filterWifi} /></div>
+                    <div onClick={this.props.toggleFilterPower.bind(this)}><Check checked={this.props.filters.filterPower} /></div>
+                    <div onClick={this.props.toggleFilterFood.bind(this)}><Check checked={this.props.filters.filterFood} /></div>
+                    <p className='textSmall lightColor'>NAME</p>
+                </div>
+            </MediaQuery>
         )
     }
     render() {

@@ -8,6 +8,7 @@
  */
 var records = [
     { id: 1, username: 'austin', password: 'caffinityadmin', displayName: 'Austin' },
+    { id: 2, username: 'beebee', password: 'caffinityadmin', displayName: 'BB' },
 ];
 
 exports.findById = function(id, cb) {

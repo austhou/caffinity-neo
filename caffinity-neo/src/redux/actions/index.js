@@ -1,41 +1,4 @@
-import firebase from 'firebase';
 const BACKEND_URL = 'https://caffinity.co/backend/api'
-
-//deprecated
-export const cityCheck = (city) => {
-    return (dispatch) => {
-        firebase.database().ref(`/${city}/`)
-            .on('value', snapshot => {
-
-                if (snapshot.val() == null) {
-                    firebase.database().ref('/').child(city).update({
-                        'cafes': '',
-                        'name': city,
-                        'lat': 0,
-                        'lng': 0
-                    });
-                }
-                else {
-                    dispatch({ type: 'get_cafe_data', payload: snapshot.val() });
-                }
-            });
-    }
-}
-
-//deprecated
-export const cafeFetch = (city) => {
-    //console.log("fetch start");
-    return (dispatch) => {
-        firebase.database().ref(`/${city}/`)
-            .on('value', snapshot => {
-                if (snapshot.val()) {
-                    dispatch({ type: 'get_cafe_data', payload: snapshot.val() });
-                }
-            }, error => {
-                console.error(error);
-            });
-    };
-};
 
 //fetch all cafes from mongo
 export const cafeFetchMongo = () => {
@@ -224,6 +187,20 @@ export const setList = () => {
 export const togglePane = () => {
     return {
         type: 'toggle_pane',
+        payload: null
+    }
+}
+
+export const setSelection = (cafe) => {
+    return {
+        type: 'set_selection',
+        payload: null
+    }
+}
+
+export const clearSelction = (cafe) => {
+    return {
+        type: 'clear_selection',
         payload: null
     }
 }

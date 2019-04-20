@@ -316,10 +316,6 @@ p {
   color: #D92752;
 }
 
-.listContainer::-webkit-scrollbar {
-  display: none;
-}
-
 .searchBox {
   background-color: transparent;
   border: 1px solid rgba(2, 37, 62, 0.33);
@@ -387,7 +383,7 @@ p {
     width: calc(100% - 64px);
     height: auto;
     margin-left: 32px;
-    margin-top: 30vh;
+    margin-top: 20vh;
   }
 
   .submitModal .searchBox {

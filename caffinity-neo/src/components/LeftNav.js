@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Modal from 'react-modal';
 import { SearchBox } from '@loadup/react-google-places-autocomplete';
 import { Icon } from 'semantic-ui-react';
+import MediaQuery from 'react-responsive';
 import axios from 'axios';
 import iconData from '../data/generalIcons.json';
 
@@ -38,7 +39,7 @@ class LeftNav extends Component {
         this.closeModal = this.closeModal.bind(this);
     }
     componentDidMount() {
-        document.getElementById('rangeInput').addEventListener('keydown', (event) => {
+        document.getElementById('rangeInput') && document.getElementById('rangeInput').addEventListener('keydown', (event) => {
             if (event.key === 'Enter' || event.keyCode === 13) {
                 //console.log("adsf")
                 this.props.setRange(this.props.location.lat, this.props.location.lng, parseFloat(this.state.rangebox));
@@ -93,7 +94,7 @@ class LeftNav extends Component {
                 }}
                 className="searchBox"
                 placeholder="Enter a Location"
-                style={{marginRight: 8}}
+                style={{marginRight: 8, zIndex: 4}}
             />
         }
         else {
@@ -110,7 +111,7 @@ class LeftNav extends Component {
         if (this.state.customLoc) {
             return <div 
                 className="itemButton smallButton"
-                style={{width: 'fit-content', display: 'flex', flexDirection: 'row', width: 32, height: 32, justifyContent: 'center', alignItems: 'center'}}
+                style={{display: 'flex', flexDirection: 'row', width: 32, height: 32, justifyContent: 'center', alignItems: 'center'}}
                 onClick={this.toggleCustomLocation.bind(this)}
             >
                 <svg width='16' height='16' viewBox='0 0 24 24' ><path d={iconData.yourlocation.svg}></path></svg>
@@ -126,7 +127,6 @@ class LeftNav extends Component {
             <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
                 <input id="rangeInput" value={this.state.rangebox} onChange={this.handleRangeChange.bind(this)} style={{width: 80, display: 'block'}} className='searchBox' />
                 {this.returnRangeButton()}
-                
             </div>
         )
     }
@@ -136,7 +136,7 @@ class LeftNav extends Component {
             return (
                 <div 
                     className="itemButton smallButton"
-                    style={{display: 'flex', flexDirection: 'row', width: 24,height:24, justifyContent: 'center', alignItems: 'center', paddingTop: -4, marginLeft: 8}}
+                    style={{display: 'flex', flexDirection: 'row',width: 32, height: 32, justifyContent: 'center', alignItems: 'center', paddingTop: -4, marginLeft: 8}}
                     onClick={this.submitRange.bind(this)}
                 >
                     <Icon className='blueIcon' name='check' style={{margin: 0, marginBottom: 2}}/>
@@ -296,6 +296,49 @@ class LeftNav extends Component {
                         </div>
                     </div>
                 </Modal>
+                <Modal 
+                    isOpen={this.state.showNavMobile}
+                    onRequestClose={() => {this.setState({ showNavMobile: false})}}
+                    className="submitModal"
+                    contentLabel="login modal"
+                    verticallyCenter
+                    style={{marginTop: '20vh'}}
+                >
+                    <p className='textSmall lightColor'>LOCATION</p>
+                    <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                        {this.returnLocation()}
+                        {this.returnLocationButton()}
+                    </div>
+                    <div style={{height: 32}} />
+                    <p className='textSmall lightColor'>DISTANCE (mi)</p>
+                    {this.returnRange()}
+                    <div style={{height: 32}} />
+
+                    
+                    <p className="textSmall lightColor" style={{marginBottom: 16}}>Properties</p>
+                    <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }}>
+                        <div onClick={this.props.toggleFilterWifi.bind(this)}><Check checked={this.props.filters.filterWifi} /></div>
+                        <Icon className={(this.props.filters.filterWifi ? 'darkIcon' : 'lightIcon')} name="wifi" />
+                        <p style={{marginLeft: 16}}>{(this.props.filters.filterWifi ? 'Has Wifi' : "No Wifi")}</p>
+                    </div>
+                    <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }}>
+                        <div onClick={this.props.toggleFilterPower.bind(this)}><Check checked={this.props.filters.filterPower} /></div>
+                        <Icon className={(this.props.filters.filterPower ? 'darkIcon' : 'lightIcon')} name="plug" />
+                        <p style={{marginLeft: 16}}>{(this.props.filters.filterPower ? 'Has Outlets' : "No Outlets")}</p>
+                    </div>
+                    <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }}>
+                        <div onClick={this.props.toggleFilterFood.bind(this)}><Check checked={this.props.filters.filterFood} /></div>
+                        <Icon className={(this.props.filters.filterFood ? 'darkIcon' : 'lightIcon')} name="food" />
+                        <p style={{marginLeft: 16}}>{(this.props.filters.filterFood ? 'Has Food' : "No Food")}</p>
+                    </div>
+                    <div 
+                        className="itemButton"
+                        style={{width: 'fit-content', marginLeft: 'auto', marginRight: 0}}
+                        onClick={() => {this.setState({ showNavMobile: false})}}
+                    >
+                        OKAY
+                    </div>
+                </Modal>
                 <Modal
                 isOpen={this.state.submitModalOpen}
                 //onAfterOpen={this.afterOpenModal}
@@ -359,27 +402,31 @@ class LeftNav extends Component {
                     
                 </Modal>
                 <div style={{marginBottom: 16, position: 'relative'}}>
-                    <img src={banner} alt="banner" width="128" style={{position: 'absolute', marginTop: 4}} onClick={() => {
-                        this.setState({ showNavMobile: !this.state.showNavMobile })
-                    }} />
+                    <img src={banner} alt="banner" width="128" style={{position: 'absolute', marginTop: 4}} />
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-end'}}>
                         {this.returnLoginLogoutButtons()}
                         <MobileTogglePaneButton />
+                        <div className="itemButton showMobile" onClick={() => { this.setState({ showNavMobile: true }) }} style={{padding: 8, marginLeft: 8}}>
+                            <Icon className='darkIcon blueIcon' name="filter" style={{margin: 0}}/>
+                        </div>
                     </div>
                 </div>
                 <div className="hideMobile" style={{height: 16}} />
                 {this.props.user ? this.returnSubmitButton() : null}
-                <div className="hideMobile" style={this.state.showNavMobile ? {display: 'block'} : {}}>
-                    <p className='textSmall lightColor'>LOCATION</p>
-                    <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-                        {this.returnLocation()}
-                        {this.returnLocationButton()}
+                <MediaQuery query="(min-device-width: 600px)">
+                    <div className="hideMobile">
+                        <p className='textSmall lightColor'>LOCATION</p>
+                        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                            {this.returnLocation()}
+                            {this.returnLocationButton()}
+                        </div>
+                        <div style={{height: 32}} />
+                        <p className='textSmall lightColor'>DISTANCE (mi)</p>
+                        {this.returnRange()}
+                        <div style={{height: 32}} />
                     </div>
-                    <div style={{height: 32}} />
-                    <p className='textSmall lightColor'>DISTANCE (mi)</p>
-                    {this.returnRange()}
-                    <div style={{height: 32}} />
-                </div>
+                </MediaQuery>
+
             </div>
         )
     }
@@ -391,8 +438,9 @@ const mapStateToProps = state => {
     const geoLocation = state.location.geo;
     const range = state.location.range;
     const user = state.user;
+    const filters = state.filters;
     
-    return { cafes, location, geoLocation, range, user };
+    return { cafes, location, geoLocation, range, user, filters };
 }
 
 export default connect(mapStateToProps, actions)(LeftNav);
