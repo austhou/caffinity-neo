@@ -194,11 +194,11 @@ export const togglePane = () => {
 export const setSelection = (cafe) => {
     return {
         type: 'set_selection',
-        payload: null
+        payload: cafe
     }
 }
 
-export const clearSelction = (cafe) => {
+export const clearSelection = () => {
     return {
         type: 'clear_selection',
         payload: null

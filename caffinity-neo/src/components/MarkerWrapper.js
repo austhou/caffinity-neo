@@ -21,7 +21,7 @@ class MarkerWrapper extends Component {
 
     selectionProcess() {
         console.log(this.state.cafe)
-        if (this.props.selection) {
+        if (this.props.selected) {
             this.props.clearSelection();
         }
         else {
@@ -74,9 +74,11 @@ class MarkerWrapper extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    const selectIdentifier = ownProps.cafe.placesData.name + " " + ownProps.cafe.placesData.formatted_address;
-    const selected = selectIdentifier === state.selectedName;
-    return { selected };
+    const selfIdentifier = ownProps.cafe.id;
+    const selectIdentifier = state.selection && state.selection.id; 
+    const selected = selectIdentifier === selfIdentifier;
+    const selection = state.selection;
+    return { selected, selection };
 };
 
 export default connect(mapStateToProps, actions)(MarkerWrapper);

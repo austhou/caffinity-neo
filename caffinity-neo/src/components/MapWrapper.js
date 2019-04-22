@@ -9,206 +9,225 @@ import { distance } from '../util';
 
 const MAPAPIKEY = "AIzaSyBABXrbgUP5XYi-sGHvJ_R9KuLlugctX8s";
 
-const MapComponent = withScriptjs(withGoogleMap((props) =>
-    <GoogleMap
-        defaultZoom={14}
-        center={{ lat: props.lat, lng: props.lng }}
-        options={{ styles: [
-            {
-                "featureType": "all",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "saturation": 36
-                    },
-                    {
-                        "color": "#303335"
-                    },
-                    {
-                        "lightness": 40
-                    }
-                ]
-            },
-            {
-                "featureType": "all",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    },
-                    {
-                        "color": "#ffffff"
-                    },
-                    {
-                        "lightness": 16
-                    }
-                ]
-            },
-            {
-                "featureType": "all",
-                "elementType": "labels.icon",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "administrative",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "color": "#fafefe"
-                    },
-                    {
-                        "lightness": "20"
-                    }
-                ]
-            },
-            {
-                "featureType": "administrative",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                    {
-                        "color": "#fafefe"
-                    },
-                    {
-                        "lightness": 17
-                    },
-                    {
-                        "weight": 1.2
-                    }
-                ]
-            },
-            {
-                "featureType": "landscape",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#F3F5F7"
-                    },
-                    {
-                        "lightness": "-4"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#F3F5F7"
-                    },
-                    {
-                        "lightness": 21
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.park",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#dedfdf"
-                    },
-                    {
-                        "lightness": 21
-                    }
-                ]
-            },
-            {
-                "featureType": "road.highway",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "color": "#ffffff"
-                    },
-                    {
-                        "lightness": 17
-                    }
-                ]
-            },
-            {
-                "featureType": "road.highway",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                    {
-                        "color": "#ffffff"
-                    },
-                    {
-                        "lightness": 29
-                    },
-                    {
-                        "weight": 0.2
-                    }
-                ]
-            },
-            {
-                "featureType": "road.arterial",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#ffffff"
-                    },
-                    {
-                        "lightness": 18
-                    }
-                ]
-            },
-            {
-                "featureType": "road.local",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#ffffff"
-                    },
-                    {
-                        "lightness": 16
-                    }
-                ]
-            },
-            {
-                "featureType": "transit",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#f2f5f6"
-                    },
-                    {
-                        "lightness": 19
-                    }
-                ]
-            },
-            {
-                "featureType": "water",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "color": "#F3F5F7"
-                    },
-                    {
-                        "lightness": "0"
-                    }
-                ]
-            }
-        ]}}
-    >
+const MapComponent = withScriptjs(withGoogleMap((props) => {
+    var lat = props.lat;
+    var lng = props.lng;
+    if (props.selection) {
+        lat = props.selection.placesData.geometry.location.lat;
+        lng = props.selection.placesData.geometry.location.lng;
+    }
+    var zoom = 11;
+    if (zoom < 8 && zoom >= 5) {
+        zoom = 12;
+    }
+    if (props.range < 5 && props.range > 2) {
+        zoom = 13;
+    }
+    if (props.range <= 2) {
+        zoom = 14;
+    }
+    return (
+        <GoogleMap
+            defaultZoom={12}
+            zoom={zoom}
+            center={{ lat: lat, lng: lng }}
+            options={{ styles: [
+                {
+                    "featureType": "all",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "saturation": 36
+                        },
+                        {
+                            "color": "#303335"
+                        },
+                        {
+                            "lightness": 40
+                        }
+                    ]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        },
+                        {
+                            "color": "#ffffff"
+                        },
+                        {
+                            "lightness": 16
+                        }
+                    ]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "administrative",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#fafefe"
+                        },
+                        {
+                            "lightness": "20"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "administrative",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#fafefe"
+                        },
+                        {
+                            "lightness": 17
+                        },
+                        {
+                            "weight": 1.2
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#F3F5F7"
+                        },
+                        {
+                            "lightness": "-4"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#F3F5F7"
+                        },
+                        {
+                            "lightness": 21
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#dedfdf"
+                        },
+                        {
+                            "lightness": 21
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        },
+                        {
+                            "lightness": 17
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        },
+                        {
+                            "lightness": 29
+                        },
+                        {
+                            "weight": 0.2
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        },
+                        {
+                            "lightness": 18
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.local",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        },
+                        {
+                            "lightness": 16
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#f2f5f6"
+                        },
+                        {
+                            "lightness": 19
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#F3F5F7"
+                        },
+                        {
+                            "lightness": "0"
+                        }
+                    ]
+                }
+            ]}}
+        >
 
-        {props.cafes.map(item => <MarkerWrapper cafe={item} key={item.placesData.name+" "+item.placesData.formatted_address}/>)}
+            {props.cafes.map(item => <MarkerWrapper cafe={item} key={item.placesData.name+" "+item.placesData.formatted_address}/>)}
 
-        <Marker
-            icon={{
-                path: props.locationSvg,
-                fillColor: '#229EC5',
-                fillOpacity: 1,
-                strokeOpacity: 0,
-                anchor: { x: 15, y: 15 }
-            }}
-            position={{ lat: props.lat, lng: props.lng }}
-            zIndex={1000}
-        />
-        
-    </GoogleMap>
+            <Marker
+                icon={{
+                    path: props.locationSvg,
+                    fillColor: '#229EC5',
+                    fillOpacity: 1,
+                    strokeOpacity: 0,
+                    anchor: { x: 15, y: 15 }
+                }}
+                position={{ lat: props.lat, lng: props.lng }}
+                zIndex={1000}
+            />
+            
+        </GoogleMap>)
+    }
 ))
 
 class MapWrapper extends Component {
@@ -234,6 +253,8 @@ class MapWrapper extends Component {
     }
 
     render () {
+        var lat = this.props.lat;
+        var lng = this.props.lng;
         return (
             <MapComponent
                 isMarkerShown
@@ -242,10 +263,12 @@ class MapWrapper extends Component {
                 containerElement={<div style={{ height: `calc(100vh - 64px)` }} />}
                 mapElement={<div style={{ height: `calc(100vh - 64px)` }} />}
                 cafes={this.props.cafes}
+                selection = {this.props.selection}
                 //city={this.props.city}
-                lat={this.props.lat}
-                lng={this.props.lng}
+                lat={lat}
+                lng={lng}
                 locationSvg={iconData.yourlocation.svg}
+                range = {this.props.range}
             />
         )
     }
@@ -257,6 +280,7 @@ const mapStateToProps = state => {
     const location = state.location.current;
     const range = state.location.range;
     const filters = state.filters;
+    const selection = state.selection;
 
     var filterCafes = []
 
@@ -276,7 +300,7 @@ const mapStateToProps = state => {
             return distance(cafe.placesData.geometry.location.lat, cafe.placesData.geometry.location.lng, location.lat, location.lng, "M") < range;
         })
     }
-    return { cafes: filterCafes, lat: location.lat, lng: location.lng };
+    return { cafes: filterCafes, lat: location.lat, lng: location.lng, selection, range };
 };
 
 export default connect(mapStateToProps, actions)(MapWrapper);

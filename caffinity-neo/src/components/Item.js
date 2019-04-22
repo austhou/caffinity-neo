@@ -73,10 +73,17 @@ class List extends Component {
           href,
         }).click();
     }
-
+    selectItem() {
+        if (this.props.selected) {
+            this.props.clearSelection();
+        }
+        else {
+            this.props.setSelection(this.props.cafe)
+        }
+    }
     render() {
         return (
-            <div className="itemHolder">
+            <div className="itemHolder" onClick={this.selectItem.bind(this)}>
                 { this.props.cafe && 
                     <div style={{display: 'flex', flexDirection: "row", position: 'absolute', alignItems: 'center', maxWidth: '100%'}}>
                         <p 
@@ -87,7 +94,7 @@ class List extends Component {
                         {this.returnIcon('ratingWifi','wifi')}
                         {this.returnIcon('ratingPower','plug')}
                         {this.returnIcon('ratingFood','food')}
-                        <p className="textName itemName">
+                        <p className={this.props.selected ? "textName itemName blueIcon" : "textName itemName"}>
                             {this.props.cafe.placesData.name}
                             <span style={{marginLeft: 16}} className="textLight textSmall">{!this.state.openNow && 'CLOSED'}</span>
                             <span style={{marginLeft: 0, display: 'none'}} className="textLight textSmall textReveal">{this.state.openNow && 'OPEN'}</span>
@@ -120,11 +127,16 @@ class List extends Component {
     }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
     const cafes = state.cafe;
     const location = state.location.current;
+
+    const selfIdentifier = ownProps.cafe.id;
+    const selectIdentifier = state.selection && state.selection.id; 
+    const selected = selectIdentifier === selfIdentifier;
+    const selection = state.selection;
     
-    return { cafes, location };
+    return { cafes, location, selected };
 }
 
 export default connect(mapStateToProps, actions)(List);
