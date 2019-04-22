@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Icon } from 'semantic-ui-react';
-import ReactStars from 'react-stars';
+
 
 import { distance } from '../util';
 
@@ -99,17 +99,6 @@ class List extends Component {
                             <span style={{marginLeft: 16}} className="textLight textSmall">{!this.state.openNow && 'CLOSED'}</span>
                             <span style={{marginLeft: 0, display: 'none'}} className="textLight textSmall textReveal">{this.state.openNow && 'OPEN'}</span>
                         </p>
-                        <div style={{display: 'none', marginLeft: 32}}>
-                            <ReactStars
-                                count={5}
-                                color1={'#F3F5F7'}
-                                value={this.props.cafe.placesData.rating}
-                                //size={24}
-                                edit={false}
-                                color2={'rgba(2, 37, 62, .33)'} 
-                                size={16}
-                            />
-                        </div>
                     </div>
                 }
                 <div className="itemMenu">
@@ -117,7 +106,7 @@ class List extends Component {
                         onClick={this.openInNewTab.bind(
                             this, 
                             `https://maps.google.com/maps?daddr=${this.props.cafe.placesData.name+' '+this.props.cafe.placesData.formatted_address}&amp;ll=`)} 
-                        className="itemButton"
+                        className="itemButton hideMobile"
                     >
                         NAVIGATE
                     </div>

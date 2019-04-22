@@ -243,6 +243,19 @@ class LeftNav extends Component {
             })
         event.preventDefault();
     }
+    returnFilteredCafes() {
+        var filterCafes = [...this.props.cafes]
+        if (this.props.filters.filterWifi) {
+            filterCafes = filterCafes.filter((cafe) => { return cafe.ratingWifi>0 })
+        }
+        if (this.props.filters.filterPower) {
+            filterCafes = filterCafes.filter((cafe) => { return cafe.ratingPower>0 })
+        }
+        if (this.props.filters.filterFood) {
+            filterCafes = filterCafes.filter((cafe) => { return cafe.ratingFood>0 })
+        }
+        return filterCafes;
+    }
     putDataToDB = (placesObject, ratingWifi, ratingPower, ratingFood) => {
         if (this.state.formPlace) {
             let idToBeAdded = this.state.newId;
@@ -269,6 +282,7 @@ class LeftNav extends Component {
                     className="submitModal"
                     contentLabel="login modal"
                     verticallyCenter
+                    style={{overlay: {zIndex: 1000}}}
                 >
                     <div>
                         <p className='textSmall lightColor'>USERNAME</p>
@@ -303,6 +317,7 @@ class LeftNav extends Component {
                     contentLabel="login modal"
                     verticallyCenter
                     style={{marginTop: '20vh'}}
+                    style={{overlay: {zIndex: 1000}}}
                 >
                     <p className='textSmall lightColor'>LOCATION</p>
                     <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
@@ -340,12 +355,13 @@ class LeftNav extends Component {
                     </div>
                 </Modal>
                 <Modal
-                isOpen={this.state.submitModalOpen}
-                //onAfterOpen={this.afterOpenModal}
-                onRequestClose={this.closeModal}
-                className="submitModal"
-                contentLabel="Example Modal"
-                verticallyCenter
+                    isOpen={this.state.submitModalOpen}
+                    //onAfterOpen={this.afterOpenModal}
+                    onRequestClose={this.closeModal}
+                    className="submitModal"
+                    contentLabel="Example Modal"
+                    verticallyCenter
+                    style={{overlay: {zIndex: 1000}}}
                 >
                     <SearchBox
                         id="add-searchbox-id"
@@ -405,9 +421,10 @@ class LeftNav extends Component {
                     <img src={banner} alt="banner" width="128" style={{position: 'absolute', marginTop: 4}} />
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-end'}}>
                         {this.returnLoginLogoutButtons()}
-                        <MobileTogglePaneButton />
-                        <div className="itemButton showMobile" onClick={() => { this.setState({ showNavMobile: true }) }} style={{padding: 8, marginLeft: 8}}>
+                        
+                        <div className="itemButton showMobile" onClick={() => { this.setState({ showNavMobile: true }) }} style={{padding: 8, marginLeft: 8, display: 'flex', flexDirection: 'row'}}>
                             <Icon className='darkIcon blueIcon' name="filter" style={{margin: 0}}/>
+                            <p className="smallText">{this.props.cafes && this.returnFilteredCafes().length}</p>
                         </div>
                     </div>
                 </div>
