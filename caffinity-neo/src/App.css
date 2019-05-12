@@ -11,7 +11,7 @@ $color-red: #D92752;
 */
 @import '//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css';
 body, html {
-  background-color: #F3F5F7;
+  background-color: #FaFcFc;
   color: #02253E;
   font-family: "Inter";
   font-weight: 500;
@@ -34,7 +34,7 @@ p {
   margin: 32px;
   display: flex;
   flex-direction: row;
-  background-color: #F3F5F7;
+  background-color: #FaFcFc;
 }
 
 @media only screen and (max-width: 480px) {
@@ -94,6 +94,18 @@ p {
 
 .showMobile {
   display: none;
+}
+
+.filterItem {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.filterItem:hover {
+  background-color: rgba(2, 37, 62, 0.03);
 }
 
 @media only screen and (max-width: 480px) {
@@ -256,7 +268,7 @@ p {
   width: calc(100% - 64px);
   margin: 32px;
   border-radius: 16px;
-  background-color: #F3F5F7;
+  background-color: #FaFcFc;
   border: 1px solid rgba(2, 37, 62, 0.33);
   padding: 32px;
   z-index: 10;
@@ -303,7 +315,7 @@ p {
   padding-left: 12px;
   padding-right: 12px;
   border-radius: 4px;
-  background-color: #F3F5F7;
+  background-color: #FaFcFc;
   color: #229EC5;
   border: 2px solid #229EC5;
   text-transform: uppercase;
@@ -318,14 +330,14 @@ p {
   box-shadow: 0px 4px 8px 0px rgba(22, 158, 197, 0.33);
   cursor: pointer;
   background-color: #229EC5;
-  color: #F3F5F7;
+  color: #FaFcFc;
 }
 
 .itemButtonBlue {
   box-shadow: 0px 4px 8px 0px rgba(22, 158, 197, 0.33);
   cursor: pointer;
   background-color: #229EC5;
-  color: #F3F5F7;
+  color: #FaFcFc;
 }
 
 .largeButton {
@@ -336,7 +348,7 @@ p {
 .smallButton {
   padding: 4px;
   border-radius: 4px;
-  background-color: #F3F5F7;
+  background-color: #FaFcFc;
   color: #229EC5;
   border: 2px solid #229EC5;
   text-transform: uppercase;
@@ -352,7 +364,7 @@ p {
   padding-left: 12px;
   padding-right: 12px;
   border-radius: 4px;
-  background-color: #F3F5F7;
+  background-color: #FaFcFc;
   color: rgba(2, 37, 62, 0.33);
   border: 2px solid rgba(2, 37, 62, 0.33);
   text-transform: uppercase;
@@ -404,7 +416,7 @@ p {
 .submitModal {
   width: 25%;
   height: auto;
-  background-color: #F3F5F7;
+  background-color: #FaFcFc;
   border: 1px solid rgba(2, 37, 62, 0.33);
   border-radius: 16px;
   padding: 32px;
@@ -428,12 +440,12 @@ p {
 }
 
 .smallButton:hover svg path {
-  fill: #F3F5F7;
+  fill: #FaFcFc;
 }
 
 @media only screen and (max-width: 480px) {
   .showMobile:hover .blueIcon {
-    color: #F3F5F7;
+    color: #FaFcFc;
   }
 
   .mobileNoMargin {
@@ -442,7 +454,7 @@ p {
   }
 
   .itemButtonBlue .blueIcon {
-    color: #F3F5F7;
+    color: #FaFcFc;
   }
 
   .submitModal {

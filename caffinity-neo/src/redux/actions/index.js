@@ -41,7 +41,7 @@ export const getLocation = (loc) => {
     }
 }
 
-export const setLocation = (lat, lng, rad) => {
+export const setLocation = (lat, lng, rad, id=null) => {
     var minLat = lat - 0.0166666*rad;
     var maxLat = lat + 0.0166666*rad;
     var minLng = lng - 0.0166666*Math.cos(lat*Math.PI/180)*rad;
@@ -62,6 +62,14 @@ export const setLocation = (lat, lng, rad) => {
         .then(res => {
             //console.log(res.data)
             dispatch({ type: 'get_cafe_data', payload: res.data })
+            if (id) {
+                
+                var result = res.data.filter(cafe => {
+                    return cafe._id === id
+                })
+                console.log(result[0])
+                dispatch({ type: 'set_selection', payload: result[0] })
+            }
         })
     }
     /*
@@ -192,6 +200,7 @@ export const togglePane = () => {
 }
 
 export const setSelection = (cafe) => {
+    console.log(cafe)
     return {
         type: 'set_selection',
         payload: cafe

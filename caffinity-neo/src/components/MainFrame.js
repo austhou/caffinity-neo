@@ -5,14 +5,25 @@ import * as actions from '../redux/actions';
 import ReactStars from 'react-stars';
 import { Icon } from 'semantic-ui-react';
 
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom'
+
 import '../App.css';
 import List from './List';
 import MapWrapper from './MapWrapper';
 import LeftNav from './LeftNav';
 import MobileTogglePaneButton from './MobileTogglePaneButton';
+import QueryProcessor from './QueryProcessor';
 
 
 class MainFrame extends Component {
+    componentWillMount() {
+        //lat && lon && r && id && this.props.setSelection()
+
+    }
     openInNewTab(href) {
         Object.assign(document.createElement('a'), {
           target: '_blank',
@@ -67,22 +78,25 @@ class MainFrame extends Component {
     }
     render() {
         return (
-            <div className="App" style={{position: 'relative'}}>
-                <LeftNav />
-                <div className="listPane hideMobile" style={!this.props.mobilePane ? {display: 'block', position: 'relative'} : { position: 'relative' }}>
-                    <div className="showMobile">
-                        {this.returnCard()}
+            <Router>
+                <div className="App" style={{position: 'relative'}}>
+                    <LeftNav />
+                    <div className="listPane hideMobile" style={!this.props.mobilePane ? {display: 'block', position: 'relative'} : { position: 'relative' }}>
+                        <div className="showMobile">
+                            {this.returnCard()}
+                        </div>
+                        <List />
                     </div>
-                    <List />
+                    <div className="mapPane hideMobile" style={this.props.mobilePane ? {display: 'block', position: 'relative'} : { position: 'relative' }}>
+                        {this.returnCard()}
+                        <MapWrapper style={{zIndex: 5}}/>
+                    </div>
+                    <div className="showMobile" style={{position: 'absolute', bottom: 0, right: 0}}>
+                        <MobileTogglePaneButton largebutt={true}/>
+                    </div>
                 </div>
-                <div className="mapPane hideMobile" style={this.props.mobilePane ? {display: 'block', position: 'relative'} : { position: 'relative' }}>
-                    {this.returnCard()}
-                    <MapWrapper style={{zIndex: 5}}/>
-                </div>
-                <div className="showMobile" style={{position: 'absolute', bottom: 0, right: 0}}>
-                    <MobileTogglePaneButton largebutt={true}/>
-                </div>
-            </div>
+                <QueryProcessor />
+            </Router>
         );
     }
 }

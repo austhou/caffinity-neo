@@ -1,3 +1,7 @@
+import { createBrowserHistory } from 'history';
+
+const history = createBrowserHistory();
+
 export function distance (lat1, lon1, lat2, lon2, unit) {
     //console.log(lat1);
     //console.log(lon1);
@@ -23,4 +27,16 @@ export function distance (lat1, lon1, lat2, lon2, unit) {
         dec = 0;
     }
     return dist.toFixed(dec);
+}
+
+export function updateURL (lat, lon, range, id) {
+    const searchParams = new URLSearchParams();
+    searchParams.set("lat", lat);
+    searchParams.set("lon", lon);
+    searchParams.set("r", range);
+    searchParams.set("id", id);
+    //browserHistory.push(`?${searchParams.toString()}`);
+    history.push({
+        search: `?${searchParams.toString()}`,
+    });   
 }

@@ -19,8 +19,23 @@ class List extends Component {
             filterDistance: 1,
         }
     }
+    getParams(location) {
+        const searchParams = new URLSearchParams(location.search);
+        return {
+          lat: searchParams.get('lat') || '',
+          lon: searchParams.get('lon') || '',
+          r: searchParams.get('r') || '',
+          id: searchParams.get('id') || '',
+        };
+    }
     componentWillMount() {
-        navigator.geolocation.getCurrentPosition(this.storeLocation, this.errorHandler, { timeout: 20000, maximumAge:Infinity, enableHighAccuracy: false });
+        let { lat, lon, r, id } = this.getParams(window.location)
+        if (lat && lon && r) {
+            this.props.setLocation(parseFloat(lat), parseFloat(lon), parseFloat(r), id);
+        }
+        else {
+            navigator.geolocation.getCurrentPosition(this.storeLocation, this.errorHandler, { timeout: 20000, maximumAge:Infinity, enableHighAccuracy: false });
+        }
         //this.props.cafeFetchMongo();
         //this.props.cafeFetchSelectionMongo(this.props.location.lat, this.props.location.lng, this.props.range);
     }
@@ -90,7 +105,7 @@ class List extends Component {
             return <div />
         }
     }
-    //return filter checkboxes
+    //return filter checkboxes, DEPRECATED
     returnChecks() {
         return(
             <MediaQuery query="(min-device-width: 600px)">
