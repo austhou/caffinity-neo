@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import * as actions from '../redux/actions';
 import ReactStars from 'react-stars';
+import { Icon } from 'semantic-ui-react';
 
 import '../App.css';
 import List from './List';
@@ -23,18 +24,23 @@ class MainFrame extends Component {
             console.log(this.props.selection)
             return (
                 <div className="cardHolder">
-                    <div className="cardItem">
-                        <div style={{display: 'flex', flexFlow: 'row wrap', alignItems: 'center', marginBottom: 8}}>
-                            <p className="blueIcon" style={{marginRight: 8}}>{this.props.selection.placesData.name}</p>
-                            <ReactStars
-                                count={5}
-                                color1={'#F3F5F7'}
-                                value={this.props.selection.placesData.rating}
-                                //size={24}
-                                edit={false}
-                                color2={'rgba(2, 37, 62, .33)'} 
-                                size={12}
-                            />
+                    <div className="cardItem mobileNoMargin">
+                        <div style={{display: 'flex', flexFlow: 'row', justifyContent: 'space-between'}}>
+                            <div style={{display: 'flex', flexFlow: 'row wrap', alignItems: 'center', marginBottom: 8}}>
+                                <p className="blueIconNoHover" style={{marginRight: 8}}>{this.props.selection.placesData.name}</p>
+                                <ReactStars
+                                    count={5}
+                                    color1={'#F3F5F7'}
+                                    value={this.props.selection.placesData.rating}
+                                    //size={24}
+                                    edit={false}
+                                    color2={'rgba(2, 37, 62, .33)'} 
+                                    size={12}
+                                />
+                            </div>
+                            <div onClick={this.props.clearSelection.bind(this)}>
+                                <Icon className='darkIcon blueIconNoHover' name="close" style={{margin: 0}}/>
+                            </div>
                         </div>
                         <p>{this.props.selection.placesData.formatted_address}</p>
                         <p>{this.props.selection.placesData.formatted_phone_number}</p>
@@ -46,9 +52,13 @@ class MainFrame extends Component {
                                 className="itemButton"
                                 style={{width: 'fit-content'}}
                             >
+                                <Icon className='darkIcon blueIconNoHover' name="location arrow" style={{margin: 0, marginRight: 4}}/>
                                 NAVIGATE
                             </div>
-                            <MobileTogglePaneButton />
+                            <div className="showMobile">
+                                <MobileTogglePaneButton />
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -69,7 +79,7 @@ class MainFrame extends Component {
                     {this.returnCard()}
                     <MapWrapper style={{zIndex: 5}}/>
                 </div>
-                <div style={{position: 'absolute', bottom: 0, right: 0}}>
+                <div className="showMobile" style={{position: 'absolute', bottom: 0, right: 0}}>
                     <MobileTogglePaneButton largebutt={true}/>
                 </div>
             </div>

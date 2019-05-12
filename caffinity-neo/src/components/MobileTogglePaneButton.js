@@ -18,7 +18,7 @@ class MobileTogglePaneButton extends Component {
     render() {
         if (this.props.largebutt) {
             return (
-                <div className="itemButton showMobile" onClick={() => { this.props.togglePane() }} 
+                <div className="itemButton showMobile itemButtonBlue" onClick={() => { this.props.togglePane() }} 
                     style={{padding: 8, marginLeft: 8, width: 48, height: 48, maxHeight: 48,borderRadius: 24, display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}
                 >
                     {this.returnIcon()}
@@ -27,9 +27,9 @@ class MobileTogglePaneButton extends Component {
         }
         else {
             return (
-                <div className="itemButton showMobile" onClick={() => { this.props.togglePane() }} style={{padding: 8, marginLeft: 8, display: 'flex', flexDirection: 'row'}}>
+                <div className="itemButton showMobile itemButtonBlue" onClick={() => { this.props.togglePane() }} style={{padding: 8, marginLeft: 8, display: 'flex', flexDirection: 'row'}}>
                     {this.returnIcon()}
-                    <p style={{marginLeft: 8}} className="textSmall">VIEW {this.props.mobilePane ? "IN LIST" : "ON MAP"}</p>
+                    <p style={{marginLeft: 8}} className="textSmall">VIEW {this.props.mobilePane ? "LIST" : "MAP"}</p>
                 </div>
             );
         }

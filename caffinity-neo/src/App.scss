@@ -24,6 +24,10 @@
     color: $color-blue;
 }
 
+.blueIconNoHover {
+    color: $color-blue;
+}
+
 .lightIcon {
     color: $color-lighter;
 }
@@ -46,6 +50,13 @@
 }
 
 .itemButton:hover {
+    box-shadow: 0px 4px 8px 0px $color-bluelight;
+    cursor: pointer;
+    background-color: $color-blue;
+    color: $color-white;
+}
+
+.itemButtonBlue {
     box-shadow: 0px 4px 8px 0px $color-bluelight;
     cursor: pointer;
     background-color: $color-blue;
@@ -160,8 +171,21 @@
     fill: $color-white;
 }
 
+.mobileNoMargin {
+
+}
+
 @media only screen and (max-width: 480px) { 
     .showMobile:hover .blueIcon {
+        color: $color-white;
+    }
+
+    .mobileNoMargin {
+        margin: 0;
+        margin-bottom: 0;
+    }
+
+    .itemButtonBlue .blueIcon {
         color: $color-white;
     }
 

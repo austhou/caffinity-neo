@@ -1,4 +1,14 @@
 @import url("https://rsms.me/inter/inter.css");
+/**
+$color-white: #F3F5F7;
+$color-black: #02253E;
+$color-light: rgba(2, 37, 62, .33);
+$color-lighter: rgba(2, 37, 62, .1);
+$color-blue: #229EC5;
+$color-bluelight: rgba(22, 158, 197, .33);
+$color-hover: rgba(2, 37, 62, .03);
+$color-red: #D92752;
+*/
 @import '//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css';
 body, html {
   background-color: #F3F5F7;
@@ -101,7 +111,6 @@ p {
     width: 100%;
     margin: 0;
     flex: 1;
-    height: calc(100% - 64px);
   }
 
   .hideMobile {
@@ -248,7 +257,6 @@ p {
   margin: 32px;
   border-radius: 16px;
   background-color: #F3F5F7;
-  box-shadow: 0px 4px 8px 0px rgba(2, 37, 62, 0.33);
   border: 1px solid rgba(2, 37, 62, 0.33);
   padding: 32px;
   z-index: 10;
@@ -282,6 +290,10 @@ p {
   color: #229EC5;
 }
 
+.blueIconNoHover {
+  color: #229EC5;
+}
+
 .lightIcon {
   color: rgba(2, 37, 62, 0.1);
 }
@@ -303,6 +315,13 @@ p {
 }
 
 .itemButton:hover {
+  box-shadow: 0px 4px 8px 0px rgba(22, 158, 197, 0.33);
+  cursor: pointer;
+  background-color: #229EC5;
+  color: #F3F5F7;
+}
+
+.itemButtonBlue {
   box-shadow: 0px 4px 8px 0px rgba(22, 158, 197, 0.33);
   cursor: pointer;
   background-color: #229EC5;
@@ -414,6 +433,15 @@ p {
 
 @media only screen and (max-width: 480px) {
   .showMobile:hover .blueIcon {
+    color: #F3F5F7;
+  }
+
+  .mobileNoMargin {
+    margin: 0;
+    margin-bottom: 0;
+  }
+
+  .itemButtonBlue .blueIcon {
     color: #F3F5F7;
   }
 

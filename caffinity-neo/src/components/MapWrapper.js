@@ -252,6 +252,15 @@ class MapWrapper extends Component {
         return filterCafes;
     }
 
+    returnBottomPadding() {
+        if (window.innerWidth <= 480) {
+            return(144)
+         }
+         else {
+            return(64)
+         }
+    }
+
     render () {
         var lat = this.props.lat;
         var lng = this.props.lng;
@@ -259,9 +268,9 @@ class MapWrapper extends Component {
             <MapComponent
                 isMarkerShown
                 googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&key=${MAPAPIKEY}&libraries=geometry,drawing,places`}
-                loadingElement={<div style={{ height: `calc(100vh - 64px)` }} />}
-                containerElement={<div style={{ height: `calc(100vh - 64px)` }} />}
-                mapElement={<div style={{ height: `calc(100vh - 64px)` }} />}
+                loadingElement={<div style={{ height: `calc(100vh - ${this.returnBottomPadding()}px)` }} />}
+                containerElement={<div style={{ height: `calc(100vh - ${this.returnBottomPadding()}px)` }} />}
+                mapElement={<div style={{ height: `calc(100vh - ${this.returnBottomPadding()}px)` }} />}
                 cafes={this.props.cafes}
                 selection = {this.props.selection}
                 //city={this.props.city}

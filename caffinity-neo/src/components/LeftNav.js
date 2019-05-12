@@ -422,9 +422,11 @@ class LeftNav extends Component {
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-end'}}>
                         {this.returnLoginLogoutButtons()}
                         
-                        <div className="itemButton showMobile" onClick={() => { this.setState({ showNavMobile: true }) }} style={{padding: 8, marginLeft: 8, display: 'flex', flexDirection: 'row'}}>
-                            <Icon className='darkIcon blueIcon' name="filter" style={{margin: 0}}/>
-                            <p className="smallText">{this.props.cafes && this.returnFilteredCafes().length}</p>
+                        <div className="itemButton showMobile" onClick={() => { this.setState({ showNavMobile: true }) }} style={{padding: 8, marginLeft: 8}}>
+                            <div style={{display: 'flex', flexDirection: 'row'}}>
+                                <Icon className='darkIcon blueIcon' name="filter" style={{margin: 0}}/>
+                                <p className="smallText">{this.props.cafes && this.returnFilteredCafes().length}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -441,6 +443,22 @@ class LeftNav extends Component {
                         <p className='textSmall lightColor'>DISTANCE (mi)</p>
                         {this.returnRange()}
                         <div style={{height: 32}} />
+                        <p className="textSmall lightColor" style={{marginBottom: 16}}>Properties</p>
+                        <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }} onClick={this.props.toggleFilterWifi.bind(this)}>
+                            <div><Check checked={this.props.filters.filterWifi} /></div>
+                            <Icon className={(this.props.filters.filterWifi ? 'darkIcon' : 'lightIcon')} name="wifi" />
+                            <p style={{marginLeft: 16}}>{(this.props.filters.filterWifi ? 'Has Wifi' : "No Wifi")}</p>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }} onClick={this.props.toggleFilterPower.bind(this)}>
+                            <div><Check checked={this.props.filters.filterPower} /></div>
+                            <Icon className={(this.props.filters.filterPower ? 'darkIcon' : 'lightIcon')} name="plug" />
+                            <p style={{marginLeft: 16}}>{(this.props.filters.filterPower ? 'Has Outlets' : "No Outlets")}</p>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }} onClick={this.props.toggleFilterFood.bind(this)}>
+                            <div><Check checked={this.props.filters.filterFood} /></div>
+                            <Icon className={(this.props.filters.filterFood ? 'darkIcon' : 'lightIcon')} name="food" />
+                            <p style={{marginLeft: 16}}>{(this.props.filters.filterFood ? 'Has Food' : "No Food")}</p>
+                        </div>
                     </div>
                 </MediaQuery>
 

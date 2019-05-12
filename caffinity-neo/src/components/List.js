@@ -94,7 +94,7 @@ class List extends Component {
     returnChecks() {
         return(
             <MediaQuery query="(min-device-width: 600px)">
-                <div className="listHeader">
+                <div className="listHeader" style={{display: 'none'}}>
                     <p className="distanceCol"></p>
                     <div onClick={this.props.toggleFilterWifi.bind(this)}><Check checked={this.props.filters.filterWifi} /></div>
                     <div onClick={this.props.toggleFilterPower.bind(this)}><Check checked={this.props.filters.filterPower} /></div>
@@ -104,11 +104,19 @@ class List extends Component {
             </MediaQuery>
         )
     }
+    returnBottomPadding() {
+        if (window.innerWidth <= 480) {
+            return(144)
+         }
+         else {
+            return(64)
+         }
+    }
     render() {
         return (
             <div>
                 {this.returnChecks()}
-                <div className="listContainer" style={{maxHeight: 'calc(100vh - 92px)', overflow: 'scroll', boxSizing: 'content-box'}} >
+                <div className="listContainer" style={{maxHeight: `calc(100vh - ${this.returnBottomPadding()}px)`, overflow: 'scroll', boxSizing: 'content-box'}} >
                     {this.returnList()}
                 </div>
             </div>
