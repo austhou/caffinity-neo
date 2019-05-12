@@ -31,10 +31,12 @@ class List extends Component {
     componentWillMount() {
         let { lat, lon, r, id } = this.getParams(window.location)
         if (lat && lon && r) {
+            //this.props.setRange(parseFloat(lat), parseFloat(lon), parseFloat(r));
             this.props.setLocation(parseFloat(lat), parseFloat(lon), parseFloat(r), id);
         }
         else {
             navigator.geolocation.getCurrentPosition(this.storeLocation, this.errorHandler, { timeout: 20000, maximumAge:Infinity, enableHighAccuracy: false });
+            //this.props.setRange(3);
         }
         //this.props.cafeFetchMongo();
         //this.props.cafeFetchSelectionMongo(this.props.location.lat, this.props.location.lng, this.props.range);

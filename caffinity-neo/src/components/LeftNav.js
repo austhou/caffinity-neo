@@ -39,18 +39,37 @@ class LeftNav extends Component {
         //this.afterOpenModal = this.afterOpenModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
     }
+    getParams(location) {
+        const searchParams = new URLSearchParams(location.search);
+        return {
+          lat: searchParams.get('lat') || '',
+          lon: searchParams.get('lon') || '',
+          r: searchParams.get('r') || '',
+          id: searchParams.get('id') || '',
+        };
+    }
     componentDidMount() {
+        let { lat, lon, r, id } = this.getParams(window.location)
+
+
         document.getElementById('rangeInput') && document.getElementById('rangeInput').addEventListener('keydown', (event) => {
             if (event.key === 'Enter' || event.keyCode === 13) {
                 //console.log("adsf")
                 this.props.setRange(this.props.location.lat, this.props.location.lng, parseFloat(this.state.rangebox));
             }
         });
-        this.setState({ rangebox: this.props.range });
-
+        if (lat && lon && r) {
+            //this.props.setRange(parseFloat(lat), parseFloat(lon), parseFloat(r));
+            this.setState({ rangebox: parseFloat(r) })
+        }
+        else {
+            this.setState({ rangebox: this.props.range });
+        }
+        
         if (ReactDOM.findDOMNode(this.refs.searchBox)) {
             ReactDOM.findDOMNode(this.refs.searchBox).focus()
         }
+        
     }
     componentDidUpdate() {
         if (ReactDOM.findDOMNode(this.refs.searchBox) && this.state.focusLocation) {

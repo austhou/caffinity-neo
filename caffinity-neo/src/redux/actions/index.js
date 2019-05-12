@@ -57,6 +57,12 @@ export const setLocation = (lat, lng, rad, id=null) => {
                 payload: { lat, lng }
             }
         )
+        dispatch(
+            {
+                type: 'set_range',
+                payload: rad
+            }
+        )
         fetch(`${BACKEND_URL}/getRange/${minLat}/${maxLat}/${minLng}/${maxLng}`)
         .then(data => data.json())
         .then(res => {
@@ -86,6 +92,8 @@ export const setGeoLocation = (lat, lng) => {
     }
 }
 
+
+
 export const setRange = (lat, lng, rad) => {
     var minLat = lat - 0.0166666*rad;
     var maxLat = lat + 0.0166666*rad;
@@ -94,7 +102,6 @@ export const setRange = (lat, lng, rad) => {
 
     //console.log(lat+'+'+lng+'+'+rad);
     //console.log(minLat+'-'+maxLat+'-'+minLng+'-'+maxLng)
-
     return (dispatch) => {
         dispatch(
             {
