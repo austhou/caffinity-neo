@@ -25,6 +25,13 @@ p {
     background-color: $color-white;
 }
 
+@media only screen and (max-width: 1280px) {
+    p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     .App {
         flex-direction: column;

@@ -37,6 +37,12 @@ p {
   background-color: #FaFaFc;
 }
 
+@media only screen and (max-width: 1280px) {
+  p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 @media only screen and (max-width: 480px) {
   .App {
     flex-direction: column;
@@ -202,6 +208,11 @@ p {
   align-items: center;
 }
 
+@media only screen and (max-width: 1280px) {
+  .itemHolder {
+    height: 54px;
+  }
+}
 @media only screen and (max-width: 480px) {
   .listContainer {
     overflow-x: hidden;
@@ -274,6 +285,13 @@ p {
   z-index: 10;
 }
 
+@media only screen and (max-width: 1280px) {
+  .cardItem {
+    padding: 24px;
+    margin: 24px;
+    width: calc(100% - 48px);
+  }
+}
 @media only screen and (max-width: 480px) {
   .cardItem {
     margin: 0px;
@@ -443,6 +461,24 @@ p {
   fill: #FaFaFc;
 }
 
+@media only screen and (max-width: 1280px) {
+  .itemButton {
+    padding: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .grayButton {
+    padding: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .searchBox {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
 @media only screen and (max-width: 480px) {
   .showMobile:hover .blueIcon {
     color: #FaFaFc;

@@ -389,20 +389,20 @@ class LeftNav extends Component {
                     />
                     <div style={{height: 32}} />
                     <p className="textSmall lightColor" style={{marginBottom: 16}}>Select Properties</p>
-                    <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }}>
-                        <div onClick={this.toggleNewWifi.bind(this)}><Check checked={this.state.newWifi} /></div>
+                    <div className="filterItem" onClick={this.toggleNewWifi.bind(this)}>
+                        <div><Check checked={this.state.newWifi} /></div>
                         <Icon className={(this.state.newWifi ? 'darkIcon' : 'lightIcon')} name="wifi" />
-                        <p style={{marginLeft: 16}}>{(this.state.newWifi ? 'Has Wifi' : "No Wifi")}</p>
+                        <p style={{marginLeft: 16}}>{(this.state.newWifi ? 'Has Wifi' : "Wifi")}</p>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }}>
-                        <div onClick={this.toggleNewPower.bind(this)}><Check checked={this.state.newPower} /></div>
+                    <div className="filterItem" onClick={this.toggleNewPower.bind(this)}>
+                        <div><Check checked={this.state.newPower} /></div>
                         <Icon className={(this.state.newPower ? 'darkIcon' : 'lightIcon')} name="plug" />
-                        <p style={{marginLeft: 16}}>{(this.state.newPower ? 'Has Outlets' : "No Outlets")}</p>
+                        <p style={{marginLeft: 16}}>{(this.state.newPower ? 'Has Outlets' : "Outlets")}</p>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'row', marginBottom: 16 }}>
-                        <div onClick={this.toggleNewFood.bind(this)}><Check checked={this.state.newFood} /></div>
+                    <div className="filterItem" onClick={this.toggleNewFood.bind(this)}>
+                        <div><Check checked={this.state.newFood} /></div>
                         <Icon className={(this.state.newFood ? 'darkIcon' : 'lightIcon')} name="food" />
-                        <p style={{marginLeft: 16}}>{(this.state.newFood ? 'Has Food' : "No Food")}</p>
+                        <p style={{marginLeft: 16}}>{(this.state.newFood ? 'Has Food' : "Food")}</p>
                     </div>
                     <div style={{height: 32}} />
                     <div style={{marginLeft: 'auto', marginRight: 0, display: 'flex', flexDirection: 'row', width: 'fit-content'}}>
@@ -424,7 +424,12 @@ class LeftNav extends Component {
                     
                 </Modal>
                 <div style={{marginBottom: 16, position: 'relative'}}>
-                    <img src={banner} alt="banner" width="128" style={{position: 'absolute', marginTop: 4}} />
+                    <MediaQuery query="(min-device-width: 1280px)">
+                        <img src={banner} alt="banner" width="128" style={{position: 'absolute', marginTop: 4}} />
+                    </MediaQuery>
+                    <MediaQuery query="(max-device-width: 1280px)">
+                        <img src={banner} alt="banner" width="96" style={{position: 'absolute', marginTop: 4}} />
+                    </MediaQuery>
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-end'}}>
                         {this.returnLoginLogoutButtons()}
                         

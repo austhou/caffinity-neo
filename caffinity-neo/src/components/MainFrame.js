@@ -15,6 +15,7 @@ import '../App.css';
 import List from './List';
 import MapWrapper from './MapWrapper';
 import LeftNav from './LeftNav';
+//import TopBar from './TopBar';
 import MobileTogglePaneButton from './MobileTogglePaneButton';
 import QueryProcessor from './QueryProcessor';
 
@@ -79,6 +80,7 @@ class MainFrame extends Component {
     render() {
         return (
             <Router>
+                
                 <div className="App" style={{position: 'relative'}}>
                     <LeftNav />
                     <div className="listPane hideMobile" style={!this.props.mobilePane ? {display: 'block', position: 'relative'} : { position: 'relative' }}>

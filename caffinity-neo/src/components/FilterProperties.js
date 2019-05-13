@@ -19,17 +19,17 @@ class FilterProperties extends Component {
                 <div className="filterItem" onClick={this.props.toggleFilterWifi.bind(this)}>
                     <div><Check checked={this.props.filters.filterWifi} /></div>
                     <Icon className={(this.props.filters.filterWifi ? 'darkIcon' : 'lightIcon')} name="wifi" />
-                    <p style={{marginLeft: 16}}>{(this.props.filters.filterWifi ? 'Has Wifi' : "No Wifi")}</p>
+                    <p style={{marginLeft: 16}}>{(this.props.filters.filterWifi ? 'Has Wifi' : "Wifi")}</p>
                 </div>
                 <div className="filterItem" onClick={this.props.toggleFilterPower.bind(this)}>
                     <div><Check checked={this.props.filters.filterPower} /></div>
                     <Icon className={(this.props.filters.filterPower ? 'darkIcon' : 'lightIcon')} name="plug" />
-                    <p style={{marginLeft: 16}}>{(this.props.filters.filterPower ? 'Has Outlets' : "No Outlets")}</p>
+                    <p style={{marginLeft: 16}}>{(this.props.filters.filterPower ? 'Has Outlets' : "Outlets")}</p>
                 </div>
                 <div className="filterItem" onClick={this.props.toggleFilterFood.bind(this)}>
                     <div><Check checked={this.props.filters.filterFood} /></div>
                     <Icon className={(this.props.filters.filterFood ? 'darkIcon' : 'lightIcon')} name="food" />
-                    <p style={{marginLeft: 16}}>{(this.props.filters.filterFood ? 'Has Food' : "No Food")}</p>
+                    <p style={{marginLeft: 16}}>{(this.props.filters.filterFood ? 'Has Food' : "Food")}</p>
                 </div>
             </div>
         )
