@@ -143,7 +143,7 @@ class List extends Component {
         return (
             <div>
                 {this.returnChecks()}
-                <div className="listContainer" style={{maxHeight: `calc(100vh - ${this.returnBottomPadding()}px)`, overflow: 'scroll', boxSizing: 'content-box'}} >
+                <div className="listContainer" style={{maxHeight: `calc(100vh - ${this.returnBottomPadding()}px)`, height: `calc(100vh - ${this.returnBottomPadding()}px)`, overflow: 'scroll', boxSizing: 'content-box'}} >
                     {this.returnLoading()}
                     {this.returnList()}
                 </div>

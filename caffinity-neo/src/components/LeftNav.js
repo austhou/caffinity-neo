@@ -87,6 +87,7 @@ class LeftNav extends Component {
     toggleCustomLocation() {
         if (this.state.customLoc) {
             this.setState({ customLoc: false, locationbox: 'Your Location' });
+            this.props.clearSelection();
             this.props.setLocation(this.props.geoLocation.lat, this.props.geoLocation.lng, this.props.range);
         }
         else {
