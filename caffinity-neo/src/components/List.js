@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import MediaQuery from 'react-responsive';
 import { distance } from '../util';
+import { Icon } from 'semantic-ui-react';
 
 import * as actions from '../redux/actions';
 import Item from './Item';
@@ -129,11 +130,21 @@ class List extends Component {
             return(64)
          }
     }
+    returnLoading() {
+        if (this.props.loading) {
+            return (
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: '100%', height: `calc(100vh - ${this.returnBottomPadding()}px)`}}>
+                    <Icon loading name='cog' size='huge'/>
+                </div>
+            )
+        }
+    }
     render() {
         return (
             <div>
                 {this.returnChecks()}
                 <div className="listContainer" style={{maxHeight: `calc(100vh - ${this.returnBottomPadding()}px)`, overflow: 'scroll', boxSizing: 'content-box'}} >
+                    {this.returnLoading()}
                     {this.returnList()}
                 </div>
             </div>
@@ -146,7 +157,8 @@ const mapStateToProps = state => {
     const location = state.location.current;
     const range = state.location.range;
     const filters = state.filters;
-    return { cafes, location, range, filters };
+    const loading = state.loading;
+    return { cafes, location, range, filters, loading };
 }
 
 export default connect(mapStateToProps, actions)(List);

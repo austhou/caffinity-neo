@@ -63,6 +63,7 @@ export const setLocation = (lat, lng, rad, id=null) => {
                 payload: rad
             }
         )
+        dispatch({ type: 'getting_cafe_data', payload: null })
         fetch(`${BACKEND_URL}/getRange/${minLat}/${maxLat}/${minLng}/${maxLng}`)
         .then(data => data.json())
         .then(res => {
@@ -73,7 +74,7 @@ export const setLocation = (lat, lng, rad, id=null) => {
                 var result = res.data.filter(cafe => {
                     return cafe._id === id
                 })
-                console.log(result[0])
+                
                 dispatch({ type: 'set_selection', payload: result[0] })
             }
         })

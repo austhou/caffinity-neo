@@ -6,6 +6,7 @@ import FilterReducer from './FilterReducer';
 import UserReducer from './UserReducer';
 import MobilePane from './MobilePane';
 import SelectionReducer from './SelectionReducer';
+import LoadingReducer from './LoadingReducer';
 
 export default combineReducers({
     cafe: CafeFetchReducer, //list of cafes
@@ -14,4 +15,5 @@ export default combineReducers({
     user: UserReducer, //user
     mobilePane: MobilePane, //show list or map (mobile only)
     selection: SelectionReducer,
+    loading: LoadingReducer,
 });

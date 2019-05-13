@@ -33,7 +33,6 @@ class MainFrame extends Component {
     }
     returnCard() {
         if (this.props.selection) {
-            console.log(this.props.selection)
             return (
                 <div className="cardHolder">
                     <div className="cardItem mobileNoMargin">
