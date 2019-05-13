@@ -45,7 +45,7 @@ passport.deserializeUser(function(id, cb) {
 const API_PORT = 8081;
 const app = express();
 
-var whitelist = ['http://localhost:3000', undefined, 'https://caffinity.co']
+var whitelist = ['http://localhost:3001', undefined, 'https://caffinity.co']
 var corsOptions = {
   origin: function (origin, callback) {
     console.log(origin)

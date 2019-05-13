@@ -8,7 +8,7 @@ class Check extends Component {
         return (
             <div className="iconHolder" style={{display: 'flex', flexDirection: "row", alignItems: 'center',  width: 20, height: 20}}>
                 <div className="checkBox">
-                    {this.props.checked && <div style={{width: 10,height:10, backgroundColor: '#229EC5'}} />}
+                    {this.props.checked && <div style={{width: 10,height:10, backgroundColor: '#169DFF'}} />}
                 </div>
             </div>
         )

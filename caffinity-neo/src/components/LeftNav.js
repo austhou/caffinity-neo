@@ -39,7 +39,7 @@ class LeftNav extends Component {
         //this.afterOpenModal = this.afterOpenModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
     }
-    getParams(location) {
+    getParams(location) { //TODO pull into util
         const searchParams = new URLSearchParams(location.search);
         return {
           lat: searchParams.get('lat') || '',
@@ -60,7 +60,7 @@ class LeftNav extends Component {
         });
         if (lat && lon && r) {
             //this.props.setRange(parseFloat(lat), parseFloat(lon), parseFloat(r));
-            this.setState({ rangebox: parseFloat(r) })
+            this.setState({ rangebox: parseFloat(r), locationbox: `${lat}, ${lon}` })
         }
         else {
             this.setState({ rangebox: this.props.range });
@@ -86,7 +86,7 @@ class LeftNav extends Component {
     //toggle function between current and custom location
     toggleCustomLocation() {
         if (this.state.customLoc) {
-            this.setState({ customLoc: false });
+            this.setState({ customLoc: false, locationbox: 'Your Location' });
             this.props.setLocation(this.props.geoLocation.lat, this.props.geoLocation.lng, this.props.range);
         }
         else {

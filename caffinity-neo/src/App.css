@@ -11,7 +11,7 @@ $color-red: #D92752;
 */
 @import '//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css';
 body, html {
-  background-color: #FaFcFc;
+  background-color: #FaFaFc;
   color: #02253E;
   font-family: "Inter";
   font-weight: 500;
@@ -34,7 +34,7 @@ p {
   margin: 32px;
   display: flex;
   flex-direction: row;
-  background-color: #FaFcFc;
+  background-color: #FaFaFc;
 }
 
 @media only screen and (max-width: 480px) {
@@ -164,7 +164,7 @@ p {
 }
 
 .itemHolder:hover .textName {
-  color: #229EC5;
+  color: #169DFF;
 }
 
 .iconHolder {
@@ -268,7 +268,7 @@ p {
   width: calc(100% - 64px);
   margin: 32px;
   border-radius: 16px;
-  background-color: #FaFcFc;
+  background-color: #FaFaFc;
   border: 1px solid rgba(2, 37, 62, 0.33);
   padding: 32px;
   z-index: 10;
@@ -299,11 +299,11 @@ p {
 }
 
 .blueIcon {
-  color: #229EC5;
+  color: #169DFF;
 }
 
 .blueIconNoHover {
-  color: #229EC5;
+  color: #169DFF;
 }
 
 .lightIcon {
@@ -314,10 +314,10 @@ p {
   padding: 8px;
   padding-left: 12px;
   padding-right: 12px;
-  border-radius: 4px;
-  background-color: #FaFcFc;
-  color: #229EC5;
-  border: 2px solid #229EC5;
+  border-radius: 6px;
+  background-color: #FaFaFc;
+  color: #169DFF;
+  border: 2px solid #169DFF;
   text-transform: uppercase;
   font-size: 12px;
   line-height: 16px;
@@ -329,15 +329,15 @@ p {
 .itemButton:hover {
   box-shadow: 0px 4px 8px 0px rgba(22, 158, 197, 0.33);
   cursor: pointer;
-  background-color: #229EC5;
-  color: #FaFcFc;
+  background-color: #169DFF;
+  color: #FaFaFc;
 }
 
 .itemButtonBlue {
   box-shadow: 0px 4px 8px 0px rgba(22, 158, 197, 0.33);
   cursor: pointer;
-  background-color: #229EC5;
-  color: #FaFcFc;
+  background-color: #169DFF;
+  color: #FaFaFc;
 }
 
 .largeButton {
@@ -347,10 +347,10 @@ p {
 
 .smallButton {
   padding: 4px;
-  border-radius: 4px;
-  background-color: #FaFcFc;
-  color: #229EC5;
-  border: 2px solid #229EC5;
+  border-radius: 6px;
+  background-color: #FaFaFc;
+  color: #169DFF;
+  border: 2px solid #169DFF;
   text-transform: uppercase;
   font-size: 12px;
   line-height: 16px;
@@ -363,8 +363,8 @@ p {
   padding: 8px;
   padding-left: 12px;
   padding-right: 12px;
-  border-radius: 4px;
-  background-color: #FaFcFc;
+  border-radius: 6px;
+  background-color: #FaFaFc;
   color: rgba(2, 37, 62, 0.33);
   border: 2px solid rgba(2, 37, 62, 0.33);
   text-transform: uppercase;
@@ -388,7 +388,7 @@ p {
 .searchBox {
   background-color: transparent;
   border: 1px solid rgba(2, 37, 62, 0.33);
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 16px;
   line-height: 20px;
   padding: 8px;
@@ -399,14 +399,14 @@ p {
 
 .searchBox:focus {
   outline: none;
-  border: 1px solid #229EC5;
+  border: 1px solid #169DFF;
 }
 
 .checkBox {
   width: 14px;
   height: 14px;
   border-radius: 2px;
-  border: 2px solid #229EC5;
+  border: 2px solid #169DFF;
 }
 
 .checkBox:hover {
@@ -416,7 +416,7 @@ p {
 .submitModal {
   width: 25%;
   height: auto;
-  background-color: #FaFcFc;
+  background-color: #FaFaFc;
   border: 1px solid rgba(2, 37, 62, 0.33);
   border-radius: 16px;
   padding: 32px;
@@ -436,16 +436,16 @@ p {
 }
 
 .smallButton svg path {
-  fill: #229EC5;
+  fill: #169DFF;
 }
 
 .smallButton:hover svg path {
-  fill: #FaFcFc;
+  fill: #FaFaFc;
 }
 
 @media only screen and (max-width: 480px) {
   .showMobile:hover .blueIcon {
-    color: #FaFcFc;
+    color: #FaFaFc;
   }
 
   .mobileNoMargin {
@@ -454,7 +454,7 @@ p {
   }
 
   .itemButtonBlue .blueIcon {
-    color: #FaFcFc;
+    color: #FaFaFc;
   }
 
   .submitModal {
