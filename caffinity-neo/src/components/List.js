@@ -34,6 +34,7 @@ class List extends Component {
         if (lat && lon && r) {
             //this.props.setRange(parseFloat(lat), parseFloat(lon), parseFloat(r));
             this.props.setLocation(parseFloat(lat), parseFloat(lon), parseFloat(r), id);
+            navigator.geolocation.getCurrentPosition(this.storeGeoLocation, this.errorHandler, { timeout: 20000, maximumAge:Infinity, enableHighAccuracy: false });
         }
         else {
             navigator.geolocation.getCurrentPosition(this.storeLocation, this.errorHandler, { timeout: 20000, maximumAge:Infinity, enableHighAccuracy: false });
@@ -51,6 +52,11 @@ class List extends Component {
     storeLocation = (loc) => {
         console.log('The location in lat lon format is: [', loc.coords.latitude, ',', loc.coords.longitude, ']');
         this.props.setLocation(loc.coords.latitude, loc.coords.longitude, this.props.range);
+        this.props.setGeoLocation(loc.coords.latitude, loc.coords.longitude);
+        //this.props.cafeFetchSelectionMongo(this.props.location.lat, this.props.location.lng, this.props.range);
+    }
+    storeLocation = (loc) => {
+        console.log('The location in lat lon format is: [', loc.coords.latitude, ',', loc.coords.longitude, ']');
         this.props.setGeoLocation(loc.coords.latitude, loc.coords.longitude);
         //this.props.cafeFetchSelectionMongo(this.props.location.lat, this.props.location.lng, this.props.range);
     }
