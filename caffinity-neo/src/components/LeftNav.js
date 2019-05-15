@@ -445,7 +445,7 @@ class LeftNav extends Component {
                 <div className="hideMobile" style={{height: 16}} />
                 {this.props.user ? this.returnSubmitButton() : null}
                 <MediaQuery query="(min-device-width: 600px)">
-                    <div className="hideMobile">
+                    <div className="hideMobile navCard">
                         <p className='textSmall lightColor'>LOCATION</p>
                         <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
                             {this.returnLocation()}

@@ -28,6 +28,13 @@
     background-color: $color-hover;
 }
 
+.navCard {
+    width: 100%;
+    border-radius: 16px;
+    background-color:  $color-lighter;
+    padding: 16px;
+}
+
 @media only screen and (max-width: 480px) {
     .leftNavPane {
         width: 100%;

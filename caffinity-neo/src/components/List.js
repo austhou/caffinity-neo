@@ -8,7 +8,6 @@ import { Icon } from 'semantic-ui-react';
 import * as actions from '../redux/actions';
 import Item from './Item';
 import Check from './Check';
-//import './App.css';
 
 class List extends Component {
     constructor() {
@@ -53,14 +52,12 @@ class List extends Component {
         console.log('The location in lat lon format is: [', loc.coords.latitude, ',', loc.coords.longitude, ']');
         this.props.setGeoLocation(loc.coords.latitude, loc.coords.longitude);
     }
-    sortCafes (cafes, location) {
+    sortCafes (cafes, location) { //uses distance from util
         if( location ) {
             const stateArrL = _.map(cafes, (val, uid) => {
                 return { ...val };
             });
             const sortedL = _.clone(stateArrL.sort(function(a, b) {
-                //console.log(a);
-                //action.payload = { lat, lng }
                 var alat = a.placesData.geometry.location.lat;//a["lat"];
                 var alng = a.placesData.geometry.location.lng;
                 var blat = b.placesData.geometry.location.lat;//["lat"];
@@ -69,13 +66,9 @@ class List extends Component {
                 var x = parseFloat(distance(alat,alng,location.lat,location.lng,"M"));
                 var y = parseFloat(distance(blat,blng,location.lat,location.lng,"M"));
 
-                //console.log(typeof x + '-' + y)
-
                 return ((x < y) ? -1 : ((x > y) ? 1 : 0));
             }), true);
-            //console.log(sortedL)
             return sortedL;
-            
         }
         return null;
     }

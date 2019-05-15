@@ -11,7 +11,7 @@ $color-red: #D92752;
 */
 @import '//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css';
 body, html {
-  background-color: #FaFaFc;
+  background-color: #FbFbFf;
   color: #02253E;
   font-family: "Inter";
   font-weight: 500;
@@ -34,7 +34,7 @@ p {
   margin: 32px;
   display: flex;
   flex-direction: row;
-  background-color: #FaFaFc;
+  background-color: #FbFbFf;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -112,6 +112,13 @@ p {
 
 .filterItem:hover {
   background-color: rgba(2, 37, 62, 0.03);
+}
+
+.navCard {
+  width: 100%;
+  border-radius: 16px;
+  background-color: rgba(2, 37, 62, 0.1);
+  padding: 16px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -279,7 +286,7 @@ p {
   width: calc(100% - 64px);
   margin: 32px;
   border-radius: 16px;
-  background-color: #FaFaFc;
+  background-color: #FbFbFf;
   border: 1px solid rgba(2, 37, 62, 0.33);
   padding: 32px;
   z-index: 10;
@@ -333,7 +340,7 @@ p {
   padding-left: 12px;
   padding-right: 12px;
   border-radius: 6px;
-  background-color: #FaFaFc;
+  background-color: #FbFbFf;
   color: #169DFF;
   border: 2px solid #169DFF;
   text-transform: uppercase;
@@ -348,14 +355,14 @@ p {
   box-shadow: 0px 4px 8px 0px rgba(22, 158, 197, 0.33);
   cursor: pointer;
   background-color: #169DFF;
-  color: #FaFaFc;
+  color: #FbFbFf;
 }
 
 .itemButtonBlue {
   box-shadow: 0px 4px 8px 0px rgba(22, 158, 197, 0.33);
   cursor: pointer;
   background-color: #169DFF;
-  color: #FaFaFc;
+  color: #FbFbFf;
 }
 
 .largeButton {
@@ -366,7 +373,7 @@ p {
 .smallButton {
   padding: 4px;
   border-radius: 6px;
-  background-color: #FaFaFc;
+  background-color: #FbFbFf;
   color: #169DFF;
   border: 2px solid #169DFF;
   text-transform: uppercase;
@@ -382,7 +389,7 @@ p {
   padding-left: 12px;
   padding-right: 12px;
   border-radius: 6px;
-  background-color: #FaFaFc;
+  background-color: #FbFbFf;
   color: rgba(2, 37, 62, 0.33);
   border: 2px solid rgba(2, 37, 62, 0.33);
   text-transform: uppercase;
@@ -434,7 +441,7 @@ p {
 .submitModal {
   width: 25%;
   height: auto;
-  background-color: #FaFaFc;
+  background-color: #FbFbFf;
   border: 1px solid rgba(2, 37, 62, 0.33);
   border-radius: 16px;
   padding: 32px;
@@ -458,7 +465,7 @@ p {
 }
 
 .smallButton:hover svg path {
-  fill: #FaFaFc;
+  fill: #FbFbFf;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -481,7 +488,7 @@ p {
 }
 @media only screen and (max-width: 480px) {
   .showMobile:hover .blueIcon {
-    color: #FaFaFc;
+    color: #FbFbFf;
   }
 
   .mobileNoMargin {
@@ -490,7 +497,7 @@ p {
   }
 
   .itemButtonBlue .blueIcon {
-    color: #FaFaFc;
+    color: #FbFbFf;
   }
 
   .submitModal {
